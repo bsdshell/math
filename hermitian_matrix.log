@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  8 AUG 2013 02:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  10 SEP 2013 22:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -47,11 +47,11 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./herm
 itian_matrix.aux) ) 
 Here is how much of TeX's memory you used:
- 205 strings out of 493315
- 2297 string characters out of 6137904
+ 209 strings out of 493315
+ 2335 string characters out of 6137904
  54158 words of memory out of 5000000
- 3742 multiletter control sequences out of 15000+600000
- 3948 words of font info for 15 fonts, out of 8000000 for 9000
+ 3744 multiletter control sequences out of 15000+600000
+ 4567 words of font info for 17 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  23i,4n,19p,163b,107s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfo
@@ -60,7 +60,7 @@ ts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmsy7.pfb>
-Output written on hermitian_matrix.pdf (1 page, 47375 bytes).
+Output written on hermitian_matrix.pdf (1 page, 47645 bytes).
 PDF statistics:
  28 PDF objects out of 1000 (max. 8388607)
  19 compressed objects within 1 object stream
