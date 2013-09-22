@@ -1,15 +1,18 @@
 \documentclass{article}
 \usepackage[top=0.5in, left=0.8in, bottom=1.1in, right=1in]{geometry}
 \usepackage{colortbl}
+\usepackage{algorithmicx}                                       
 \begin{document}
 \begin{table}[h]
     \centering
-    \begin{tabular}{|>{\columncolor[gray]{0.8}}c|>{\columncolor[gray]{0.8}}c|>{\columncolor[gray]{0.8}}c|>{\columncolor[gray]{0.5}}c|c|c|c|c|}
+\textsc{\Large Binary search from one dimension to two dimension}\\[0.1cm]
+
+    \begin{tabular}{|>{\columncolor[gray]{0.8}}c|>{\columncolor[gray]{0.8}}c|>{\columncolor[gray]{0.8}}c|c|c|c|c|c|}
         \hline
-        \rowcolor[gray]{0.8}1&10&20&30&40&50&60&70\\\hline
-        \rowcolor[gray]{0.8}100&200&300&400&500&600&700&800\\\hline
-        \rowcolor[gray]{0.8}150&250&350&450&550&650&750&850\\\hline
-        \rowcolor[gray]{0.5}1000&1100&1200&\cellcolor[gray]{0.5}1300&1400&1500&1600&1700\\\hline
+        \rowcolor[gray]{0.8}1&10&20&\cellcolor[gray]{0.5}30&40&50&60&70\\\hline
+        \rowcolor[gray]{0.8}100&200&300&\cellcolor[gray]{0.5}400&500&600&700&800\\\hline
+        \rowcolor[gray]{0.8}150&250&350&\cellcolor[gray]{0.5}450&550&650&750&850\\\hline
+        \cellcolor[gray]{0.5}1000&\cellcolor[gray]{0.5}1100&\cellcolor[gray]{0.5}1200&\cellcolor[gray]{0.5}1300&1400&1500&1600&1700\\\hline
         1&0&1&1&0&1&0&1\\\hline
         1&0&1&1&0&1&0&1\\\hline
         1&0&1&1&0&1&0&1\\\hline
@@ -21,10 +24,10 @@
     \centering
     \begin{tabular}{|c|c|c|c|>{\columncolor[gray]{0.8}}c|>{\columncolor[gray]{0.8}}c|>{\columncolor[gray]{0.8}}c|>{\columncolor[gray]{0.8}}c|}
         \hline
-        1&10&20&30&40&50&60&70\\\hline
-        100&200&300&400&500&600&700&800\\\hline
-        150&250&350&450&550&650&750&850\\\hline
-       1000&1100&1200&\cellcolor[gray]{0.5}1300&1400&1500&1600&1700\\\hline
+        1&10&20&\cellcolor[gray]{0.5}30&40&50&60&70\\\hline
+        100&200&300&\cellcolor[gray]{0.5}400&500&600&700&800\\\hline
+        150&250&350&\cellcolor[gray]{0.5}450&550&650&750&850\\\hline
+        \cellcolor[gray]{0.5}1000&\cellcolor[gray]{0.5}1100&\cellcolor[gray]{0.5}1200&\cellcolor[gray]{0.5}1300&1400&1500&1600&1700\\\hline
         \rowcolor[gray]{0.8}1&0&1&1&0&1&0&1\\\hline
         \rowcolor[gray]{0.8}1&0&1&1&0&1&0&1\\\hline
         \rowcolor[gray]{0.8}1&0&1&1&0&1&0&1\\\hline
