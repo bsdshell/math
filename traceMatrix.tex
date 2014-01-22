@@ -1,0 +1,17 @@
+\documentclass[10pt]{article}
+\usepackage{amsopn}
+\DeclareMathOperator{\tr}{tr}
+\begin{document}
+$$\textbf{Show }\tr(\textbf{AB})=\tr(\textbf{BA})$$
+$$\tr(\textbf{AB})=\sum_{i=1}^n\sum_{j=1}^na_{i,j}b_{j,i}$$
+$$\tr(\textbf{BA})=\sum_{j=1}^n\sum_{i=1}^nb_{j,i}a_{i,j}$$
+$$\Rightarrow\tr(\textbf{AB})=\tr(\textbf{BA})$$
+\\
+$$\textbf{Show }\hspace{1pt}\tr(\textbf{A+B})=\tr(\textbf{A})+\tr(\textbf{B})$$
+$$\tr(\textbf{A+B})=\sum_{i=1}^n \left(a_{i,i}+b_{i,i}\right)=\sum_{i=1}^n a_{i,i}+\sum_{i=1}^n b_{i,i}=\tr(\textbf{A})+\tr(\textbf{B})$$
+\\
+$$\textbf{Show associative of matrix multiplication}\hspace{5pt}\textbf{ABC}=\textbf{A(BC)}$$
+$$\left[\textbf{(AB)C}\right]_{i,j}=\sum_{m=1}^n\left(\sum_{k=1}^n a_{i,k}b_{k,m}\right)c_{m,j}=\sum_{m=1}^n\left(\sum_{k=1}^n a_{i,k}b_{k,m} c_{m,j}\right)$$
+$$\left[\textbf{A(BC)}\right]_{i,j}=\sum_{k=1}^n a_{i,k}\left(\sum_{m=1}^n b_{k,m} c_{m,j}\right)=\sum_{k=1}^n \left(\sum_{m=1}^n a_{i,k}b_{k,m} c_{m,j}\right)$$
+$$\Rightarrow\textbf{ABC}=\textbf{A(BC)}$$
+\end{document}
