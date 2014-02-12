@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{tikz}
+\usepackage{amsmath}
+\begin{document}
+
+    % TikZ picture with origin upper left
+    \begin{tikzpicture}[yscale=-1] 
+        % 4x4 grid
+        \draw (-2, 0) grid (6, 6);
+        % origin point
+        \draw [color=blue, fill=blue] (2, 4) circle (0.1);
+        % x-axis
+        \draw [thick,->] (-2, 4) -- (6, 4);
+        % y-axis
+        \draw [thick,->] (2, 6) -- (2, -1);
+        % origin label
+        \node at (2, 4.5) {(0, 0)};
+        \draw (2, 4) circle (2);
+        \draw [color=red, fill=red] (2, 2) circle(0.1);
+        \node at (2.5, 1.5){(0, r)};
+        \draw [color=red, fill=red] (-1, 4) circle(0.1);
+        \node at (-0.5, 4.5){(t, 0)};
+        \draw (2, 2)--(-1, 4);
+    \end{tikzpicture}\\
+	\textit{Derived circle parametic equation}
+	\textit{line equation from (0,r) to (t, 0)}\\
+	$$\textit{line equatin }$$
+	$$\frac{y-0}{x-t}=\frac{y-r}{x-0}$$
+	$$\Rightarrow xy=(y - r)(x - t)$$
+	$$\Rightarrow xy=xy - rx - yt + rt$$
+	$$\Rightarrow  rx=rt-yt=t(r-y) $$
+	$$\Rightarrow  rx = t(r-y)$$
+	$$\Rightarrow x = \frac{t}{r}(r-y)$$	
+	$$\textit{Let the circle equation to be}$$
+	$$x^{2} + y^{2} = r^{2}$$
+	$$\Rightarrow \left (\frac{t}{r}(r-y)  \right )^{2} + y^{2}=r^{2}$$
+	$$\Rightarrow \left (\frac{t}{r} \right )^{2}(r-y)^{2} + y^{2}=r^{2}$$
+	$$\Rightarrow t^{2}(r^{2}+y^{2}-2ry) + r^{2}y^{2} = r^{4}$$
+	$$\Rightarrow t^{2}r^{2} + t^{2}y^{2} - 2rt^{2}y + r^{2}y^{2}=r^{4}$$
+	$$\Rightarrow (t^{2}+r^{2})y^{2} - 2rt^{2}y + t^{2}r^{2}-r^{4}=0$$
+	$$\Rightarrow a=(t^{2}+r^{2})\quad b=-2rt^{2}\quad c=t^{2}r^{2}-r^{4}$$
+	$$y=\frac{-b\pm\sqrt{b^{2}-4ac}}{2a}$$
+	$$\Rightarrow y=\frac{-2rt^{2}\pm\sqrt{4r^{2}t^{4}-4(t^{2}+r^{2})(t^{2}r^{2}-r^{4})}}{2(t^{2}+r^{2})}$$
+
+	$$\Rightarrow y=\frac{-2rt^{2}\pm 2\sqrt{r^{2}t^{4}-( t^{4}r^{2} - t^{2}r^{4} + t^{2}r^{4} - r^{6} )}}{2(t^{2}+r^{2})}$$
+
+	$$\Rightarrow y=\frac{-2rt^{2}\pm 2\sqrt{r^{2}t^{4} - t^{4}r^{2} + t^{2}r^{4} - t^{2}r^{4} + r^{6} }}{2(t^{2}+r^{2})}$$
+	
+	$$\Rightarrow y=\frac{-2rt^{2}\pm 2\sqrt{ t^{2}r^{4} - t^{2}r^{4} + r^{6} }}{2(t^{2}+r^{2})}$$
+	
+	$$\Rightarrow y=\frac{-2rt^{2}\pm 2r^{3}}{2(t^{2}+r^{2})}$$
+	$$\Rightarrow y=\frac{-r(t^{2}\pm r^{2})}{(t^{2}+r^{2})}$$
+	
+	$$\Rightarrow y=-r\textit{ or } y=\frac{-r(t^{2} - r^{2})}{(t^{2}+r^{2})}$$
+	$$ x=\frac{t}{r}(r-y)$$
+
+\end{document}
