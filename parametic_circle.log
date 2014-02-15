@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  13 FEB 2014 02:18
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.5.30)  15 FEB 2014 01:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -514,22 +514,18 @@ e
 ))
 \Hy@linkcounter=\count133
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--27
-
- []
-
 [1
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 [2] (./parametic_circle.aux) ) 
 Here is how much of TeX's memory you used:
- 11151 strings out of 493315
- 209794 string characters out of 6137904
- 262901 words of memory out of 5000000
- 14398 multiletter control sequences out of 15000+600000
+ 11156 strings out of 493315
+ 209898 string characters out of 6137904
+ 271901 words of memory out of 5000000
+ 14403 multiletter control sequences out of 15000+600000
  5138 words of font info for 19 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,13n,55p,434b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,20n,55p,434b,467s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2013/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmex10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pub
@@ -537,7 +533,7 @@ lic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmr7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmti10.pfb>
-Output written on parametic_circle.pdf (2 pages, 61286 bytes).
+Output written on parametic_circle.pdf (2 pages, 62933 bytes).
 PDF statistics:
  38 PDF objects out of 1000 (max. 8388607)
  27 compressed objects within 1 object stream
