@@ -2,7 +2,6 @@
 \usepackage{tikz}
 \usepackage{amsmath, empheq}
 \begin{document}
-
     % TikZ picture with origin upper left
     \begin{tikzpicture}[yscale=-1] 
         % 4x4 grid
@@ -10,7 +9,7 @@
         % origin point
         \draw [color=blue, fill=blue] (2, 4) circle (0.1);
         % x-axis
-        \draw [thick,->] (-2, 4) -- (6, 4);
+        \draw [thick,->] (-2, 4) -- (7, 4);
         % y-axis
         \draw [thick,->] (2, 6) -- (2, -1);
         % origin label
@@ -23,11 +22,10 @@
         \draw (2, 2)--(-1, 4);
         \node at (0.5, 3.5){(x, y)};
         \draw [color=black, fill=black] (0.24, 3.2) circle(0.1);
-    \end{tikzpicture}\\
-	\textit{Derived circle parametic equation}
-	\textit{line equatin }	
+    \end{tikzpicture}\\ \\
+	\centerline{Derive circle parametric equation}
 	\begin{flalign*}
-	\textit{line equation from (0,r) to (t, 0)}\quad
+	\textit{Line equation from (0,r) to (t, 0)}\quad
 	\frac{y-0}{x-t}=\frac{y-r}{x-0}\\
     \Rightarrow xy=(y - r)(x - t)  \\
    \Rightarrow xy=xy - rx - yt + rt\\
