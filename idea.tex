@@ -1,0 +1,51 @@
+\documentclass[10pt]{article}
+\begin{document}
+$$\textbf{Definition of Monoid } $$
+$$\textbf{A monoid is a triple } (A, \otimes, \overline{1})$$
+$$1. \otimes \textbf{ is closed associative binary operator on the set A}$$
+$$2. \overline{1} \textbf{ is identity element for } \oplus$$
+$$\forall\quad a, b, c \in A$$
+$$ a \otimes b  \otimes c = a \otimes (b \otimes c) $$
+$$ a \otimes \overline{1} = \overline{1} \otimes a =  a$$
+\\
+$\textbf{If }  \gcd(a, b) = 1 \textbf{ and }  a \vert bc \quad$  $\Rightarrow a \vert c$ \\
+$\textbf{Proof}$ \\
+$\gcd(a, b) = 1  $\\
+$\Rightarrow ma+nb = 1\quad m, n \in \mathbf{N} $ \\
+$\Rightarrow mac + nbc = c$ \\
+$a \vert bc \Rightarrow ak = bc \quad k \in \mathbf{N} $ \\
+$\Rightarrow mac + n(ak)=c \quad    (ak=bc) $ \\
+$\Rightarrow a(mc + nk) = c$  \\
+$\Rightarrow a \vert c $ \\
+\\
+$\textbf{If } \gcd(a, b) = 1 \Rightarrow ma + nb = 1 \quad m, n \in \mathbf{N}$\\
+$\textbf{Proof}$\\
+\\
+$\textbf{Prove there is infinite prime}$\\
+\\
+$\textbf{Prove all the eigeivalues}\quad  \lambda \geq  0  \textbf{ if the matrix is symmetic}$\\
+\\
+$\textbf{If the determine of matrix } \det{A} > 0 \iff \textbf{the matrix is invertable}$\\
+\\
+Efficient Algorithm to compute Fibonacci Number \\
+Fibonacci Sequence   
+$F_{n} = F_{n} + F_{n-1}$ with $F_{0} = 0$
+$F_{1} = 1$ \\
+(1) Navier algorithm with recursion in $O(2^n)$ \\
+(2) Use Dynamic Algorithm in $O(n)$\\
+(3) Use matrix with repeated squaring to compute Fibonacci Sequence in $O(\log{n})$
+\[\left(\begin{array}{cc} F_{n+1} & F_{n} \\ F_{n} & F_{n-1} \end{array} \right)^n =  \left(\begin{array}{cc}1 & 1 \\ 1 & 0 \end{array} \right)^n \]
+\\
+\begin{flushleft}
+1\\
+1 + 2\\
+1 + 3 + 5 \\
+1 + 3 + 5 + ... + (2k+1)\\
+$S = \sum_{k=1}^{n} (2k-1)$ \\
+$S = \sum_{k=1}^{n} 2k - \sum_{k=1}^{n} 1$ \\
+$S = 2(\sum_{k=1}^{n} k) - n $ \\
+$S = 2 \frac{(1+n)n}{2} - n$ \\
+$S = (1+n)n - n$ \\
+$S = n^2 $ \\
+\end{flushleft}
+\end{document}

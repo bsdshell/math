@@ -1,0 +1,47 @@
+Def 12 In an oriental manifold 
+
+the inserseciton # is independent of how we deform will be proved
+
+
+Generelization 13
+non-orientable situations(e.g. Ng) we can do the 
+
+Theorem 16
+L insert K = (-1)^kl K insert L  where k = dim(K), L = dim(L)
+proof: 
+
+Theorem 17
+Let K, L be oriented, closed(compact without boundry) submanifolds
+in an oriented manifold M, their intersection number is isotopy-invarient:
+ If K_0 iso K_1 and L_o iso L_1
+ then K_0 iso L_0 = K_1 iso L_1
+
+Remark 19, the closedness hypothesis in Thm 17 is essential 
+for submanfold with boundry, the intersection number may not be isotopy-invariant
+
+          ----------------
+         /              /   circle, circle can be moved away from the plan
+        /              /
+       /              /
+       ----------------
+
+Theorem 21, If closed K, and L can be disjoined by isotopy, then K inter L = intersection #
+the converse is false 
+
+   Sign_2 with closed circle on the top
+
+Cor 24.[generalization of Jordan curve theorem]
+In R^m, every close hypersurface[of dim(m-1)] separated R^m into two parts 
+
+Fixed point theorem
+Suppose we need to solve some equation g(x) = 0, this can be algebraic, finite-difference, ordinary/partial differential...
+
+Put f(x) = g(x) + x
+    g(x) = 0 imply f(x) = x
+Solve any equation is equivalent to finding fixed pt of some map
+
+Conventions: Given a manifold M oriented locally of by a basis of tangent vector e1,...,em and a map f:M->M
+the diagonal Delta_M = {(x, x) in M}
+
+(e1...e1)^t ...(em...em)^t
+
