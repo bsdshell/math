@@ -1,24 +1,57 @@
 \documentclass[10pt]{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
 \begin{document}
-$$\textbf{Definition of Monoid } $$
-$$\textbf{A monoid is a triple } (A, \otimes, \overline{1})$$
-$$1. \otimes \textbf{ is closed associative binary operator on the set A}$$
-$$2. \overline{1} \textbf{ is identity element for } \oplus$$
-$$\forall\quad a, b, c \in A$$
-$$ a \otimes b  \otimes c = a \otimes (b \otimes c) $$
-$$ a \otimes \overline{1} = \overline{1} \otimes a =  a$$
+$\textbf{Definition of Monoid } $\\
+$\textbf{A monoid is a triple } (A, \otimes, \overline{1})$\\
+$1. \otimes \textbf{ is closed associative binary operator on the set A}$\\
+$2. \overline{1} \textbf{ is identity element for } \oplus$\\
+$\forall\quad a, b, c \in A$\\
+$ a \otimes b  \otimes c = a \otimes (b \otimes c) $\\
+$ a \otimes \overline{1} = \overline{1} \otimes a =  a$\\
 \\
+
+$\textbf{Definition of Ring}$\\
+$\text{Let a, b, c }\in  \mathbb{R}$\\
+$\text{There are addition and multiplication operations and satisfy associative and distributive laws}$\\
+$a*b*c = a*(b*c) \textit{ and }  a*(b+c) = a*b + a*c$\\
+$\text{There are additive identity } \textbf{ 0 } \text{and multiplicative identity } \textbf{ 1 }$\\
+$\textbf{0} + a = a \text{ and }1*a = a$\\
+$\text{There exists additive inverse } -a \text{ such that } a + (-a) = 0$\\
+
+$\textbf{Definition of Ring}$\\
+$\text{let a, b, c } \in \mathbb{R}$\\
+$\text{There are two binary operations addition and multiplication and satisfy }$\\
+
+Associative Law\\
+$ a \times b \times c = a \times (b \times c) $\\
+
+Distritutive Law\\
+$a \times (b + c) = a \times b + a \times c $\\
+
+Additive inverse\\
+For all a in $\mathbb{R}$, there exists -a such that\\
+$a + (-a) = 0$\\
+
+Multiplicative identity \\
+For all a in $\mathbb{R}$, there exist 1 such that\\
+$1a = a$ \\
+
+
+
+
 $\textbf{If }  \gcd(a, b) = 1 \textbf{ and }  a \vert bc \quad$  $\Rightarrow a \vert c$ \\
 $\textbf{Proof}$ \\
 $\gcd(a, b) = 1  $\\
-$\Rightarrow ma+nb = 1\quad m, n \in \mathbf{N} $ \\
+$\Rightarrow ma+nb = 1\quad m, n \in \mathbb{N} $ \\
 $\Rightarrow mac + nbc = c$ \\
-$a \vert bc \Rightarrow ak = bc \quad k \in \mathbf{N} $ \\
+$a \vert bc \Rightarrow ak = bc \quad k \in \mathbb{N} $ \\
 $\Rightarrow mac + n(ak)=c \quad    (ak=bc) $ \\
 $\Rightarrow a(mc + nk) = c$  \\
 $\Rightarrow a \vert c $ \\
 \\
-$\textbf{If } \gcd(a, b) = 1 \Rightarrow ma + nb = 1 \quad m, n \in \mathbf{N}$\\
+$\textbf{If } \gcd(a, b) = 1 \Rightarrow ma + nb = 1 \quad m, n \in \mathbb{N}$\\
 $\textbf{Proof}$\\
 \\
 $\textbf{Prove there is infinite prime}$\\
@@ -36,11 +69,16 @@ $F_{1} = 1$ \\
 (3) Use matrix with repeated squaring to compute Fibonacci Sequence in $O(\log{n})$
 \[\left(\begin{array}{cc} F_{n+1} & F_{n} \\ F_{n} & F_{n-1} \end{array} \right)^n =  \left(\begin{array}{cc}1 & 1 \\ 1 & 0 \end{array} \right)^n \]
 \\
+\newpage
+
 \begin{flushleft}
+Show the sum of odd number are square number\\
+\medskip
 1\\
-1 + 2\\
+1 + 3\\
 1 + 3 + 5 \\
-1 + 3 + 5 + ... + (2k+1)\\
+1 + 3 + 5 + ... + (2k+1) \\
+\medskip
 $S = \sum_{k=1}^{n} (2k-1)$ \\
 $S = \sum_{k=1}^{n} 2k - \sum_{k=1}^{n} 1$ \\
 $S = 2(\sum_{k=1}^{n} k) - n $ \\
@@ -48,4 +86,206 @@ $S = 2 \frac{(1+n)n}{2} - n$ \\
 $S = (1+n)n - n$ \\
 $S = n^2 $ \\
 \end{flushleft}
+composition function \\
+$g \circ f \circ h $ \\
+$g \circ f \colon A\to B$ \\
+
+Find the sum of sequence of squares\\
+
+$\sum_{k=1}^{n}((k+1)^3 - k^3) = \sum_{k=1}^{n}(k^2+1+2k)(k+1) - k^3$
+
+$\sum_{k=1}^{n} (k^3+k+2k^2+k^2+1+2k)-k^3$
+
+$\sum_{k=1}^{n} (k^3+3k^2+3k+1)-k^3$
+
+$\sum_{k=1}^{n} (3k^2+3k+1)$ \\
+
+$\sum_{k=1}^{n} ((k+1)^3-k^3) = \sum_{k=1}^{n} (k+1)^3 - \sum_{k=1}^{n} k^3$
+
+$\Rightarrow 2^3 + 3^3 + ... + n^3 + (n+1)^3 - (1 + 2^3 + 3^3 + ... + n^3) = (n+1)^3 -1$
+
+$\Rightarrow  \sum_{k=1}^{n}(k+1)^3 - \sum_{k=1}^{n}k^3 =(n+1)^3 - 1$
+
+$\Rightarrow (n+1)^3-1 = \sum_{k=1}^{n}(3k^2+3k+1) $
+
+$\Rightarrow (n+1)^3-1 = 3\sum_{k=1}^{n} k^2 +  3\sum_{k=1}^{n} k + n $
+
+$\Rightarrow (n+1)^3-1 = 3\sum_{k=}^{n} k^2 + (n+1) n \frac{3}{2} + n$
+
+$\Rightarrow (n+1)^3-1 -  (n+1) n \frac{3}{2} - n= 3\sum_{k=1}^{n} k^2 $
+
+$\Rightarrow (n+1)((n+1)^2-n \frac{3}{2})-(n+1) = 3\sum_{k=1}^{n} k^2$
+
+$\Rightarrow (n+1)( (n+1)^2 -n\frac{3}{2}-1) = 3\sum_{k=1}^{n} k^2 $	
+
+$\Rightarrow (n+1)( n^2+1+2n-n\frac{3}{2} - 1) = 3\sum_{k=1}^{n} k^2 $	
+
+$\Rightarrow (n+1)(n^2 + \frac{1}{2}n) = \sum_{k=1}^{n} k^2$
+
+$\Rightarrow \frac{1}{2}(n+1)(2n^2+n)=\sum_{k=1}^{n} k^2$
+
+$\Rightarrow \frac{1}{6}n(n+1)(2n+1) = \sum_{k=1}^{n} k^2 $
+
+\pagebreak
+Definition of Group\\
+$\text{Let a, b, c} \in \mathbb{G} $\\
+There is binary operation * and satisfy\\
+
+Closure Law\\
+$ a*b \in \mathbb{G} $\\
+
+Associative Law\\
+$ a*b*c = a*(b*c)$\\
+
+Identity\\
+$ \exists \mathit{e} \in \mathbb{G} \text{ such that } \mathit{e}*a = a*\mathit{e} \in \mathbb{G}$\\
+
+Inverse\\
+$ \text{If a } \in \mathbb{G}, \exists a^{-1} \in \mathbb{G} \text{ such that } a*a^{-1} = e $\\
+
+Definition of Vector Space\\
+$\text{Let }\vec{u}, \vec{v}, \vec{w} \in \vec{V} \text{ and scalars } \alpha, \beta \in \mathbb{F}$\\
+Closure\\
+$\vec{u} + \vec{v} \text{ and } \in \vec{V}$\\
+Associative Law\\
+$\vec{u} + \vec{v} + \vec{w} = \vec{u} + (\vec{v} + \vec{w})$\\
+Commutative Law\\
+$\vec{u} + \vec{v} = \vec{v} + \vec{u} $\\
+Identity element of addition\\
+$\vec{0} \in \vec{V} \text{ such that } \vec{0} + \vec{u} = \vec{u}$\\
+Inverse element of addition\\
+$\exists -\vec{u} \text{ such that } \vec{u} + (-\vec{u}) = \vec{0}$\\
+Identity element of scalar multiplication\\
+$\exists \mathit{1} \in \mathbb{F} \text{ such that } \mathit{1}\vec{u} = \vec{u}$\\
+Distributivity of scale multiplication with respect to vector addition\\
+$\alpha(\vec{u} + \vec{v}) = \alpha\vec{u} + \alpha\vec{v}$\\
+Distributivity of scale multiplication with respect to field addition\\
+$(\alpha + \beta)\vec{u} = \alpha\vec{u} + \beta\vec{u}$\\
+
+\pagebreak
+Definition of Affine Space\\
+An affine space is a set of points that admits free transitive action of a vector space $\vec{V}$ That is, there is a map $X \times \vec{V} \rightarrow X:(x, \vec{v}) \mapsto x + \vec{v}$, called translation by a vector $\vec{v}$, such that\\
+1. Addition of vectors corresponds to composition of translation, i.e., for all $x \in X \text{ and } \vec{u}, \vec{v} \in \vec{V}, (x + \vec{u}) + \vec{v} = x + (\vec{u} + \vec{v})$\\ 
+2. The zero vector $\vec{0}$ acts as the identity vector, i.e., for all $x \in X, x + \vec{0} = x$\\
+3. The action is transitive, i.e., for all $x, y \in X, \text{ exists } \vec{v} \in \vec{V} \text{ such that } y = x + \vec{v}$\\
+4. The dimension of X is the dimension of vector space translations, $\vec{V}$\\\\
+Or There is unique map\\
+$X \times X \rightarrow \vec{V}:(x, y) \mapsto y - x \text{ such that } y = x + (y - x) \text{ for all }x, y \in X$
+It furthermore satifies\\ 
+1. For all $x, y, z \in X$, z - x = (z - y) + (y - x)\\
+2. For all $x, y, \in X$ and $\vec{u}, \vec{v} \in \vec{V}$, $ (y + \vec{v}) - (x + \vec{u}) = (y - x) + (\vec{v} - \vec{u})$\\
+3. For all $x \in X, x - x = \vec{0}$\\
+4. For all $x, y \in X, y - x = -(x - y)$\\
+
+Affine Space from linear system equation\\
+Consider an $(m \times n)$ linear sytem equations\\\\
+$\sum_{k=1}^{n} a_{i k} x_{k} = c_{i}, (1 \leq i \leq m) \quad\quad\quad \text{(1)}$\\\\
+where $d = n - rank(M), c_{i} \ne \vec{0} \in \mathbb{R}^{m}$\\
+When the system has at least one solution $x_{p}$ then the full set of solution is a d-dimension affine space
+$A \subset \mathbb{R}^{n}$\\ 
+Since $x_{p} \in A, \text{ we can declare point } x_{p} \text{ as origin of } A$ and then introduct A coordinates as follows:homogenous system\\
+
+$\sum_{k=1}^{n} a_{i k} x_{k} = \vec{0} (1 \leq i \leq m)$\\\\
+$\Rightarrow dim(Ker(M)) = d \quad \text{(Rank Theorem)}$\\
+$\text{(1) has d-linear independent solution } \vec{b_{j}} \in \mathbb{R}^{n} \quad\quad (1 \leq j \leq d)$\\
+$\text{Affine Space }\mathit{A}$ can be written as\\\\ 
+$A = \Big\{ x_{p} + \sum_{j=1}^{d}\alpha_{j}\vec{b_{j}} \quad \vert \quad \alpha_{j} \in \mathbb{R} \quad\quad (1 \leq j \leq d)\Big\} $\\\\
+$\text{The } \alpha_{j} \text{ can be served as coordinates in A, so that A looks as it were a d-dimension coordiate space.}$\\ 
+$\text{But note that addition(+) in the space refers to the chosen point } x_{p}, \text{ and not to the origin of the base vector space}$\\
+
+$
+        \begin{bmatrix}
+        1 & 2 & 3 \\
+        4 & 5 & 6    
+        \end{bmatrix}
+        \left[
+        \begin{array}{c}
+        x_1 \\
+        x_2 \\
+        x_3 
+        \end{array}
+        \right] = 
+        \left[ 
+        \begin{array}{c}
+        1 \\ 
+        2 
+        \end{array}
+        \right]
+$
+\newpage
+
+$\text{Theorem 1}$\\
+
+The image of transformation is spanned by the image of the any basis of its domain. For $T:\vec{V} \rightarrow \vec{W}, \text{ if } \beta=\{ \vec{b_1},\vec{b_2},...,\vec{b_n} \} \text{ is a basis of }\vec{V}, 
+\text{ then }T(\beta) = \{ T(\vec{b_1}), T(\vec{b_2}), ... ,T(\vec{b_n})\} \text{ spans the image of }T$\\
+
+Proof\\
+For all $\vec{v} \in \vec{V}, \vec{v} = \alpha_1\vec{b_1} + \alpha_2\vec{b_2} + ... + \alpha_n\vec{b_n}$\\
+$\Rightarrow T(\vec{v}) = T(\alpha_1\vec{b_1} + \alpha_2\vec{b_2} + ... + \alpha_n\vec{b_n})$\\
+$\Rightarrow T(\vec{v}) = \alpha_1 T(\vec{b_1}) + \alpha_2 T(\vec{b_2}) + ... + \alpha_n T(\vec{b_n})$\\
+$\Rightarrow \{ T(\vec{b_1}), T(\vec{b_2}),...,T(\vec{b_n})\} \text{ spans the image of }T$\\
+
+$\text{Rank Theorem}$\\
+If the domain is finite dimension, then the dimension of domain is the sum of rank and nullity of the transformation\\
+
+$\text{Let } T:\vec{V} \rightarrow \vec{W} \text{ be a linear transformation },\text{let n be the dimension of }\vec{V},$\\
+$\text{let k be nullity of }T \text{ and let k be the rank of }T$\\
+$\text{Show } n = k + r$\\
+
+$\text{Let }\beta = \{ \vec{b_1}, \vec{b_2},...,\vec{b_k}\} \text{ be the basis of kernal of }T, \text{ the basis can be extended to } \gamma = \{ \vec{b_1}, \vec{b_2},...,\vec{b_k}, \vec{b_{k+1}},...,\vec{b_n}\}$\\
+$\text{let }\vec{v} \in \vec{V} \Rightarrow \vec{v} = \alpha_1 \vec{b_1} + \alpha_2 + \vec{b_2} +,..., + \alpha_k \vec{b_k} + \alpha_{k+1}\vec{b}_{k+1}+,...,+\alpha_{n}\vec{b_n}$\\
+$\text{Let }T(\vec{v}) = T(\alpha_1 \vec{b_1} + \alpha_2 + \vec{b_2} +,..., + \alpha_k \vec{b_k} + \alpha_{k+1}\vec{b}_{k+1}+,...,+\alpha_{n}\vec{b_n}) = \vec{0}$\\
+$\Rightarrow \vec{v} = \alpha_1 \vec{b_1} + \alpha_2 + \vec{b_2} +,..., + \alpha_k \vec{b_k} + \alpha_{k+1}\vec{b}_{k+1}+,...,+\alpha_{n}\vec{b_n} \in \ker(T) \quad\quad \text{(1)}$\\
+$\because \vec{v} = \sigma_1 \vec{b_1} + \sigma_2 + \vec{b_2} +,..., + \sigma_k \vec{b_k} \in \ker(T) \quad\quad \text{(2)}$\\
+$(1) - (2) \Rightarrow \vec{0} = (\alpha_1-\sigma_1)\vec{b_1} + (\alpha_2 - \sigma_2)\vec{b_2}+,...,+ (\alpha_k - \sigma_k)\vec{b_k}+   \alpha_{k+1}\vec{b}_{k+1}+,...,+\alpha_{n}\vec{b_n} $\\
+$\because \vec{b}_{1}, \vec{b}_{2},...,\vec{b}_{k},\vec{b}_{k+1}, \vec{b}_{k+2},...,\vec{b_n} \text{ are linearly independent}$\\
+$\therefore \alpha_{k+1}, \alpha_{k+2}, ... , \alpha_{n} \text{ are all zero} \quad\quad \text{(3)}$\\
+$T(\vec{v}) = T(\alpha_1 \vec{b_1}) + T(\alpha_2 \vec{b_2}) +,..., + T(\alpha_k \vec{b_k}) + T(\alpha_{k+1}\vec{b}_{k+1})+,...,+T(\alpha_{n}\vec{b_n}) = \vec{0}$\\
+$T(\vec{v}) = \alpha_1 T(\vec{b_1}) + \alpha_2 T(\vec{b_2}) +,..., + \alpha_k T(\vec{b_k}) + \alpha_{k+1}T(\vec{b}_{k+1})+,...,+\alpha_{n}T(\vec{b_n}) = \vec{0}$\\
+$\because \beta = \{ \vec{b_1}, \vec{b_2},...,\vec{b_k}\} \text{ is the basis of kernal of }T$\\
+$\therefore T(\vec{b_1}) = \vec{0},..., T(\vec{b_k}) = \vec{0}$\\
+$\therefore T(\vec{v}) = \alpha_{k+1}T(\vec{b}_{k+1})+,...,+\alpha_{n}T(\vec{b_n}) = \vec{0} \quad\quad \text{(4)}$\\
+$\text{(3) and (4)} \Rightarrow \{ T(\vec{b}_{k+1}), T(\vec{b_{k+2}}), ... , T(\vec{b_{n}}) \} \text{ are linearly independent}$\\
+$\Rightarrow \dim(\vec{V}) = \text{ nullity(T) } + \text{ rank(T) } \text{ or }$\\
+$\Rightarrow \dim(\vec{V}) = \dim(\ker(T)) + \dim(\text{img(T)}) $\\
+$\Rightarrow n = k + r \quad \square$
+
+Affine plane\\
+Affine plane is a set, whose elements are called points, and a set of subset, called lines, satifying the following three axioms:\\
+1. Given two distinct points P and Q, there is one and only one containing both P and Q.\\
+2. Given a line l, and a point P not in l, there is one and only one line m which is parallel to l and which passes through P.\\
+3. There exists three non-collinear points.\\ 
+
+Projective plane\\
+A projective plane $\mathbb{S}$ is a set, whose elements are called points, and a set of subset, called lines, satifying the following four axioms.\\
+1. Two distinct points meets P, Q of S lie on one and only one line.\\ 
+2. Any two lines meet in at least one point.\\
+3. There exist three non-colinear points\\
+4. Every line contains at least three points.\\
+
+\noindent
+Definition of Inner Product\\
+
+\noindent
+Positivity\\
+$\langle\vec{v}, \vec{v}\rangle \geq 0$\\
+$\langle \vec{v} , \vec{v} \rangle = \vec{0} \iff \vec{v} = \vec{0}$\\
+
+\noindent
+Bilinearity\\
+$\langle c_{1}\vec{v_1} + c_{2}\vec{v_2}, \vec{v_3}\rangle = c_{1}\langle \vec{v_1}, \vec{v_3}\rangle + c_{2}\langle\vec{v_2}, \vec{v_3} \rangle$\\
+
+\noindent
+Conjugate Symmetic\\
+$\langle \vec{v_1}, \vec{v_2} \rangle = \overline{\langle \vec{v_2}, \vec{v_1} \rangle}$
+
+\pagebreak
+Calculate the Excel Sheet Row number algorithm
+Latex Environment has different mode\\
+{\it Math mode}\\
+{\it Text mode}\\
+{\it Command mode}\\
+
+
+
 \end{document}
