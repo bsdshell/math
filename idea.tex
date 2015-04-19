@@ -248,13 +248,21 @@ $\therefore T(\vec{v}) = \alpha_{k+1}T(\vec{b}_{k+1})+,...,+\alpha_{n}T(\vec{b_n
 $\text{(3) and (4)} \Rightarrow \{ T(\vec{b}_{k+1}), T(\vec{b_{k+2}}), ... , T(\vec{b_{n}}) \} \text{ are linearly independent}$\\
 $\Rightarrow \dim(\vec{V}) = \text{ nullity(T) } + \text{ rank(T) } \text{ or }$\\
 $\Rightarrow \dim(\vec{V}) = \dim(\ker(T)) + \dim(\text{img(T)}) $\\
-$\Rightarrow n = k + r \quad \square$
+$\Rightarrow n = k + r \quad \square$\\
 
 Affine plane\\
 Affine plane is a set, whose elements are called points, and a set of subset, called lines, satifying the following three axioms:\\
 1. Given two distinct points P and Q, there is one and only one containing both P and Q.\\
 2. Given a line l, and a point P not in l, there is one and only one line m which is parallel to l and which passes through P.\\
 3. There exists three non-collinear points.\\ 
+
+A coordinate system in an affine space $(\mathbf{X}, \mathbf{V}) \text{ consists of a point } \mathbf{O} \in \mathbf{X}$ is called origin, and basis 
+$\vec{v_1},...,\vec{v_n}\quad\text{ for } \vec{V} \text{ Any point }\mathbf{x} \in \mathbf{X} \text{ can be written as}$\\
+
+$\mathbf{x} - \mathbf{O} = \mathbf{x} - \mathbf{O}$\\
+$\Rightarrow \mathbf{x} = \mathbf{O} + (\mathbf{x} - \mathbf{O}) = \mathbf{O} + \sum_{k=1}^{n}\mathit{x_k}\vec{v_k}$\\
+$\text{where the numbers }\mathit{x_1},...,\mathit{x_n}\text{ are the coordinates for vector }\mathbf{x} - \mathbf{O}\text{ with respect to the basis }\vec{v_1},...\vec{v_n}.$\\
+$\text{They are now also called the coordinates for }\mathbf{x} \text{ with respect to the coordinate system }\mathbf{O}, \vec{v_1},...,\vec{v_n}$\\
 
 Projective plane\\
 A projective plane $\mathbb{S}$ is a set, whose elements are called points, and a set of subset, called lines, satifying the following four axioms.\\
@@ -264,8 +272,17 @@ A projective plane $\mathbb{S}$ is a set, whose elements are called points, and 
 4. Every line contains at least three points.\\
 
 \noindent
-Definition of Inner Product\\
+Manifold\\
+$\text{An subset }\mathbf{S} \text{ of } \mathbb{R}^{m} \text{ is called a manifold of dimension of d if every point p of }\mathbf{S} \text{ has a neighbourhood in }$
+$\mathbf{S}\text{ which is homeomorphic to an open set of }\mathbb{R}^{d}$\\
 
+\noindent
+Homeomorphrism\\
+$\text{Let S be a subset of }\mathbb{R}^{m} \text{ and sp be the subset of }\mathbb{R}^{n}. \text{ A map } \mathit{f}: \mathbb{R}^{m} \mapsto \mathbb{R}^{n}$\\
+$\text{ is called homeomorphism if }\mathit{f} \text{ is continuous and bijective and }\mathit{f}^{-1} \text{ is continuous}$\\
+
+\noindent
+Definition of Inner Product
 \noindent
 Positivity\\
 $\langle\vec{v}, \vec{v}\rangle \geq 0$\\
@@ -278,6 +295,12 @@ $\langle c_{1}\vec{v_1} + c_{2}\vec{v_2}, \vec{v_3}\rangle = c_{1}\langle \vec{v
 \noindent
 Conjugate Symmetic\\
 $\langle \vec{v_1}, \vec{v_2} \rangle = \overline{\langle \vec{v_2}, \vec{v_1} \rangle}$
+
+
+\noindent
+Proof  Cauchy-Schwarz Inequality by picture\\
+$\vert a \cdot b \vert \leq \lVert a \lVert \lVert b \lVert$
+
 
 \pagebreak
 Calculate the Excel Sheet Row number algorithm
