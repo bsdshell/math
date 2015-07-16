@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{centernot}
 \begin{document}
 $\textbf{Definition of Monoid } $\\
 $\textbf{A monoid is a triple } (A, \otimes, \overline{1})$\\
@@ -189,7 +190,7 @@ $\sum_{k=1}^{n} a_{i k} x_{k} = \vec{0} (1 \leq i \leq m)$\\\\
 $\Rightarrow dim(Ker(M)) = d \quad \text{(Rank Theorem)}$\\
 $\text{(1) has d-linear independent solution } \vec{b_{j}} \in \mathbb{R}^{n} \quad\quad (1 \leq j \leq d)$\\
 $\text{Affine Space }\mathit{A}$ can be written as\\\\ 
-$A = \Big\{ x_{p} + \sum_{j=1}^{d}\alpha_{j}\vec{b_{j}} \quad \vert \quad \alpha_{j} \in \mathbb{R} \quad\quad (1 \leq j \leq d)\Big\} $\\\\
+$A = \Big\{ x_{p} + \sum_{j=1}^{d}\alpha_{j}\vec{b_{j}} \quad \mid \quad \alpha_{j} \in \mathbb{R} \quad\quad (1 \leq j \leq d)\Big\} $\\\\
 $\text{The } \alpha_{j} \text{ can be served as coordinates in A, so that A looks as it were a d-dimension coordiate space.}$\\ 
 $\text{But note that addition(+) in the space refers to the chosen point } x_{p}, \text{ and not to the origin of the base vector space}$\\
 
@@ -214,20 +215,21 @@ $
 $
 \newpage
 
-$\text{Theorem 1}$\\
-
+\noindent
+Theorem 1\\
 The image of transformation is spanned by the image of the any basis of its domain. For $T:\vec{V} \rightarrow \vec{W}, \text{ if } \beta=\{ \vec{b_1},\vec{b_2},...,\vec{b_n} \} \text{ is a basis of }\vec{V}, 
 \text{ then }T(\beta) = \{ T(\vec{b_1}), T(\vec{b_2}), ... ,T(\vec{b_n})\} \text{ spans the image of }T$\\
 
+\noindent
 Proof\\
 For all $\vec{v} \in \vec{V}, \vec{v} = \alpha_1\vec{b_1} + \alpha_2\vec{b_2} + ... + \alpha_n\vec{b_n}$\\
 $\Rightarrow T(\vec{v}) = T(\alpha_1\vec{b_1} + \alpha_2\vec{b_2} + ... + \alpha_n\vec{b_n})$\\
 $\Rightarrow T(\vec{v}) = \alpha_1 T(\vec{b_1}) + \alpha_2 T(\vec{b_2}) + ... + \alpha_n T(\vec{b_n})$\\
 $\Rightarrow \{ T(\vec{b_1}), T(\vec{b_2}),...,T(\vec{b_n})\} \text{ spans the image of }T$\\
 
-$\text{Rank Theorem}$\\
+\noindent
+Rank Theorem\\
 If the domain is finite dimension, then the dimension of domain is the sum of rank and nullity of the transformation\\
-
 $\text{Let } T:\vec{V} \rightarrow \vec{W} \text{ be a linear transformation },\text{let n be the dimension of }\vec{V},$\\
 $\text{let k be nullity of }T \text{ and let k be the rank of }T$\\
 $\text{Show } n = k + r$\\
@@ -250,12 +252,14 @@ $\Rightarrow \dim(\vec{V}) = \text{ nullity(T) } + \text{ rank(T) } \text{ or }$
 $\Rightarrow \dim(\vec{V}) = \dim(\ker(T)) + \dim(\text{img(T)}) $\\
 $\Rightarrow n = k + r \quad \square$\\
 
+\noindent
 Affine plane\\
 Affine plane is a set, whose elements are called points, and a set of subset, called lines, satifying the following three axioms:\\
 1. Given two distinct points P and Q, there is one and only one containing both P and Q.\\
 2. Given a line l, and a point P not in l, there is one and only one line m which is parallel to l and which passes through P.\\
 3. There exists three non-collinear points.\\ 
 
+\noindent
 A coordinate system in an affine space $(\mathbf{X}, \mathbf{V}) \text{ consists of a point } \mathbf{O} \in \mathbf{X}$ is called origin, and basis 
 $\vec{v_1},...,\vec{v_n}\quad\text{ for } \vec{V} \text{ Any point }\mathbf{x} \in \mathbf{X} \text{ can be written as}$\\
 
@@ -264,6 +268,7 @@ $\Rightarrow \mathbf{x} = \mathbf{O} + (\mathbf{x} - \mathbf{O}) = \mathbf{O} + 
 $\text{where the numbers }\mathit{x_1},...,\mathit{x_n}\text{ are the coordinates for vector }\mathbf{x} - \mathbf{O}\text{ with respect to the basis }\vec{v_1},...\vec{v_n}.$\\
 $\text{They are now also called the coordinates for }\mathbf{x} \text{ with respect to the coordinate system }\mathbf{O}, \vec{v_1},...,\vec{v_n}$\\
 
+\noindent
 Projective plane\\
 A projective plane $\mathbb{S}$ is a set, whose elements are called points, and a set of subset, called lines, satifying the following four axioms.\\
 1. Two distinct points meets P, Q of S lie on one and only one line.\\ 
@@ -280,6 +285,36 @@ $\mathbf{S}\text{ which is homeomorphic to an open set of }\mathbb{R}^{d}$\\
 Homeomorphrism\\
 $\text{Let S be a subset of }\mathbb{R}^{m} \text{ and sp be the subset of }\mathbb{R}^{n}. \text{ A map } \mathit{f}: \mathbb{R}^{m} \mapsto \mathbb{R}^{n}$\\
 $\text{ is called homeomorphism if }\mathit{f} \text{ is continuous and bijective and }\mathit{f}^{-1} \text{ is continuous}$\\
+
+
+\noindent
+Definition Open and Close Sets\\
+1. $\mathbf{S}$ is said to be open set if every point of $\mathbf{S}$ is an interior of $\mathbf{S}$\\
+2. $\mathbf{S}$ is said to be closed set if $\mathbb{R}\setminus\mathbf{S}$ is open\\  
+
+\noindent
+Proposition\\
+1. $\mathbf{S} \text{ is open if there exists } \delta > 0 \text{ such that } (\mathit{s} - \delta, \mathit{s} + \delta) \subseteq \mathbf{S}$\\
+2. $\mathbf{S} \text{ is open if any }\mathit{s} \in \mathbf{S} \text{ there exists a neighbourhood of }\mathit{s} \text{ included in }\mathbf{S}$\\  
+
+
+\noindent
+Terminology\\
+$\mathcal{M} \text{ Set (ZFC) book}$\\
+$\mathcal{Q} \text{ topology =: set of open set}$\\
+$(\mathcal{M}, \mathcal{Q}) \text{ toplogy space}$\\
+$\mathcal{U} \in \mathcal{Q} \iff \text{ all } \mathcal{U} \subseteq \mathcal{M} \text{ and open set}$\\
+$\mathcal{M} \setminus \mathcal{A} \iff   \text{ all }    \mathcal{A} \subseteq \mathcal{M} \text{ closed set}$\\
+$\text{open } \centernot\implies \text{ closed}$\\
+$\text{open } \centernot\impliedby \text{ closed}$\\
+
+\noindent
+Definition of topology\\
+$\text{Let }\mathcal{M} \text{ be a set. A topology }\mathcal{Q} \text{ is a subset } \mathcal{Q} \subseteq \mathcal{P}(\mathcal{M})$\\
+Satisfy\\
+$1. \varnothing\subseteq \mathcal{Q}, \mathcal{M} \subseteq \mathcal{Q}$\\
+$2. \mathcal{U} \subseteq \mathcal{Q},   \mathcal{V} \subseteq \mathcal{Q} \implies \mathcal{U} \cap \mathcal{V} \in \mathcal{Q}$\\
+$3. \mathcal{U} \in \mathcal{Q} \implies \bigcup_{\alpha \in \mathcal{A}} \mathcal{U}_\alpha \in \mathcal{Q}$\\
 
 \noindent
 Definition of Inner Product
@@ -308,6 +343,109 @@ Latex Environment has different mode\\
 {\it Math mode}\\
 {\it Text mode}\\
 {\it Command mode}\\
+
+Elliptic Curve and Group Structure Conic Curve\\
+$
+    \begin{bmatrix}
+    x & y & z 
+    \end{bmatrix}
+    \begin{bmatrix}
+    a & b & c \\
+    d & e & f \\   
+    g & h & i \\   
+    \end{bmatrix}
+    \left[
+    \begin{array}{c}
+    x \\
+    y \\
+    z 
+    \end{array}
+    \right] = 
+    \left[ 
+    \begin{array}{c}
+    0  
+    \end{array}
+    \right]
+$\\
+$ ax^{2} + ey^{2} + iz^{2} + (b+d)xy + (c+g)xz + (f+h)yz = 0$\\
+\\
+$\mathit{(x, y, z)} = \mathit{(x/z, y/z, 1)} (z \neq 0)$\\ 
+\\
+
+\noindent
+$
+\begin{array}{lcl}
+ax^{2} + ey^{2} + (b+d)xy + (c+g)x + (f+h)y + i &=& 0\\
+ax + by + c &=& 0
+\end{array}
+$\\
+sub (1) into (2) 
+$\Rightarrow ax^{2} + bx + c = 0$\\
+$\Rightarrow x = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a}$
+\\
+
+Exponential backoff algorithm\\
+\\
+$\frac{1}{N+1} \sum_{i=1}^{k}i$\\
+For example, the expected backoff time for the third collision, one could 
+calculate the maximum backoff time, N\\
+$N = 2^{c} - 1 (c = 3)$
+$N = 7$\\
+Calculate the mean of backoff time for the third collision(c=3)\\
+$\mathbf{E(c)} = \frac{1}{N+1}\sum_{i=0}^{N} i$\\
+$\mathbf{E(c)} = \frac{1}{N+1}\sum_{i=0}^{N} \Rightarrow \frac{1}{N+1} \frac{N(N+1)}{2} = \frac{N}{2}$\\
+$\mathbf{E(3)} = \frac{1}{7+1}\sum_{i=0}^{N} i = \frac{1}{8}(0+1+2+3+4+5+6+7) = \frac{28}{8}$\\
+$\mathbf{E(3)} = 3.5$\\
+
+Prove Square root of two is irrational
+$\sqrt{2} \notin \mathbb{Q}$\\
+$\text{Assume } \sqrt{2} \in \mathbb{Q}$\\
+$\text{let }n = min\{ n \in \mathbb{N} \mid n*\sqrt{2} \in \mathbb{N}\}$\\
+$\Rightarrow n*(\sqrt{2} - 1)*\sqrt{2} \in \mathbb{Q}$\\
+$\because \sqrt{2} - 1 < 1$\\
+$\Rightarrow n*(\sqrt{2} - 1)*\sqrt{2} < n*\sqrt{2}$\\
+$\Rightarrow n*(\sqrt{2} - 1) < n \text{ such as } n*(\sqrt{2} - 1)*\sqrt{2} \in \mathbb{N}$\\
+$\Rightarrow \text{This contracts our assumption } \quad \square$\\
+
+\pagebreak
+\noindent
+Geometric proof: square root of two is irrational\\
+$\text{Given an isosceles right triangle from above and let } \gcd(a, b)=1, \text{ from Pythagorean theorem}$\\
+$\Rightarrow a^2 = b^2 + b^2$\\
+$\Rightarrow \sqrt{2} = \frac{a}{b}$\\
+
+singular point on affine plane curve\\
+$\text{If } p \in (x, y) \text{ and } \frac{df}{dx}, \frac{df}{dy} \text{ are undefined on } p \in (x, y), \text{ then } p\in (x, y) \text{ is singular point}$\\
+
+
+Eisenstein series\\
+$L = [w_1, w_2] \in \mathbb{C}, G(L) = \sum_{w\in L\setminus \{0, 0\}} \frac{1}{w^k}$\\
+$\text{Let lattices } L=[1, \tau] \text{ and parametrized by }\tau  \text{ in the upper half plane } \mathbb{H} = \{ z \in\mathbb{C} : \Im(z) > 0 \} $\\
+$G(L) = G([1, \tau]) =G(\tau) = \sum_{m, n \in \mathbb{Z}}' \frac{1}{(m+n\tau)^k}$\\
+
+\noindent
+$\text{Show } G_{k}(\tau + 1) = G_{k}(\tau)$\\
+$G_{k}(\tau + 1) = \sum_{m, n \in \mathbb{Z}}' \frac{1}{(m+n(\tau+1))^k} = \sum_{m, n \in \mathbb{Z}}' \frac{1}{(m + n + n\tau)^k} = \sum_{m', n \in \mathbb{Z} }' \frac{1}{(m' + n\tau)^k}$\\
+$\Rightarrow G_{k}(\tau + 1) = G_{k}(\tau)$\\
+
+\noindent
+$\text{Show } G_{k}(\tau) = \tau^{-k} G_{k}(\frac{-1}{\tau})$\\
+$\tau^{-k} \sum_{m, n \in \mathbb{Z}}' \frac{1}{(m + \frac{n}{\tau})^{k}} = \tau^{-k} \sum_{m, n \in \mathbb{Z}}' \frac{1}{(\frac{m\tau}{\tau} + \frac{n}{\tau})^{k}} = \sum_{m, n \in \mathbb{Z}}' \tau^{-k}\tau^{k} (m\tau + n)^{-k}$\\
+$\Rightarrow G_{k}(\tau) = \tau^{-k} G_{k}(\frac{-1}{\tau})$\\
+
+
+\noindent
+$\text{Show }G_{k}(\tau) = 0 \text{ if } k \in (2j+1) \quad j \in \mathbb{Z}$\\
+$\text{For each } (m+n\tau)^{-(2j+1)}, \text{ there exists } (-(m+n\tau))^{-(2j+1)} \in  G_{k}(\tau)$\\
+$\Rightarrow (m+n\tau)^{-(2j+1)} + (-1)^{-(2j+1)}(m+n\tau)^{-(2j+1))} = 0$\\
+$\Rightarrow \sum_{m,n \in \mathbb{Z}} (m+n\tau)^{-k} = 0\quad k \in (2j+1)$\\
+
+\noindent
+$\text{Show for any lattices L, the sum } \sum_{\omega \in \mathit{L}}' \frac{1}{\omega^{k}} \text{ converges absoluately for all } k > 2$\\
+
+\noindent
+$\text{Weierstrass function } \wp \text{-function of lattice L is defined by}$\\
+$\wp(z) = \wp(z; L) = \frac{1}{z^2} + \sum_{w \in L}' \big[ \frac{1}{(z-\omega)^2} + \frac{1}{\omega^2} \big]$
 
 
 
