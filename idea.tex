@@ -3,6 +3,11 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{centernot}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\newcommand{\polyring}[2][Z]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
+
 \begin{document}
 $\textbf{Definition of Monoid } $\\
 $\textbf{A monoid is a triple } (A, \otimes, \overline{1})$\\
@@ -39,8 +44,53 @@ Multiplicative identity \\
 For all a in $\mathbb{R}$, there exist 1 such that\\
 $1a = a$ \\
 
+\[\text{Group homomorphism(operation preserving)}\]
+Given group $(G1, +)$ and $(G2, *)$,for all $a_1, a_2 \in G1$ and $b_1, b_2 \in G2$,\\
+if $\phi(a_1 + a_2) = \phi(b_1)*\phi(b_2)$, then $\phi$ is group homomorphism\\
+
+Given $G(\mathbb{R}, +)$ and $(\mathbb{R}, *)$, then $\phi(x) = e^x$ is homomorphism\\ 
+Let $a_1, b_1 \in \mathbb{R}$ and $a_2, b_2 \in \mathbb{R}$\\ 
+$\phi(a_1+b_1) = e^{a_1 + b_1}$ and $\phi(a_2)*\phi(b_2) = e^{a_2}*e^{b_2} = e^{a_2+b_2}$\\
+$\Rightarrow \phi(a_1 + b_1) = \phi(a_2)*\phi(b_2)$\\
+$\Rightarrow \phi(x) = e^{x}$ is homomorphism for $G(\mathbb{R}, +)$ and $G(\mathbb{R}, *)$
 
 
+
+Ring homomorphism(operation preserving)\\
+Let $\phi$ is a function between two rings $R$, then $\phi$ is a $\mathit{ring}$ homomorphism if
+for all $a \in R$ and $b \in R$ 
+\[\phi(a+b) = \phi(a) + \phi(b)\] 
+\[\phi(ab) = \phi(a)\phi(b)\]
+and \[\phi(1) = 1\]
+e.g. $G(\mathbb{N}, +)$ and $G(\mathbb{Z}/\mathbb{Z}_5, +)$\\
+
+Let $\phi: \mathbb{C} \rightarrow \mathbb{C}$ be the map send a complex number to its complex conjugate. Then $\phi$ is an automorphism of $\mathbb{C}$. 
+$\phi$ is its own inverse.\\
+
+\begin{equation}
+\begin{aligned}
+\phi(z) &= \overline{z}\\
+\phi(z_1 + z_2) &= \overline{z_1 + z_2}\\
+\overline{z_1 + z_2} &= \overline{z_1} + \overline{z_2}\\
+\phi(z_1 z_2) &= \overline{z_1 z_2}\\
+\overline{z_1 z_2} &= \overline{z_1} \cdot \overline{z_2} \nonumber\\
+\phi(\phi(z)) &= z\\
+\end{aligned}
+\end{equation}
+
+Let $\phi: \polyring{x} \rightarrow  \polyring{x}$ be the map that send $f(x)$ to $f(x+1)$. Then $\phi$ is an automorphism of $\polyring{x}$.   
+The inverse map sends $f(x)$ to $f(x-1)$\\
+
+Ideal\\
+Let $R$ be a ring and let $I$ is additive subgroup of $R$, then $I$ is called an ideal of $R$ and write $I \triangleleft R$ 
+\quad if $\forall a \in I$ and $\forall r \in R $, and $ ar \in I$ and $ra \in I$\\
+
+Example\\
+$R = (\mathbb{N}, +)$ and $I = (2k, +) \quad k \in \mathbb{N}$\\
+
+Let $I$ be a kernal of $\phi$, then $I$ is an ideal of $R$\\
+Let $a \in I$ and $r \in R$, then $\phi(ra) = \phi(r)\phi(a)$\\
+$I$ is kernal of $\phi$ $\Rightarrow \phi(a) = 0 \therefore \phi(ra) = 0, \therefore ra \in I$\\
 
 $\textbf{If }  \gcd(a, b) = 1 \textbf{ and }  a \vert bc \quad$  $\Rightarrow a \vert c$ \\
 $\textbf{Proof}$ \\
@@ -309,14 +359,6 @@ $\text{open } \centernot\implies \text{ closed}$\\
 $\text{open } \centernot\impliedby \text{ closed}$\\
 
 \noindent
-Definition of topology\\
-$\text{Let }\mathcal{M} \text{ be a set. A topology }\mathcal{Q} \text{ is a subset } \mathcal{Q} \subseteq \mathcal{P}(\mathcal{M})$\\
-Satisfy\\
-$1. \varnothing\subseteq \mathcal{Q}, \mathcal{M} \subseteq \mathcal{Q}$\\
-$2. \mathcal{U} \subseteq \mathcal{Q},   \mathcal{V} \subseteq \mathcal{Q} \implies \mathcal{U} \cap \mathcal{V} \in \mathcal{Q}$\\
-$3. \mathcal{U} \in \mathcal{Q} \implies \bigcup_{\alpha \in \mathcal{A}} \mathcal{U}_\alpha \in \mathcal{Q}$\\
-
-\noindent
 Definition of Inner Product
 \noindent
 Positivity\\
@@ -409,6 +451,28 @@ $\Rightarrow \text{This contracts our assumption } \quad \square$\\
 
 \pagebreak
 \noindent
+\[ \text{Prove Square root of 2 is irrational} \text{ [ Geometric proof ] }\]
+$\text{Assume } \sqrt{2} \in \mathbb{Q}$\\
+$\Rightarrow \frac{a}{b} = \sqrt{2} \quad a, b \in \mathbb{N} \text{ and } \gcd(a, b) = 1, a > b$\\
+
+given a right issoseles triangle\\
+$AB = AC = AE, \quad FE \text{  tangles to arc at point } E $\\
+$\Rightarrow AF = EF$\\
+$\text{Let } AB = AC = 1$\\
+$\Rightarrow BC = \sqrt{2}$\\
+$\Rightarrow FB = 1-EB = 1-(\sqrt{2} - 1) = 2-\sqrt{2}$\\
+$\because \frac{AC}{CB} = \frac{EB}{FB} = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}-1}{2-\sqrt{2}}$\\
+$\therefore \frac{1}{\sqrt{2}} =\frac{1}{\frac{a}{b}} = \frac{\sqrt{2}-1}{2-\sqrt{2}} = \frac{\frac{a}{b} - 1}{2-\frac{a}{b}}$\\
+$\therefore \frac{b}{a} = \frac{ \frac{a-b}{b} } {\frac{2b - a}{b}} = \frac{a-b}{2b-a}$\\
+$\because \sqrt{2} < \sqrt{4} = 2 \therefore  a < 2b $\\
+$\Rightarrow  \color{red} a-b < b $\\
+$\because 2a > 2b$\\
+$\Rightarrow  \color{red}2b -a < a$\\
+$\text{That contracts our assumption } \gcd(a, b) = 1$\\
+$\Rightarrow \frac{a}{b} \notin \mathbb{Q}$
+
+\pagebreak
+\noindent
 Geometric proof: square root of two is irrational\\
 $\text{Given an isosceles right triangle from above and let } \gcd(a, b)=1, \text{ from Pythagorean theorem}$\\
 $\Rightarrow a^2 = b^2 + b^2$\\
@@ -418,35 +482,129 @@ singular point on affine plane curve\\
 $\text{If } p \in (x, y) \text{ and } \frac{df}{dx}, \frac{df}{dy} \text{ are undefined on } p \in (x, y), \text{ then } p\in (x, y) \text{ is singular point}$\\
 
 
-Eisenstein series\\
+\[\text{Eisenstein series}\]
 $L = [w_1, w_2] \in \mathbb{C}, G(L) = \sum_{w\in L\setminus \{0, 0\}} \frac{1}{w^k}$\\
 $\text{Let lattices } L=[1, \tau] \text{ and parametrized by }\tau  \text{ in the upper half plane } \mathbb{H} = \{ z \in\mathbb{C} : \Im(z) > 0 \} $\\
 $G(L) = G([1, \tau]) =G(\tau) = \sum_{m, n \in \mathbb{Z}}' \frac{1}{(m+n\tau)^k}$\\
 
 \noindent
-$\text{Show } G_{k}(\tau + 1) = G_{k}(\tau)$\\
+\[\text{Show } G_{k}(\tau + 1) = G_{k}(\tau)\]
 $G_{k}(\tau + 1) = \sum_{m, n \in \mathbb{Z}}' \frac{1}{(m+n(\tau+1))^k} = \sum_{m, n \in \mathbb{Z}}' \frac{1}{(m + n + n\tau)^k} = \sum_{m', n \in \mathbb{Z} }' \frac{1}{(m' + n\tau)^k}$\\
 $\Rightarrow G_{k}(\tau + 1) = G_{k}(\tau)$\\
 
 \noindent
-$\text{Show } G_{k}(\tau) = \tau^{-k} G_{k}(\frac{-1}{\tau})$\\
-$\tau^{-k} \sum_{m, n \in \mathbb{Z}}' \frac{1}{(m + \frac{n}{\tau})^{k}} = \tau^{-k} \sum_{m, n \in \mathbb{Z}}' \frac{1}{(\frac{m\tau}{\tau} + \frac{n}{\tau})^{k}} = \sum_{m, n \in \mathbb{Z}}' \tau^{-k}\tau^{k} (m\tau + n)^{-k}$\\
+\[\text{Show } G_{k}(\tau) = \tau^{-k} G_{k}(\frac{-1}{\tau})\]
+$\tau^{-k} G_{k}(\frac{-1}{\tau}) =  \tau^{-k} \sum_{(m, n \in \mathbb{Z} )}' \frac{1}{(m+\frac{n}{\tau})^{k}}$\\
+$\tau^{-k} \sum_{m, n \in \mathbb{Z}}' \frac{1}{(m + \frac{n}{\tau})^{k}} = \tau^{-k} \sum_{m, n \in \mathbb{Z}}' \frac{1}{(\frac{m\tau}{\tau} + \frac{n}{\tau})^{k}} = \sum_{m, n \in \mathbb{Z}}' \textcolor{red}{(\tau^{-k}\tau^{k})} (m\tau + n)^{-k})$\\
 $\Rightarrow G_{k}(\tau) = \tau^{-k} G_{k}(\frac{-1}{\tau})$\\
 
 
 \noindent
-$\text{Show }G_{k}(\tau) = 0 \text{ if } k \in (2j+1) \quad j \in \mathbb{Z}$\\
-$\text{For each } (m+n\tau)^{-(2j+1)}, \text{ there exists } (-(m+n\tau))^{-(2j+1)} \in  G_{k}(\tau)$\\
-$\Rightarrow (m+n\tau)^{-(2j+1)} + (-1)^{-(2j+1)}(m+n\tau)^{-(2j+1))} = 0$\\
-$\Rightarrow \sum_{m,n \in \mathbb{Z}} (m+n\tau)^{-k} = 0\quad k \in (2j+1)$\\
+\[\text{Show }G_{k}(\tau) = 0 \text{ if } k = (2j+1) \quad j \in \mathbb{Z} \]
+$\text{For each }\omega = (m+n\tau) \in L, \text{there exists } -\omega = -(m+n\tau) \in L $\\
+$\because \omega ^{-(2J+1)} + (-1)^{-(2J+1)}\omega^{-(2j+1)} = 0$\\
+$\therefore \sum_{m,n \in \mathbb{Z}}' (m+n\tau)^{-k} = 0\quad \text{ for all } k \in (2j+1)$\\
 
 \noindent
-$\text{Show for any lattices L, the sum } \sum_{\omega \in \mathit{L}}' \frac{1}{\omega^{k}} \text{ converges absoluately for all } k > 2$\\
+\[\text{Show for any lattices L, the sum } \sum_{\omega \in \mathit{L}}' \frac{1}{\omega^{k}} \text{ converges absoluately for all } k > 2 \]
+Proof:
+
+
+\pagebreak
+\noindent
+\[\text{Show }\frac{1}{(1-x)^2} = \sum_{n=0}^{\infty} (n+1)x^n \quad |x| < 1\]
+Proof:
+$\text{For all } |x| < 1, \text{ power series expansion} $\\
+\[(\frac{1}{1-x}\big) = (\sum_{n=0}^{\infty} x^n)\]\\
+Differentiate both sides\\
+\begin{equation}
+\begin{aligned}
+(\frac{1}{1-x}\big)' &= (\sum_{n=0}^{\infty} x^n)' \\
+(\frac{1}{1-x}\big)' &= (1-x)^{-2}\\ 
+\sum_{n=1}^{\infty} nx^{n-1} &= \sum_{i=0}^{\infty} (i+1)x^{i} \quad (n-1=i)\\
+\frac{1}{(1-x)^2} &= \sum_{n=0}^{\infty} (n+1)x^{n} \quad \text{ sub }(i = n)\\
+\end{aligned}
+\end{equation}
 
 \noindent
-$\text{Weierstrass function } \wp \text{-function of lattice L is defined by}$\\
-$\wp(z) = \wp(z; L) = \frac{1}{z^2} + \sum_{w \in L}' \big[ \frac{1}{(z-\omega)^2} + \frac{1}{\omega^2} \big]$
+\[\text{Weierstrass function } \wp \text{-function of lattice L is defined by} \]
+$\wp(z) = \wp(z; L) = \frac{1}{z^2} + \sum_{w \in L}' \big[ \frac{1}{(z-\omega)^2} + \frac{1}{\omega^2} \big]$\\
 
+\noindent
+Holomorphic\\
+A function $f(z)$ defined on some open neibourhood of a point $z_{0} \in \mathbb{C}$ is said to be holomorphic at $z_{0}$ if the complex derivative 
+\[ f'(z_{0}) = \lim_{h \to 0 } \frac{f(z_{0} + h) - f(z_{0})}{h} \] exists.
+We said $f$ is holomorphic on an open set $\Omega$ if it is holomorphic at every $z_{0} \in \Omega$ and we said $f$ is holomorphic in a closed set $\mathbf{C}$ if it is holomorphic on some open set $\Omega$ containing $\mathbf{C}$.
+Functions are holomorphic on all of $\mathbb{C}$ are said to be $\mathit{entire}$\\
 
+\noindent
+\[ \text{Show } f(z) = z^2 \text{ is holomorphic} \]
+\begin{equation}
+\begin{aligned}
+f'(z) &= \lim_{h \to 0} \frac{(z+h)^2 - z^2}{h} \\
+f'(z) &= \lim_{h \to 0} \frac{z^2 + 2hz + h^2 - z^2}{h}\\
+f'(z) &= \lim_{h \to 0} \frac{2hz + h^2}{h} \nonumber \\
+f'(z) &= \lim_{h \to 0} 2z + h\\
+f'(z) &= 2z
+\end{aligned}
+\end{equation}
+
+\pagebreak
+\noindent
+Differential\\
+A function $f(x)$ is differential on $x_{0} \in \mathbb{R}$ if \\
+\[  f'(x_{0}) =  \lim_{h \to 0} \frac{f(x_{0} +h) - f(x_{0})}{h} \]
+exists\\
+
+\[\text{Show } f(x) = x^{2} \text{ is differentiable for all } x  \in \mathbb{R} \]
+\begin{equation}
+\begin{aligned}
+f'(x) &=  \lim_{h \to 0} \frac{f(x +h) - f(x)}{h}\\
+f'(x) &= \lim_{h \to 0} \frac{x^2 + h^2 + 2xh - x^2  }{h} \nonumber \\
+f'(x) &= \lim_{h \to 0} \frac{h^2 + 2xh}{h}\\
+f'(x) &= \lim_{h \to 0} h+2x\\     
+f'(x) &= 2x \quad \text{ for all } x \in \mathbb{R}
+\end{aligned}
+\end{equation}
+
+\pagebreak
+\noindent
+\[ \text{Elliptic Curve}\]\\
+Find the formula for \[ s(n) = \sum_{k=1}^{n} k^2 \]\\
+\[ s(n) = \frac{(2n+1)(n+1)n}{2 \times 3} \]\\
+Let $y^2 = S(n)$ and $x=n$\\
+\[ y^2 = \frac{1}{6}x(x+1)(2x+1) \]\\
+\includegraphics[scale=4]{/Users/cat/myfile/github/geogebra/elliptic1.png}
+
+$ (x, y)=(0, 0), (-1, 0),(-\frac{1}{2}, 0)$ are on the curve\\
+
+\noindent
+\[ y^2 = x^3 + bx^2 + cx + d \]
+$\because (x+ \frac{b}{3})^3 =  x^3 + 3x^2 \frac{b}{3} + 3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3}$\\
+$y^2 = (x+ \frac{b}{3})^3  - 3x (\frac{b}{3})^{2} - (\frac{b}{3})^{3} + cx + d$\\
+$y^2 = (x+\frac{b}{3})^{3} - [3(\frac{b}{3})^{2} - c]x + d$\\
+let x + $\frac{b}{3} = x'$\\
+$y^2 = x'^{3} - [3(\frac{b}{3})^{2} - c][x' - \frac{b}{3}] + d$\\
+$y^2 = x'^{3} - [3(\frac{b}{3})^{2} - c]x' + 3(\frac{b}{3})^{3} - \frac{b}{3}c + d $\\
+$y^2 = x'^{3} +[c-3(\frac{b}{3})^2]x' + 3(\frac{b}{3})^{3} - \frac{b}{3}c + d $
+
+\noindent
+\[ \text{For any lattice } L, \text{the sum of  }\sum_{\omega_k \in L}'^{\infty} \frac{1}{\omega_k} \text{ is converges absoluately for all } k > 2 \]
+
+\newpage
+\noindent
+\[\text{Definition of topology}\]
+$\text{Let }\mathcal{M} \text{ be a set. A topology }\mathcal{Q} \text{ is a subset } \mathcal{Q} \subseteq \mathcal{P}(\mathcal{M})$\\
+Satisfy\\
+$1. \varnothing\subseteq \mathcal{Q}, \mathcal{M} \subseteq \mathcal{Q}$\\
+$2. \mathcal{U} \subseteq \mathcal{Q},   \mathcal{V} \subseteq \mathcal{Q} \implies \mathcal{U} \cap \mathcal{V} \in \mathcal{Q}$\\
+$3. \mathcal{U} \in \mathcal{Q} \implies \bigcup_{\alpha \in \mathcal{A}} \mathcal{U}_\alpha \in \mathcal{Q}$\\
+
+\noindent
+\[\text{Topological Space}\]
+a \textcolor{red}{topological space} is \textcolor{blue}{pair $(X, \tau)$} where $X$ is a set and $\tau$ is subset of $X$ satifying certain axioms. \textcolor{blue}{$\tau$} is called \textcolor{red}{topology}\\
+1. $\emptyset$ and \textcolor{red}{space} $X$ are both in \textcolor{blue}{$\tau$}\\
+2. the union of any collection of set in \textcolor{blue}{$\tau$} is contained in \textcolor{blue}{$\tau$}\\
+3. the intersection of any finitly many sets in \textcolor{blue}{$\tau$} is contained in \textcolor{blue}{$\tau$}
 
 \end{document}
