@@ -1,0 +1,39 @@
+\documentclass[10pt]{article}
+\usepackage{tipa}
+\usepackage{pagecolor,lipsum}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{centernot}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\begin{document}
+\noindent
+\[ \text{Binomial Identity} \] 
+\[  \binom{n}{k} = \binom{n}{k-1} \binom{n-1}{k-1} \] 
+\[ \binom{n}{0} = 1 \text{ with } 1 \leq k \leq n\] 
+
+
+\begin{equation}
+\begin{aligned}
+\text{LHS} \quad \binom(n, k) = \frac{P(n, k)}{k!} = \frac{\frac{n!}{(n-k)!}}{k!} &= \frac{n!}{(n-k)! k!}\\
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{P(n-1, k)}{k!} + \frac{P(n-1, k-1)}{(k-1)!}  \\  
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{\frac{(n-1)!}{(n-1-k)!}}{k!} + \frac{(n-1)!}{[(n-1)-(k-1))]!(k-1)!}\\    
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-1)!}{(n-k-1)!k!} + \frac{(n-1)!}{(n-k)!(k-1)!}\\    
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-k)(n-1)!}{(n-k)(n-k-1)!k!} + \frac{k(n-1)!}{k(n-k)!(k-1)!}\\    
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-k)(n-1)!}{(n-k)!k!} + \frac{k(n-1)!}{(n-k)!k!}\\    
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-1)!(n-k+k)}{(n-k)!k!}\\    
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n!}{(n-k)!k!} \nonumber \quad \square\\    
+\end{aligned}
+\end{equation}
+
+\[ \text{Division Ring} \] 
+Division Ring is a set $F$, together with two operations + and $\times$ 
+1. $F$ is abelian group under +
+2. The non-zero elements of $F$ form group under $\times$ (not necessary commutative)
+
+
+\newpage
+\[  \binom{n+1}{k} = \binom{n}{k-1} \binom{n-1}{k-1} \] 
+\includegraphics[width=10cm,scale=1]{/Users/cat/myfile/github/image/binomimage.jpg}\\
+\end{document}

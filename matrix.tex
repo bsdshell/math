@@ -1,0 +1,151 @@
+\documentclass[10pt]{article}
+\usepackage{tipa}
+\usepackage{pagecolor,lipsum}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{centernot}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{svg}
+
+\newcommand{\polyringz}[2][Z]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
+\newcommand{\polyringr}[2][R]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
+
+\begin{document}
+
+\[\text{Computer Graphic Matrix} \]
+\[\text{Identity}\]
+\[
+        \begin{bmatrix}
+            1 & 0 & 0\\
+            0 & 1 & 0\\   
+            0 & 0 & 1  
+        \end{bmatrix}
+\]
+
+\[ \text{Scalar} \]
+\[
+        \begin{bmatrix}
+            x & 0 & 0\\
+            0 & y & 0\\   
+            0 & 0 & z  
+        \end{bmatrix}
+\]
+
+\[ \text{Translation} \]
+\[
+        \begin{bmatrix}
+            1 & 0 & 0 & x\\
+            0 & 1 & 0 & y\\   
+            0 & 0 & 1 & z\\  
+            0 & 0 & 0 & 1  
+        \end{bmatrix}
+\]
+
+\[ \text{Rotation} \]
+\[
+    M_{z}(\alpha)=\begin{bmatrix}
+            cos\alpha & sin\alpha & 0\\
+            -sin\alpha & cos\alpha & 0\\   
+            0      &   0    & 1  
+        \end{bmatrix}
+\]
+
+\[
+    M_{y}(\alpha)=\begin{bmatrix}
+            cos\alpha & sin\alpha & 0\\
+            0      &   1    & 0    \\  
+            -sin\alpha & cos\alpha & 0   
+        \end{bmatrix}
+\]
+
+\[
+    M_{x}(\alpha)=\begin{bmatrix}
+            1 &   0      &     0   \\         
+            0 & cos\alpha & sin\alpha\\
+            0 & -sin\alpha& cos\alpha   
+        \end{bmatrix}
+\]
+
+\newpage
+\[ \text{Find the matrix reflects a point with respect to x-axis} \]
+
+\[
+        M \left[ 
+        \begin{array}{c}
+        1\\
+        0    
+        \end{array}
+        \right] = 
+        \left[
+        \begin{array}{c}
+        1 \\
+        0
+        \end{array}
+        \right]
+\]
+\[
+        M \left[ 
+        \begin{array}{c}
+        0\\
+        1    
+        \end{array}
+        \right] = 
+        \left[
+        \begin{array}{c}
+        0 \\
+        -1 
+        \end{array}
+        \right]
+\]
+
+\[
+        M \begin{bmatrix}
+            0 & 1\\
+            1 & 0 
+        \end{bmatrix} = 
+        \begin{bmatrix}
+            1 & 0\\
+            0 & -1 
+        \end{bmatrix}
+\]
+\[
+\Rightarrow 
+        M = \begin{bmatrix}
+            1 & 0\\
+            0 & -1 
+        \end{bmatrix}
+\]
+
+Let point $p(1, 0)$ on the x-axis and matrix $M$ reflects the point counterclockwise $\alpha$ to a point $p'$\\
+let line $\mathit{l}$ passes origin with angle $\alpha$ between $\mathit{l}$ and x-axis
+
+\[
+    \begin{bmatrix}
+        cos\alpha & sin\alpha\\
+        -sin\alpha & cos\alpha   
+    \end{bmatrix} e_{1} = 
+    \left[
+        \begin{array}{c}
+            cos\alpha \\
+            -sin\alpha
+        \end{array}
+    \right]
+\]
+
+\[
+    \begin{bmatrix}
+        cos\alpha & sin\alpha\\
+        -sin\alpha & cos\alpha   
+    \end{bmatrix} e_{2} = 
+    \left[
+        \begin{array}{c}
+            sin\alpha \\
+            cos\alpha
+        \end{array}
+    \right]
+\]
+
+
+\end{document}

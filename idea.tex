@@ -1,4 +1,6 @@
 \documentclass[10pt]{article}
+\usepackage{tipa}
+\usepackage{pagecolor,lipsum}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
@@ -6,29 +8,125 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 
-\newcommand{\polyring}[2][Z]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
+\newcommand{\polyringz}[2][Z]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
+\newcommand{\polyringr}[2][R]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
 
 \begin{document}
-$\textbf{Definition of Monoid } $\\
-$\textbf{A monoid is a triple } (A, \otimes, \overline{1})$\\
-$1. \otimes \textbf{ is closed associative binary operator on the set A}$\\
-$2. \overline{1} \textbf{ is identity element for } \oplus$\\
-$\forall\quad a, b, c \in A$\\
-$ a \otimes b  \otimes c = a \otimes (b \otimes c) $\\
-$ a \otimes \overline{1} = \overline{1} \otimes a =  a$\\
-\\
 
-$\textbf{Definition of Ring}$\\
-$\text{Let a, b, c }\in  \mathbb{R}$\\
-$\text{There are addition and multiplication operations and satisfy associative and distributive laws}$\\
-$a*b*c = a*(b*c) \textit{ and }  a*(b+c) = a*b + a*c$\\
-$\text{There are additive identity } \textbf{ 0 } \text{and multiplicative identity } \textbf{ 1 }$\\
-$\textbf{0} + a = a \text{ and }1*a = a$\\
-$\text{There exists additive inverse } -a \text{ such that } a + (-a) = 0$\\
+\[ \textbf{Prove the power series } exp(A) = \sum_{k=0}^{n} \frac{A^{k}}{k!} \textbf{ is convegent when A is nxn matrix} \]
+$\exp(X) = \sum_{k=0}^{n} \frac{X^{k}}{k!}$\\
+$\sin(X) = \sum_{k=0}^{n} (-1)^{k}\frac{X^{2k}}{2k!}$\\
+$\cos(X) = \sum_{k=0}^{n} (-1)^{k}\frac{X^{2k+1}}{(2k+1)!}$\\
+$\cosh(X) = \sum_{k=0}^{n} \frac{X^{2k}}{(2k)!}$\\
+$\sinh(X) = \sum_{k=0}^{n} \frac{X^{2k+1}}{(2k+1)!}$\\
 
-$\textbf{Definition of Ring}$\\
-$\text{let a, b, c } \in \mathbb{R}$\\
-$\text{There are two binary operations addition and multiplication and satisfy }$\\
+Let $ X = 
+    \begin{bmatrix}
+    0 & -\beta \\
+    \beta & 0 
+    \end{bmatrix}
+$\\
+
+$
+    \exp(X) = 
+        \begin{bmatrix}
+        1 & 0 \\
+        0 & 1 
+        \end{bmatrix}
+        +
+        \begin{bmatrix}
+        0 & -\beta \\
+        \beta & 0 
+        \end{bmatrix}
+        +
+        \frac{1}{2!}
+        \begin{bmatrix}
+        -\beta^{2} & 0 \\
+        0 & \beta^{2} 
+        \end{bmatrix}
+        +
+        \frac{1}{3!}
+        \begin{bmatrix}
+        0 & \beta^{3} \\
+        -\beta^{3} & 0 
+        \end{bmatrix}
+        +
+        \frac{1}{4!}
+        \begin{bmatrix}
+        \beta^{4} & 0 \\
+         0 & \beta^{4} 
+        \end{bmatrix}
+        +
+        \frac{1}{5!}
+        \begin{bmatrix}
+        0 & -\beta^{5}\\
+        \beta^{5} & 0 
+        \end{bmatrix}
+$\\
+$
+    \exp(X) = 
+        \begin{bmatrix}
+        1 + \frac{1}{2!}(-\beta^{2}) + \frac{1}{4!}\beta^{4} + ... & -\beta + \frac{1}{3!}\beta^{3} + ...\\
+        \beta + \frac{1}{3!}-\beta^{3} + ... & 1 + \frac{1}{2!}\beta^{2} + \frac{1}{4!}\beta^{4} + ...
+        \end{bmatrix}
+        = 
+        \begin{bmatrix}
+        \sin(\beta) & -\cos(\beta)\\
+        \cos(\beta) & \sin(\beta)
+        \end{bmatrix}
+$
+
+\[ \textbf{Group} \]
+$\text{Let a, b, c} \in \mathbb{G} $\\
+There is binary operation * and satisfies\\
+
+Closure Law\\
+$ a*b \in \mathbb{G} $\\
+
+Associative Law\\
+$ a*b*c = a*(b*c)$\\
+
+Identity\\
+$ \exists \mathit{e} \in \mathbb{G} \text{ such that } \mathit{e}*a = a*\mathit{e} \in \mathbb{G}$\\
+
+Inverse\\
+$ \text{If a } \in \mathbb{G}, \exists a^{-1} \in \mathbb{G} \text{ such that } a*a^{-1} = e $\\
+
+XOR over $\mathbb{Z}/\mathbb{Z}_2$ forms a group\\
+1. $ a \oplus b = a \oplus b $ commutative\\ 
+2. $ a \oplus b \oplus c = a \oplus (b \oplus c) $ associative\\ 
+3. $ 0 \oplus a = a $ identity\\ 
+4. $ a \oplus a = 0 $ own inverse\\  
+
+\[ \textbf{ Semigroup } \]
+Semigroup is a set $S$ and a binary operator $\otimes \colon S \times S \rightarrow S$ that satisfies 
+associative property\\ 
+\[ \forall \text{ a, b, c} \in S \text{ such as } a \otimes b\otimes c = a \otimes (b \otimes c) \]
+
+\[ \textbf{ Monoid } \]
+A monoid is a triple $(S, \otimes, \overline{1})$ \\
+1. $\otimes$ is closed associative binary operator on the set $S$ \\
+2. $\overline{1}$ is identity element for $\otimes$ \\
+$\forall\quad a, b, c \in S$ such as\\
+\[ a \otimes b  \otimes c = a \otimes (b \otimes c)   \]
+\[ a \otimes \overline{1} = \overline{1} \otimes a =  a  \]
+
+\newpage
+\[ \text{ Category } \]
+A category is collection of objects and collection of arrow[morphism, map] which have following structure
+echo arrow has domain and codomain which are object     
+\[ f \colon X \rightarrow Y \text{ or } X \xrightarrow{f} Y\]
+Composition
+\[ f \colon X \rightarrow Y \text{ and } g \colon Y \rightarrow Z \quad g \circ f \colon X \rightarrow Z \quad \]
+Composition Identity
+\[ f \colon X \rightarrow Y \text{ and } g \colon Y \rightarrow Z  \quad \exists id_y \colon Y \rightarrow Y \mid id_y \circ f = f \text{ and } g \circ id_y = g \]
+Associative
+\[ f \colon X \rightarrow Y \quad g \colon Y \rightarrow Z \quad h \colon Z \rightarrow W \mid h \circ g \circ f = h \circ (g \circ f) \quad \]
+
+\[ \text{functor} \]
+
+\[ \text{ Ring } \]
+Let a, b, c $\in  \mathbb{R}$ There are addition and multiplication operations and satisfy associative and distributive laws\\
 
 Associative Law\\
 $ a \times b \times c = a \times (b \times c) $\\
@@ -44,6 +142,11 @@ Multiplicative identity \\
 For all a in $\mathbb{R}$, there exist 1 such that\\
 $1a = a$ \\
 
+\[ \text{Division Ring} \] 
+Division Ring is a set $F$, together with two operations + and $\times$ 
+1. $F$ is abelian group under +
+2. The non-zero elements of $F$ form group under $\times$ (not necessary commutative)
+
 \[\text{Group homomorphism(operation preserving)}\]
 Given group $(G1, +)$ and $(G2, *)$,for all $a_1, a_2 \in G1$ and $b_1, b_2 \in G2$,\\
 if $\phi(a_1 + a_2) = \phi(b_1)*\phi(b_2)$, then $\phi$ is group homomorphism\\
@@ -54,9 +157,18 @@ $\phi(a_1+b_1) = e^{a_1 + b_1}$ and $\phi(a_2)*\phi(b_2) = e^{a_2}*e^{b_2} = e^{
 $\Rightarrow \phi(a_1 + b_1) = \phi(a_2)*\phi(b_2)$\\
 $\Rightarrow \phi(x) = e^{x}$ is homomorphism for $G(\mathbb{R}, +)$ and $G(\mathbb{R}, *)$
 
+\[\text{Normal Group} \]
+if $N$ is subgroup of $G$, and if $gH = Hg \quad \forall g \in G$, then $H$ is normal
 
+\[ \text{Coset} \]
+if $N$ is subgroup of $G$, and if $gH = \{gh: \forall g \in G \}$, then $gH$ is left coset of $H$ in $G$ with repsect to $g$.\\
+Similarly, if $Hg = \{hg: \forall g \in G \}$, then $Hg$ is right coset of $H$ in $G$ with repsect to $g$.\\
+\begin{center}
+\includegraphics[width=10cm,scale=1]{/Users/cat/myfile/github/image/coset.jpg}\\
+\end{center}
 
-Ring homomorphism(operation preserving)\\
+\newpage
+Ring homomorphism(operation preserving)
 Let $\phi$ is a function between two rings $R$, then $\phi$ is a $\mathit{ring}$ homomorphism if
 for all $a \in R$ and $b \in R$ 
 \[\phi(a+b) = \phi(a) + \phi(b)\] 
@@ -78,10 +190,10 @@ $\phi$ is its own inverse.\\
 \end{aligned}
 \end{equation}
 
-Let $\phi: \polyring{x} \rightarrow  \polyring{x}$ be the map that send $f(x)$ to $f(x+1)$. Then $\phi$ is an automorphism of $\polyring{x}$.   
+Let $\phi: \polyringr{x} \rightarrow  \polyringr{x}$ be the map that send $f(x)$ to $f(x+1)$. Then $\phi$ is an automorphism of $\polyringr{x}$.   
 The inverse map sends $f(x)$ to $f(x-1)$\\
 
-Ideal\\
+\[ \text{Ideal}\\ \]
 Let $R$ be a ring and let $I$ is additive subgroup of $R$, then $I$ is called an ideal of $R$ and write $I \triangleleft R$ 
 \quad if $\forall a \in I$ and $\forall r \in R $, and $ ar \in I$ and $ra \in I$\\
 
@@ -123,7 +235,13 @@ $F_{1} = 1$ \\
 \newpage
 
 \begin{flushleft}
-Show the sum of odd number are square number\\
+$\text{Visual proof}$\\
+$ (\sum_{k=1}^{n} k)^{2} = \sum_{k=1}^{n} k^{3}$\\
+\includegraphics[width=10cm,scale=1]{/Users/cat/myfile/github/image/cubeproof.png}
+\end{flushleft}
+
+\begin{flushleft}
+$\text{Show the sum of odd number are square number}$
 \medskip
 1\\
 1 + 3\\
@@ -137,6 +255,8 @@ $S = 2 \frac{(1+n)n}{2} - n$ \\
 $S = (1+n)n - n$ \\
 $S = n^2 $ \\
 \end{flushleft}
+
+
 composition function \\
 $g \circ f \circ h $ \\
 $g \circ f \colon A\to B$ \\
@@ -178,23 +298,7 @@ $\Rightarrow \frac{1}{2}(n+1)(2n^2+n)=\sum_{k=1}^{n} k^2$
 $\Rightarrow \frac{1}{6}n(n+1)(2n+1) = \sum_{k=1}^{n} k^2 $
 
 \pagebreak
-Definition of Group\\
-$\text{Let a, b, c} \in \mathbb{G} $\\
-There is binary operation * and satisfy\\
-
-Closure Law\\
-$ a*b \in \mathbb{G} $\\
-
-Associative Law\\
-$ a*b*c = a*(b*c)$\\
-
-Identity\\
-$ \exists \mathit{e} \in \mathbb{G} \text{ such that } \mathit{e}*a = a*\mathit{e} \in \mathbb{G}$\\
-
-Inverse\\
-$ \text{If a } \in \mathbb{G}, \exists a^{-1} \in \mathbb{G} \text{ such that } a*a^{-1} = e $\\
-
-Definition of Vector Space\\
+\[ \text{Vector Space} \]
 $\text{Let }\vec{u}, \vec{v}, \vec{w} \in \vec{V} \text{ and scalars } \alpha, \beta \in \mathbb{F}$\\
 Closure\\
 $\vec{u} + \vec{v} \text{ and } \in \vec{V}$\\
@@ -605,6 +709,119 @@ $3. \mathcal{U} \in \mathcal{Q} \implies \bigcup_{\alpha \in \mathcal{A}} \mathc
 a \textcolor{red}{topological space} is \textcolor{blue}{pair $(X, \tau)$} where $X$ is a set and $\tau$ is subset of $X$ satifying certain axioms. \textcolor{blue}{$\tau$} is called \textcolor{red}{topology}\\
 1. $\emptyset$ and \textcolor{red}{space} $X$ are both in \textcolor{blue}{$\tau$}\\
 2. the union of any collection of set in \textcolor{blue}{$\tau$} is contained in \textcolor{blue}{$\tau$}\\
-3. the intersection of any finitly many sets in \textcolor{blue}{$\tau$} is contained in \textcolor{blue}{$\tau$}
+3. the intersection of any finitly many sets in \textcolor{blue}{$\tau$} is contained in \textcolor{blue}{$\tau$}\\
+
+\[ \text{Binomial Identity} \] 
+\[  \binom{n}{k} = \binom{n}{k-1} + \binom{n-1}{k-1} \] 
+\[ \binom{n}{0} = 1 \text{ with } 1 \leq k \leq n\] 
+
+\begin{equation}
+\begin{aligned}
+    \text{LHS} \quad \binom{n}{k} = \frac{P(n, k)}{k!} = \frac{\frac{n!}{(n-k)!}}{k!} &= \frac{n!}{(n-k)! k!}\\
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{P(n-1, k)}{k!} + \frac{P(n-1, k-1)}{(k-1)!}  \\  
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{\frac{(n-1)!}{(n-1-k)!}}{k!} + \frac{(n-1)!}{[(n-1)-(k-1))]!(k-1)!}\\    
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-1)!}{(n-k-1)!k!} + \frac{(n-1)!}{(n-k)!(k-1)!}\\    
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-k)(n-1)!}{(n-k)(n-k-1)!k!} + \frac{k(n-1)!}{k(n-k)!(k-1)!}\\    
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-k)(n-1)!}{(n-k)!k!} + \frac{k(n-1)!}{(n-k)!k!}\\    
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-1)!(n-k+k)}{(n-k)!k!}\\    
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n!}{(n-k)!k!} \nonumber \quad \square\\    
+\end{aligned}
+\end{equation}
+
+\newpage
+\[  \binom{n+1}{k} = \binom{n}{k-1} \binom{n-1}{k-1} \] 
+\includegraphics[width=10cm,scale=1]{/Users/cat/myfile/github/image/binomimage.jpg}
+
+\newpage
+\[\text{Computer Graphic Matrix} \]
+\[\text{Identity}\]
+\[
+        \begin{bmatrix}
+            1 & 0 & 0\\
+            0 & 1 & 0\\   
+            0 & 0 & 1  
+        \end{bmatrix}
+\]
+
+\[ \text{Scalar} \]
+\[
+        \begin{bmatrix}
+            x & 0 & 0\\
+            0 & y & 0\\   
+            0 & 0 & z  
+        \end{bmatrix}
+\]
+
+\[ \text{Translation} \]
+\[
+        \begin{bmatrix}
+            1 & 0 & 0 & x\\
+            0 & 1 & 0 & y\\   
+            0 & 0 & 1 & z\\  
+            0 & 0 & 0 & 1  
+        \end{bmatrix}
+\]
+
+\newpage
+\[\text{Computer Graphic Matrix} \]
+\[\text{Identity}\]
+\[
+        \begin{bmatrix}
+            1 & 0 & 0\\
+            0 & 1 & 0\\   
+            0 & 0 & 1  
+        \end{bmatrix}
+\]
+
+\[ \text{Scalar} \]
+\[
+        \begin{bmatrix}
+            x & 0 & 0\\
+            0 & y & 0\\   
+            0 & 0 & z  
+        \end{bmatrix}
+\]
+
+\[ \text{Translation} \]
+\[
+        \begin{bmatrix}
+            1 & 0 & 0 & x\\
+            0 & 1 & 0 & y\\   
+            0 & 0 & 1 & z\\  
+            0 & 0 & 0 & 1  
+        \end{bmatrix}
+\]
+
+\[ \text{Rotation} \]
+
+\begin{equation}
+\begin{aligned}
+    M_{z}(\beta) & =\begin{bmatrix}
+            \cos\beta & -\sin\beta & 0\\
+            \sin\beta & \cos\beta & 0\\   
+            0      &   0    & 1  
+        \end{bmatrix} \\
+    M_{y}(\beta) & =\begin{bmatrix}
+            \cos \beta & sin\beta & 0\\
+            0      &   1    & 0    \\  
+            -sin\beta & \cos\beta & 0   
+        \end{bmatrix} \\
+    M_{x}(\beta) & =\begin{bmatrix}
+            1 &   0      &     0   \\         
+            0 & \cos\beta & -\sin\beta\\
+            0 & sin\beta& \cos\beta   
+        \end{bmatrix} 
+\end{aligned}
+\end{equation}
+
+\[ \text{Find the matrix reflects a point with respect to x-axis} \]
+\[
+        A \left[ 
+        \begin{array}{c}
+        1\\
+        0    
+        \end{array}
+        \right]
+\]
 
 \end{document}

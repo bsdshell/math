@@ -1,0 +1,611 @@
+Definition of Monoid
+A monoid is a triple (A,&#x2297;,_1)
+1. &#x2297; is closed associative binary operator on the set A
+2._1 is identity element for &#x2295;
+&#x2200; a,b,c &#x2208; A
+a &#x2297; b &#x2297; c = a &#x2297; (b &#x2297; c)
+a &#x2297;_1 = __1 &#x2297; a = a
+    Definition of Ring
+Let a, b, c  &#x2208; &#x211D;
+There are addition and multiplication operations and satisfy associative and distributive laws
+a * b * c = a * (b * c) and a * (b + c) = a * b + a * c
+There are additive identity  0 and multiplicative identity  1
+0 + a = a and 1 * a = a
+There exists additive inverse  - a such that a + (-a) = 0
+    Definition of Ring
+let a, b, c  &#x2208; &#x211D;
+There are two binary operations addition and multiplication and satisfy
+    Associative Law
+a &#x00D7; b &#x00D7; c = a &#x00D7; (b &#x00D7; c)
+    Distritutive Law
+a &#x00D7; (b + c) = a &#x00D7; b + a &#x00D7; c
+    Additive inverse
+For all a in &#x211D;, there exists -a such that
+a + (-a) = 0
+    Multiplicative identity
+For all a in &#x211D;, there exist 1 such that
+1a = a
+    If gcd(a,b) = 1 and a|bc   &#x21D2; a|c
+Proof
+gcd(a,b) = 1
+&#x21D2; ma + nb = 1   m,n &#x2208; &#x2115;
+&#x21D2; mac + nbc = c
+a|bc &#x21D2; ak = bc   k &#x2208; &#x2115;
+&#x21D2; mac + n(ak) = c   (ak = bc)
+&#x21D2; a(mc + nk) = c
+&#x21D2; a|c
+If gcd(a,b) = 1 &#x21D2; ma + nb = 1   m,n &#x2208; &#x2115;
+                                                                     1                                                   
+
+                                                                                                                   
+            Proof
+            Prove there is infinite prime
+            Prove all the eigeivalues  &#x03BB; &#x2265; 0 if the matrix is symmetic
+            If the determine of matrix detA &#x003E; 0  &#x21D0;&#x21D2; the matrix is invertable
+            Efficient Algorithm to compute Fibonacci Number
+            Fibonacci Sequence Fn = Fn + Fn-1 with F0 = 0 F1 = 1
+            (1) Navier algorithm with recursion in O(2n)
+            (2) Use Dynamic Algorithm in O(n)
+            (3) Use matrix with repeated squaring to compute Fibonacci Sequence in O(log n)
+                               (
+                                 Fn+1   Fn
+                                  Fn   Fn-1 )
+                                              n
+                                               = (
+  1   1
+     1   0 )
+       n
+                                                                2                                                   
+
+                                                                                                                   
+            Show the sum of odd number are square number
+            1
+            1 + 3
+            1 + 3 + 5
+            1 + 3 + 5 + ... + (2k+1)
+            S = &#x2211;n
+    k=1(2k - 1)
+            S = &#x2211;n
+    k=1 2k -&#x2211;n
+    k=1 1
+            S = 2(&#x2211;n
+   k=1 k) - n
+            S = 2(1+n)n
+   2     - n
+            S = (1 + n)n - n
+            S = n2
+            composition function
+            g &#x2218; f &#x2218; h
+            g &#x2218; f : A &#x2192; B
+               Find the sum of sequence of squares
+               &#x2211;n
+                 k=1((k + 1)3 - k3) = &#x2211;n
+    k=1(k2 + 1 + 2k)(k + 1) - k3
+               &#x2211;n
+                 k=1(k3 + k + 2k2 + k2 + 1 + 2k) - k3
+               &#x2211;n
+                 k=1(k3 + 3k2 + 3k + 1) - k3
+               &#x2211;n
+                 k=1(3k2 + 3k + 1)
+               &#x2211;n
+                 k=1((k + 1)3 - k3) = &#x2211;n
+    k=1(k + 1)3 -&#x2211;n
+    k=1 k3
+               &#x21D2; 23 + 33 + ... + n3 + (n + 1)3 - (1 + 23 + 33 + ... + n3) = (n + 1)3 - 1
+               &#x21D2;&#x2211;n
+    k=1(k + 1)3 -&#x2211;n
+    k=1 k3 = (n + 1)3 - 1
+               &#x21D2; (n + 1)3 - 1 = &#x2211;n
+    k=1(3k2 + 3k + 1)
+               &#x21D2; (n + 1)3 - 1 = 3&#x2211;n
+    k=1 k2 + 3&#x2211;n
+    k=1 k + n
+               &#x21D2; (n + 1)3 - 1 = 3&#x2211;n
+    k= k2 + (n + 1)n3
+2 + n
+               &#x21D2; (n + 1)3 - 1 - (n + 1)n3
+2 - n = 3&#x2211;n
+    k=1 k2
+               &#x21D2; (n + 1)((n + 1)2 - n3
+2) - (n + 1) = 3&#x2211;n
+    k=1 k2
+               &#x21D2; (n + 1)((n + 1)2 - n3
+2 - 1) = 3&#x2211;n
+    k=1 k2
+               &#x21D2; (n + 1)(n2 + 1 + 2n - n3
+2 - 1) = 3&#x2211;n
+    k=1 k2
+               &#x21D2; (n + 1)(n2 + 1 
+2n) = &#x2211;n
+    k=1 k2
+               &#x21D2; 1 
+2(n + 1)(2n2 + n) = &#x2211;n
+    k=1 k2
+               &#x21D2; 1 
+6n(n + 1)(2n + 1) = &#x2211;n
+    k=1 k2
+                                                                           3                                                   
+
+                                                                                                                   
+               Definition of Group
+            Let a, b, c &#x2208; G
+            There is binary operation * and satisfy
+               Closure Law
+            a * b &#x2208; G
+               Associative Law
+            a * b * c = a * (b * c)
+               Identity
+            &#x2203;e &#x2208; G such that e * a = a * e &#x2208; G
+               Inverse
+            If a &#x2208; G,&#x2203;a-1 &#x2208; G such that a * a-1 = e
+               Definition of Vector Space
+            Let &#x20D7;u,&#x20D7; v, &#x20D7; w &#x2208; &#x20D7; V and scalars &#x03B1;,&#x03B2; &#x2208; F
+            Closure
+            &#x20D7;u + &#x20D7; v and  &#x2208; &#x20D7; V
+            Associative Law
+            &#x20D7;u + &#x20D7; v + &#x20D7; w = &#x20D7; u + (&#x20D7;v + &#x20D7; w)
+            Commutative Law
+            &#x20D7;u + &#x20D7; v = &#x20D7; v + &#x20D7; u
+            Identity element of addition
+            &#x20D7;0 &#x2208; &#x20D7; V such that &#x20D7; 0 + &#x20D7; u = &#x20D7; u
+            Inverse element of addition
+            &#x2203;- &#x20D7; u such that &#x20D7; u + (-&#x20D7;u) = &#x20D7; 0
+            Identity element of scalar multiplication
+            &#x2203;1 &#x2208; F such that 1&#x20D7;u = &#x20D7; u
+            Distributivity of scale multiplication with respect to vector addition
+            &#x03B1;(&#x20D7;u + &#x20D7; v) = &#x03B1;&#x20D7;u + &#x03B1;&#x20D7;v
+            Distributivity of scale multiplication with respect to field addition
+            (&#x03B1; + &#x03B2;)&#x20D7;u = &#x03B1;&#x20D7;u + &#x03B2;&#x20D7;u
+                                                       4                                                   
+
+                                                                                                                   
+               Definition of Affine Space
+            An affine space is a set of points that admits free transitive action of a vector
+            space &#x20D7; V That is, there is a map X &#x00D7; &#x20D7; V &#x2192; X : (x,&#x20D7; v) &#x21A6;&#x2192; x +&#x20D7; v, called translation
+            by a vector &#x20D7; v, such that
+            1.  Addition of vectors corresponds to composition of translation, i.e., for all
+            x &#x2208; X and &#x20D7; u,&#x20D7; v &#x2208; &#x20D7; V ,(x + &#x20D7; u) + &#x20D7; v = x + (&#x20D7;u + &#x20D7; v)
+            2. The zero vector &#x20D7; 0 acts as the identity vector, i.e., for all x &#x2208; X,x +&#x20D7; 0 = x
+            3. The action is transitive, i.e., for all x,y &#x2208; X, exists &#x20D7; v &#x2208; &#x20D7; V such that y = x+&#x20D7;v
+            4. The dimension of X is the dimension of vector space translations, &#x20D7; V
+            Or There is unique map
+            X &#x00D7; X &#x2192; &#x20D7; V  : (x,y) &#x21A6;&#x2192; y - x such that y = x + (y - x) for all x,y &#x2208; X It
+            furthermore satifies
+            1. For all x,y,z &#x2208; X, z - x = (z - y) + (y - x)
+            2. For all x,y,&#x2208; X and &#x20D7; u,&#x20D7; v &#x2208; &#x20D7; V , (y + &#x20D7; v) - (x + &#x20D7; u) = (y - x) + (&#x20D7;v - &#x20D7; u)
+            3. For all x &#x2208; X,x - x = &#x20D7; 0
+            4. For all x,y &#x2208; X,y - x = -(x - y)
+               Affine Space from linear system equation
+            Consider an (m &#x00D7; n) linear sytem equations
+            &#x2211;n
+              k=1 aikxk = ci,(1 &#x2264; i &#x2264; m)         (1)
+            where d = n - rank(M),ci &#x2044;= &#x20D7; 0 &#x2208; &#x211D;m
+            When the system has at least one solution xp then the full set of solution is a
+            d-dimension affine space A &#x2282; &#x211D;n
+            Since xp &#x2208; A, we can declare point xp as origin of A and then introduct A co-
+            ordinates as follows:homogenous system
+               &#x2211;n
+                 k=1 aikxk = &#x20D7; 0(1 &#x2264; i &#x2264; m)
+            &#x21D2; dim(Ker(M)) = d   (Rank Theorem)
+            (1) has d-linear independent solution &#x20D7;bj &#x2208; &#x211D;n      (1 &#x2264; j &#x2264; d)
+            Affine Space A can be written as
+            A = {
+ xp + &#x2211;d
+    j=1 &#x03B1;j &#x20D7; bj    |  &#x03B1;j &#x2208; &#x211D;       (1 &#x2264; j &#x2264; d)}
+            The &#x03B1;j can be served as coordinates in A, so that A looks as it were a d-dimension coordiate space.
+            But note that addition(+) in the space refers to the chosen point xp, and not to the origin of the base vector space
+               [
+                1  2  3
+                4  5  6]&#x230A;
+                        &#x2308; x1
+                          x2
+                          x3 &#x230B;
+                             &#x2309; = [
+  1
+    2 ]
+                                    5                                                   
+
+                                                                                                                   
+            Theorem 1
+            The image of transformation is spanned by the image of the any basis of its
+            domain.  For T :  &#x20D7; V  &#x2192; &#x20D7; W, if &#x03B2; = {&#x20D7;b1, &#x20D7; b2,..., &#x20D7; bn} is a basis of &#x20D7; V , then T(&#x03B2;) =
+            {T(&#x20D7;b1),T(&#x20D7;b2),...,T(&#x20D7;bn)} spans the image of T
+            Proof
+            For all &#x20D7; v &#x2208; &#x20D7; V ,&#x20D7; v = &#x03B1;1 &#x20D7; b1 + &#x03B1;2 &#x20D7; b2 + ... + &#x03B1;n &#x20D7; bn
+            &#x21D2; T(&#x20D7;v) = T(&#x03B1;1 &#x20D7; b1 + &#x03B1;2 &#x20D7; b2 + ... + &#x03B1;n &#x20D7; bn)
+            &#x21D2; T(&#x20D7;v) = &#x03B1;1T(&#x20D7;b1) + &#x03B1;2T(&#x20D7;b2) + ... + &#x03B1;nT(&#x20D7;bn)
+            &#x21D2;{T(&#x20D7;b1),T(&#x20D7;b2),...,T(&#x20D7;bn)} spans the image of T
+            Rank Theorem
+            If the domain is finite dimension, then the dimension of domain is the sum of
+            rank and nullity of the transformation
+            Let T : &#x20D7; V &#x2192; &#x20D7; W be a linear transformation ,let n be the dimension of &#x20D7; V ,
+            let k be nullity of T and let k be the rank of T
+            Show n = k + r
+               Let &#x03B2; = {&#x20D7;b1, &#x20D7; b2,..., &#x20D7; bk} be the basis of kernal of T, the basis can be extended to &#x03B3; =
+            {&#x20D7;b1, &#x20D7; b2,..., &#x20D7; bk,  &#x20D7; bk+1,..., &#x20D7; bn}
+            let &#x20D7;v &#x2208; &#x20D7; V &#x21D2; &#x20D7; v = &#x03B1;1 &#x20D7; b1 + &#x03B1;2 + &#x20D7; b2+,...,+&#x03B1;k &#x20D7; bk + &#x03B1;k+1 &#x20D7; bk+1+,...,+&#x03B1;n &#x20D7; bn
+            Let T(&#x20D7;v) = T(&#x03B1;1 &#x20D7; b1 + &#x03B1;2 + &#x20D7; b2+,...,+&#x03B1;k &#x20D7; bk + &#x03B1;k+1 &#x20D7; bk+1+,...,+&#x03B1;n &#x20D7; bn) = &#x20D7; 0
+            &#x21D2; &#x20D7; v = &#x03B1;1 &#x20D7; b1 + &#x03B1;2 + &#x20D7; b2+,...,+&#x03B1;k &#x20D7; bk + &#x03B1;k+1 &#x20D7; bk+1+,...,+&#x03B1;n &#x20D7; bn &#x2208; ker(T)      (1)
+            &#x2235; &#x20D7; v = &#x03C3;1 &#x20D7; b1 + &#x03C3;2 + &#x20D7; b2+,...,+&#x03C3;k &#x20D7; bk &#x2208; ker(T)      (2)
+            (1)-(2) &#x21D2; &#x20D7; 0 = (&#x03B1;1-&#x03C3;1)&#x20D7;b1+(&#x03B1;2-&#x03C3;2)&#x20D7;b2+,...,+(&#x03B1;k-&#x03C3;k)&#x20D7;bk+&#x03B1;k+1 &#x20D7; bk+1+,...,+&#x03B1;n &#x20D7; bn
+            &#x2235;&#x20D7; b1,&#x20D7; b2,...,&#x20D7; bk,&#x20D7; bk+1,&#x20D7; bk+2,..., &#x20D7; bn are linearly independent
+            &#x2234; &#x03B1;k+1,&#x03B1;k+2,...,&#x03B1;n are all zero      (3)
+            T(&#x20D7;v) = T(&#x03B1;1 &#x20D7; b1) + T(&#x03B1;2 &#x20D7; b2)+,...,+T(&#x03B1;k &#x20D7; bk) + T(&#x03B1;k+1 &#x20D7; bk+1)+,...,+T(&#x03B1;n &#x20D7; bn) = &#x20D7; 0
+            T(&#x20D7;v) = &#x03B1;1T(&#x20D7;b1) + &#x03B1;2T(&#x20D7;b2)+,...,+&#x03B1;kT(&#x20D7;bk) + &#x03B1;k+1T(&#x20D7;bk+1)+,...,+&#x03B1;nT(&#x20D7;bn) = &#x20D7; 0
+            &#x2235; &#x03B2; = {&#x20D7;b1, &#x20D7; b2,..., &#x20D7; bk} is the basis of kernal of T
+            &#x2234; T(&#x20D7;b1) = &#x20D7; 0,...,T(&#x20D7;bk) = &#x20D7; 0
+            &#x2234; T(&#x20D7;v) = &#x03B1;k+1T(&#x20D7;bk+1)+,...,+&#x03B1;nT(&#x20D7;bn) = &#x20D7; 0      (4)
+            (3) and (4) &#x21D2;{T(&#x20D7;bk+1),T(  &#x20D7;bk+2),...,T(&#x20D7;bn)} are linearly independent
+            &#x21D2; dim(&#x20D7;V ) =  nullity(T)  +  rank(T)  or
+            &#x21D2; dim(&#x20D7;V ) = dim(ker(T)) + dim(img(T))
+            &#x21D2; n = k + r   &#x25A1;
+            Affine plane
+            Affine plane is a set, whose elements are called points, and a set of subset, called
+            lines, satifying the following three axioms:
+            1. Given two distinct points P and Q, there is one and only one containing both
+            P and Q.
+            2. Given a line l, and a point P not in l, there is one and only one line m which
+            is parallel to l and which passes through P.
+                                                               6                                                   
+
+                                                                                                                   
+            3. There exists three non-collinear points.
+            A coordinate system in an affine space (X,V) consists of a point O &#x2208; X is
+            called origin, and basis &#x20D7; v1,..., &#x20D7; vn    for &#x20D7; V Any point x &#x2208; X can be written as
+               x - O = x - O
+            &#x21D2; x = O + (x - O) = O + &#x2211;n
+    k=1 xk &#x20D7; vk
+            where the numbers x1,...,xn are the coordinates for vector x-O with respect to the basis &#x20D7; v1,...&#x20D7;vn.
+            They are now also called the coordinates for x with respect to the coordinate system O, &#x20D7; v1,..., &#x20D7; vn
+            Projective plane
+            A projective plane S is a set, whose elements are called points, and a set of
+            subset, called lines, satifying the following four axioms.
+            1. Two distinct points meets P, Q of S lie on one and only one line.
+            2. Any two lines meet in at least one point.
+            3. There exist three non-colinear points
+            4. Every line contains at least three points.
+            Manifold
+            An subset S of &#x211D;m is called a manifold of dimension of d if every point p of S has a neighbourhood in
+            S which is homeomorphic to an open set of &#x211D;d
+            Homeomorphrism
+            Let S be a subset of &#x211D;m and sp be the subset of &#x211D;n. A map f : &#x211D;m &#x21A6;&#x2192; &#x211D;n
+            is called homeomorphism if f  is continuous and bijective and f -1 is continuous
+            Definition Open and Close Sets
+            1. S is said to be open set if every point of S is an interior of S
+            2. S is said to be closed set if &#x211D; \ S is open
+            Proposition
+            1. S is open if there exists &#x03B4; &#x003E; 0 such that (s - &#x03B4;,s + &#x03B4;) &#x2286; S
+            2. S is open if any s &#x2208; S there exists a neighbourhood of s included in S
+            Terminology
+            <img src="cmsy10-4d.png" alt="M" /> Set (ZFC) book
+            <img src="cmsy10-51.png" alt="Q" /> topology =: set of open set
+            (<img src="cmsy10-4d.png" alt="M" />,<img src="cmsy10-51.png" alt="Q" />) toplogy space
+            <img src="cmsy10-55.png" alt="U" />&#x2208;<img src="cmsy10-51.png" alt="Q" /> &#x21D0;&#x21D2; all <img src="cmsy10-55.png" alt="U" />&#x2286;<img src="cmsy10-4d.png" alt="M" /> and open set
+            <img src="cmsy10-4d.png" alt="M" />\<img src="cmsy10-41.png" alt="A" /> &#x21D0;&#x21D2; all <img src="cmsy10-41.png" alt="A" />&#x2286;<img src="cmsy10-4d.png" alt="M" /> closed set
+            open  &#x2044;=&#x21D2;  closed
+            open  &#x2044;&#x21D0;=  closed
+            Definition of topology
+            Let <img src="cmsy10-4d.png" alt="M" /> be a set. A topology <img src="cmsy10-51.png" alt="Q" /> is a subset <img src="cmsy10-51.png" alt="Q" />&#x2286;<img src="cmsy10-50.png" alt="P" />(<img src="cmsy10-4d.png" alt="M" />)
+                                                               7                                                   
+
+                                                                                                                   
+            Satisfy
+            1.&#x2205; &#x2286;<img src="cmsy10-51.png" alt="Q" />,<img src="cmsy10-4d.png" alt="M" />&#x2286;<img src="cmsy10-51.png" alt="Q" />
+            2.<img src="cmsy10-55.png" alt="U" />&#x2286;<img src="cmsy10-51.png" alt="Q" />,<img src="cmsy10-56.png" alt="V" />&#x2286;<img src="cmsy10-51.png" alt="Q" /> =&#x21D2; <img src="cmsy10-55.png" alt="U" />&#x2229;<img src="cmsy10-56.png" alt="V" />&#x2208;<img src="cmsy10-51.png" alt="Q" />
+            3.<img src="cmsy10-55.png" alt="U" />&#x2208;<img src="cmsy10-51.png" alt="Q" /> =&#x21D2; &#x22C3;
+  &#x03B1;&#x2208;<img src="cmsy7-41.png" alt="A" /><img src="cmsy10-55.png" alt="U" />&#x03B1; &#x2208;<img src="cmsy10-51.png" alt="Q" />
+            Definition of Inner Product Positivity
+            &#x27E8;&#x20D7;v,&#x20D7; v&#x27E9;&#x2265; 0
+            &#x27E8;&#x20D7;v,&#x20D7; v&#x27E9; = &#x20D7; 0  &#x21D0;&#x21D2; &#x20D7; v = &#x20D7; 0
+            Bilinearity
+            &#x27E8;c1 &#x20D7; v1 + c2 &#x20D7; v2, &#x20D7; v3&#x27E9; = c1&#x27E8;&#x20D7;v1, &#x20D7; v3&#x27E9; + c2&#x27E8;&#x20D7;v2, &#x20D7; v3&#x27E9;
+            Conjugate Symmetic
+            &#x27E8;&#x20D7;v1, &#x20D7; v2&#x27E9; = _________&#x27E8;&#x20D7;v2 , &#x20D7; v1 &#x27E9;
+            Proof Cauchy-Schwarz Inequality by picture
+            |a &#x22C5; b|&#x2264;&#x2225;a&#x2225;&#x2225;b&#x2225;
+                                  8                                                   
+
+                                                                                                                   
+               Calculate the Excel Sheet Row number algorithm Latex Environment has
+            different mode
+            Math mode
+            Text mode
+            Command mode
+               Elliptic Curve and Group Structure Conic Curve
+            [
+             x  y  z]&#x230A;
+                     &#x2308;a  b  c
+                      d  e  f
+                      g  h  i&#x230B;
+                             &#x2309;&#x230A;
+                              &#x2308; x
+                                 y
+                                 z &#x230B;
+                                   &#x2309; = [
+  0 ]
+            ax2 + ey2 + iz2 + (b + d)xy + (c + g)xz + (f + h)yz = 0
+            (x,y,z) = (x&#x2215;z,y&#x2215;z,1)(z &#x2044;= 0)
+             ax2 + ey2 + (b + d)xy + (c + g)x + (f + h)y + i  =  0
+             ax + by + c                                =  0
+            sub (1) into (2) &#x21D2; ax2 + bx + c = 0
+            &#x21D2; x = -b±&#x221A;
+ ____b2 -4ac 
+      2a
+               Exponential backoff algorithm
+             1_
+N+1 &#x2211;k
+                  i=1 i
+            For example, the expected backoff time for the third collision, one could calcu-
+            late the maximum backoff time, N
+            N = 2c - 1(c = 3) N = 7
+            Calculate the mean of backoff time for the third collision(c=3)
+            E(c) =   1 __
+N+1 &#x2211;N
+           i=0 i
+            E(c) =   1 __
+N+1 &#x2211;N
+           i=0 &#x21D2; 1 __
+N+1 N(N+1) 
+     2      = N 
+ 2
+            E(3) =   1 __
+7+1 &#x2211;N
+          i=0 i = 1 
+8(0 + 1 + 2 + 3 + 4 + 5 + 6 + 7) = 28 
+ 8
+            E(3) = 3.5
+               Prove Square root of two is irrational &#x221A;
+  _2 &#x2215; &#x2208; &#x211A;
+            Assume &#x221A;
+                    _2 &#x2208; &#x211A;
+            let n = min{n &#x2208; &#x2115; | n *&#x221A;
+ _2 &#x2208; &#x2115;}
+            &#x21D2; n * (&#x221A;
+ _2 - 1) *&#x221A;
+ _2 &#x2208; &#x211A;
+            &#x2235;&#x221A;
+ _2 - 1 &#x003C; 1
+            &#x21D2; n * (&#x221A;
+ _2 - 1) *&#x221A;
+ _2 &#x003C; n *&#x221A;
+ _2
+            &#x21D2; n * (&#x221A;
+ _2 - 1) &#x003C; n such as n * (&#x221A;
+ _2 - 1) *&#x221A;
+ _2 &#x2208; &#x2115;
+            &#x21D2; This contracts our assumption    &#x25A1;
+                                   9                                                   
+
+                                                                                                                   
+                      Prove Square root of 2 is irrational [ Geometric proof ]
+            Assume &#x221A;
+                    _2 &#x2208; &#x211A;
+            &#x21D2; a 
+b = &#x221A;
+ _2   a,b &#x2208; &#x2115; and gcd(a,b) = 1,a &#x003E; b
+               given a right issoseles triangle
+            AB = AC = AE,   FE tangles to arc at point E
+            &#x21D2; AF = EF
+            Let AB = AC = 1
+            &#x21D2; BC = &#x221A;
+ _2
+            &#x21D2; FB = 1 - EB = 1 - (&#x221A;
+ _2 - 1) = 2 -&#x221A;
+ _2
+            &#x2235; AC 
+CB = EB 
+FB =  1 _&#x221A;
+ _2 = &#x221A;
+  _2-1 
+2-&#x221A;
+ _2
+            &#x2234; 1 _&#x221A;
+ _2 =  1 
+a
+b  = &#x221A;
+  _2-1 
+2-&#x221A;
+ _2 =  a 
+b -1 
+2-a
+b
+            &#x2234; b 
+a =  a-b 
+  b ___
+ 2b-a
+  b    =  a-b _
+2b-a
+            &#x2235;&#x221A;
+ _2 &#x003C; &#x221A;
+ _4 = 2 &#x2234; a &#x003C; 2b
+            &#x21D2; a - b &#x003C; b
+            &#x2235; 2a &#x003E; 2b
+            &#x21D2; 2b - a &#x003C; a
+            That contracts our assumption gcd(a,b) = 1
+            &#x21D2; a 
+b  &#x2215; &#x2208; &#x211A;
+                                                                    10                                                  
+
+                                                                                                                   
+            Geometric proof: square root of two is irrational
+            Given an isosceles right triangle from above and let gcd(a,b) = 1, from Pythagorean theorem
+            &#x21D2; a2 = b2 + b2
+            &#x21D2;&#x221A;
+ _2 = a 
+b
+               singular point on affine plane curve
+            If p &#x2208; (x,y) and  df 
+dx, df 
+dy are undefined on p &#x2208; (x,y), then p &#x2208; (x,y) is singular point
+                                      Eisenstein series
+            L = [w1,w2] &#x2208; &#x2102;,G(L) = &#x2211;
+  w&#x2208;L\{0,0} 1 _
+wk
+            Let lattices L = [1,&#x03C4;] and parametrized by &#x03C4; in the upper half plane &#x210D; = {z &#x2208;
+            &#x2102; : &#x2111;(z) &#x003E; 0}
+            G(L) = G([1,&#x03C4;]) = G(&#x03C4;) = &#x2211;&#x2032;
+  m,n&#x2208;&#x2124;         1 _____
+(m+n&#x03C4;)k
+                                  Show Gk(&#x03C4; + 1) = Gk(&#x03C4;)
+            Gk(&#x03C4; + 1) = &#x2211;&#x2032;
+  m,n&#x2208;&#x2124;            1 ________
+(m+n(&#x03C4;+1))k  = &#x2211;&#x2032;
+  m,n&#x2208;&#x2124;           1 _______
+(m+n+n&#x03C4;)k  = &#x2211;&#x2032;
+  m&#x2032;,n&#x2208;&#x2124;         1 ______
+(m&#x2032;+n&#x03C4;)k
+            &#x21D2; Gk(&#x03C4; + 1) = Gk(&#x03C4;)
+                                 Show Gk(&#x03C4;) = &#x03C4;-kG
+k(-1
+ &#x03C4;  )
+            &#x03C4;-kGk(-1
+ &#x03C4; ) = &#x03C4;-k &#x2211;&#x2032;
+    (m,n&#x2208;&#x2124;)      1 _____
+(m+n
+&#x03C4; )k
+            &#x03C4;-k &#x2211;&#x2032;
+    m,n&#x2208;&#x2124;        1 _____
+(m+n
+&#x03C4; )k  = &#x03C4;-k &#x2211;&#x2032;
+    m,n&#x2208;&#x2124;         1 ______
+(m&#x03C4;
+ &#x03C4;  +n
+&#x03C4; )k  = &#x2211;&#x2032;
+  m,n&#x2208;&#x2124; (&#x03C4;-k&#x03C4;k)(m&#x03C4; + n)-k)
+            &#x21D2; Gk(&#x03C4;) = &#x03C4;-kGk(-1
+ &#x03C4; )
+                            Show Gk(&#x03C4;) = 0 if k = (2j + 1)   j &#x2208; &#x2124;
+            For each &#x03C9; = (m + n&#x03C4;) &#x2208; L,there exists  - &#x03C9; = -(m + n&#x03C4;) &#x2208; L
+            &#x2235; &#x03C9;-(2J+1) + (-1)-(2J+1)&#x03C9;-(2j+1) = 0
+            &#x2234;&#x2211;&#x2032;
+  m,n&#x2208;&#x2124;(m + n&#x03C4;)-k = 0    for all k &#x2208; (2j + 1)
+             Show for any lattices L, the sum  &#x2032;
+                                         &#x2211;
+                                         &#x03C9;&#x2208;L 1_
+&#x03C9;k converges absoluately for all k &#x003E; 2
+            Proof:
+                                                              11                                                  
+
+                                                                                                                   
+                            Show    1___
+(1 - x)2 =  &#x221E;
+ &#x2211;
+ n=0(n + 1)xn   |x| &#x003C; 1
+            Proof: For all |x| &#x003C; 1, power series expansion
+                                     (   1___
+1 - x)
+     = ( &#x221E;
+&#x2211;
+n=0 xn)
+            Differentiate both sides
+                             (   1___
+1 - x)
+    &#x2032;
+                                     = ( &#x221E;
+&#x2211;
+n=0 xn)&#x2032;
+                             (   1___
+1 - x)
+    &#x2032;
+                                     = (1 - x)-2
+                             &#x221E;
+                            &#x2211;
+                            n=1 nxn-1 =  &#x221E;
+&#x2211;
+ i=0(i + 1)xi   (n - 1 = i)
+                                1
+___
+(1 - x)2 =  &#x221E;
+ &#x2211;
+ n=0(n + 1)xn    sub (i = n)             (1)
+                     Weierstrass function &#x2118;-function of lattice L is defined by
+            &#x2118;(z) = &#x2118;(z;L) =  1 _
+z2  + &#x2211;&#x2032;
+  w&#x2208;L [  1 ____
+(z-&#x03C9;)2  +  1 _
+&#x03C9;2 ]
+            Holomorphic
+            A function f(z) defined on some open neibourhood of a point z0 &#x2208; &#x2102; is said to
+            be holomorphic at z0 if the complex derivative
+                                f&#x2032;(z
+0) = lim h&#x2192;0 f(z0 + h) - f(z0) 
+           h
+            exists. We said f is holomorphic on an open set &#x03A9; if it is holomorphic at every
+            z0 &#x2208; &#x03A9; and we said f is holomorphic in a closed set C if it is holomorphic on
+            some open set &#x03A9; containing C. Functions are holomorphic on all of &#x2102; are said
+            to be entire
+                                Show f(z) = z2 is holomorphic
+                                f&#x2032;(z) = lim
+ h&#x2192;0 (z + h)2 - z2 
+          h
+                                f&#x2032;(z) = lim
+ h&#x2192;0 z2 + 2hz + h2 - z2 
+              h
+                                f&#x2032;(z) = lim
+ h&#x2192;0 2hz + h2 
+      h
+                                f&#x2032;(z) = lim
+ h&#x2192;0 2z + h
+                                f&#x2032;(z) = 2z
+                                                       12                                                  
+
+                                                                                                                   
+            Differential
+            A function f(x) is differential on x0 &#x2208; &#x211D; if
+                               f&#x2032;(x
+0) = lim h&#x2192;0 f(x0 + h) - f(x0) 
+           h
+            exists
+                          Show f(x) = x2 is differentiable for all x &#x2208; &#x211D;
+                               f&#x2032;(x) = lim
+ h&#x2192;0 f(x + h) - f(x) 
+          h
+                               f&#x2032;(x) = lim
+ h&#x2192;0 x2 + h2 + 2xh - x2 
+              h
+                               f&#x2032;(x) = lim
+ h&#x2192;0 h2 + 2xh 
+    h
+                               f&#x2032;(x) = lim
+ h&#x2192;0 h + 2x
+                               f&#x2032;(x) = 2x   for all x &#x2208; &#x211D;
+                                                                    13                                                  
+
+                                                                                                                   
+                                       Elliptic Curve
+            Find the formula for
+                                       s(n) =  n
+ &#x2211; 
+k=1 k2
+                                  s(n) = (2n + 1)(n + 1)n 
+      2 &#x00D7; 3
+            Let y2 = S(n) and x = n
+                                   y2 = 1 
+6x(x + 1)(2x + 1)
+            
+               (x,y) = (0,0),(-1,0),(-1
+2,0) are on the curve
+                                   y2 = x3 + bx2 + cx + d
+            &#x2235; (x + b 
+3)3 = x3 + 3x2 b 
+3 + 3x(b
+3)2 + (b
+3)3
+            y2 = (x + b 
+3)3 - 3x(b
+3)2 - (b
+3)3 + cx + d
+            y2 = (x + b 
+3)3 - [3(b
+3)2 - c]x + d
+                                                       14                                                  
+
+                                                                                                                   
+            let x + b 
+3 = x&#x2032;
+            y2 = x&#x2032;3 - [3(b
+3)2 - c][x&#x2032;- b 
+3] + d
+                                                       15                                                  
+
+
