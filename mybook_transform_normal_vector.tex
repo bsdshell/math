@@ -1,0 +1,52 @@
+\documentclass{book}
+\usepackage[tc]{titlepic}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tipa}
+\usepackage{pagecolor,lipsum}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{centernot}
+\usepackage{xcolor}
+\newcommand{\polyringz}[2][Z]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
+\newcommand{\polyringr}[2][R]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
+\begin{document}
+\newtheorem{theorem}{Theorem}[section]
+    \[ \mbox{Linear Transformations} \]
+\begin{align*}
+    & \mbox{A function } \mathit{T}: \mathbb{R}^n \rightarrow \mathbb{R}^m \mbox{ is called linear transformation, if it satisfies} \\
+    & \mathit{T} ( \mathbf{u} + \mathbf{v} ) = \mathit{T}(\mathbf{u}) + \mathit{T}(\mathbf{v}) \quad \forall \; \mathbf{u} \,, \mathbf{v} \in \mathbb{R}^n\\
+    & \mathit{T} ( \lambda \mathbf{u} ) = \lambda \mathit{T}(\mathbf{u}) \quad \mbox{all scalars } \lambda \\
+\end{align*}
+
+\[ \mbox{Transform normal vector using transpose inverse matrix} \] 
+$\mbox{Let } \mathbf{n} \,, \mathbf{u} \in \mathbb{R}^n \,, \mathbf{M} \mbox{ is affine transformnation that transforms } \mathbf{u} $\\
+$\mathbf{A} \mbox{ is affine transformation that transforms the normal vector } \mathbf{n}$\\
+$\mathbf{n} \mbox{ is normal vector to } \mathbf{u}$  \\
+\begin{equation}
+\begin{aligned}
+     & \Rightarrow \mathbf{n}^{T} \mathbf{u} = \mathbf{0} \\
+     & \Rightarrow (\mathbf{A}\mathbf{n})^{T} \mathbf{M}\mathbf{u} = \mathbf{0} \\
+     & \Rightarrow (\mathbf{A}\mathbf{n})^{T} \mathbf{M} = \mathbf{n}^{T}\\
+     & \Rightarrow (\mathbf{A}\mathbf{n})^{T} = \mathbf{n}^{T}\mathbf{M}^{-1} \\
+     & \Rightarrow (\mathbf{A}\mathbf{n}) = \mathbf{M}^{-T} \mathbf{n}\\
+     & \Rightarrow \mathbf{A} = \mathbf{M}^{-T} \nonumber \\
+\end{aligned}
+\end{equation}
+
+\begin{theorem}
+The solution set $\mathit{K}$ of any system $\mathbf{A}\mathbf{x}=\mathbf{b}$ of $m$ linear equations in $n$ unknowns is 
+an affine space, namely a coset of $\ker{T_{A}}$ represented by a particular solution $\mathbf{s} \in \mathbb{R}^{n}$ \\
+\[ \mathit{K} \in \mathbf{s} + \ker{T_{A}}  \]
+$\mathbf{Proof}$: If $\mathbf{s} \,, \mathbf{w} \in \mathbf{K}$, then 
+$\mathbf{A}(\mathbf{s} - \mathbf{w}) = \mathbf{A}\mathbf{s} - \mathbf{A}\mathbf{w} = \mathbf{b} - \mathbf{b} = \mathbf{0}$
+so that $\mathbf{s} - \mathbf{w} \in \ker{T_{A}}$. Now let $\mathbf{k} = \mathbf{s} - \mathbf{w} \in \ker{T_{A}}$. Then
+\[ \mathbf{w} = \mathbf{s} + \mathbf{k} \in \ker{T_{A}} \]
+Hence $\mathbf{K} \subseteq \mathbf{s} + \ker{T_{A}}$. To show the conversion inclusion, suppose $\mathbf{w} \in \mathbf{s} + \ker{T_{A}}$. Then $\mathbf{w} = \mathbf{s} + \mathbf{K}$ for some $\mathbf{k} \in \ker{T_{A}}$. 
+But then 
+\[ \mathbf{A}\mathbf{w} = \mathbf{A}(\mathbf{s} + \mathbf{k}) = \mathbf{A}\mathbf{s} + \mathbf{A}\mathbf{k} = \mathbf{b} + \mathbf{0} = \mathbf{b} \]
+so $\mathbf{w} \in \mathit{K}$, and $\mathbf{s} + \ker{T_{A}} \subseteq \mathit{K}$. Thus, $\mathit{K} = \mathbf{s} + \ker{T_{A}} \quad \square$
+
+\end{theorem}
+\end{document}

@@ -1,0 +1,829 @@
+\documentclass[10pt]{article}
+\usepackage{tipa}
+\usepackage{pagecolor,lipsum}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{centernot}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\newcommand{\polyringz}[2][Z]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
+\newcommand{\polyringr}[2][R]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
+
+\begin{document}
+\title{My Little Book}
+\author{Aron}
+
+\[ \textbf{Prove the power series } exp(A) = \sum_{k=0}^{n} \frac{A^{k}}{k!} \textbf{ is convegent when A is nxn matrix} \]
+$\exp(X) = \sum_{k=0}^{n} \frac{X^{k}}{k!}$\\
+$\sin(X) = \sum_{k=0}^{n} (-1)^{k}\frac{X^{2k}}{2k!}$\\
+$\cos(X) = \sum_{k=0}^{n} (-1)^{k}\frac{X^{2k+1}}{(2k+1)!}$\\
+$\cosh(X) = \sum_{k=0}^{n} \frac{X^{2k}}{(2k)!}$\\
+$\sinh(X) = \sum_{k=0}^{n} \frac{X^{2k+1}}{(2k+1)!}$\\
+
+Let $ X = 
+    \begin{bmatrix}
+    0 & -\beta \\
+    \beta & 0 
+    \end{bmatrix}
+$\\
+
+$
+    \exp(X) = 
+        \begin{bmatrix}
+        1 & 0 \\
+        0 & 1 
+        \end{bmatrix}
+        +
+        \begin{bmatrix}
+        0 & -\beta \\
+        \beta & 0 
+        \end{bmatrix}
+        +
+        \frac{1}{2!}
+        \begin{bmatrix}
+        -\beta^{2} & 0 \\
+        0 & \beta^{2} 
+        \end{bmatrix}
+        +
+        \frac{1}{3!}
+        \begin{bmatrix}
+        0 & \beta^{3} \\
+        -\beta^{3} & 0 
+        \end{bmatrix}
+        +
+        \frac{1}{4!}
+        \begin{bmatrix}
+        \beta^{4} & 0 \\
+         0 & \beta^{4} 
+        \end{bmatrix}
+        +
+        \frac{1}{5!}
+        \begin{bmatrix}
+        0 & -\beta^{5}\\
+        \beta^{5} & 0 
+        \end{bmatrix}
+$\\
+$
+    \exp(X) = 
+        \begin{bmatrix}
+        1 + \frac{1}{2!}(-\beta^{2}) + \frac{1}{4!}\beta^{4} + ... & -\beta + \frac{1}{3!}\beta^{3} + ...\\
+        \beta + \frac{1}{3!}-\beta^{3} + ... & 1 + \frac{1}{2!}\beta^{2} + \frac{1}{4!}\beta^{4} + ...
+        \end{bmatrix}
+        = 
+        \begin{bmatrix}
+        \sin(\beta) & -\cos(\beta)\\
+        \cos(\beta) & \sin(\beta)
+        \end{bmatrix}
+$
+
+\[ \textbf{Group} \]
+$\text{Let a, b, c} \in \mathbb{G} $\\
+There is binary operation * and satisfies\\
+
+Closure Law\\
+$ a*b \in \mathbb{G} $\\
+
+Associative Law\\
+$ a*b*c = a*(b*c)$\\
+
+Identity\\
+$ \exists \mathit{e} \in \mathbb{G} \text{ such that } \mathit{e}*a = a*\mathit{e} \in \mathbb{G}$\\
+
+Inverse\\
+$ \text{If a } \in \mathbb{G}, \exists a^{-1} \in \mathbb{G} \text{ such that } a*a^{-1} = e $\\
+
+XOR over $\mathbb{Z}/\mathbb{Z}_2$ forms a group\\
+1. $ a \oplus b = a \oplus b $ commutative\\ 
+2. $ a \oplus b \oplus c = a \oplus (b \oplus c) $ associative\\ 
+3. $ 0 \oplus a = a $ identity\\ 
+4. $ a \oplus a = 0 $ own inverse\\  
+
+\[ \textbf{ Semigroup } \]
+Semigroup is a set $S$ and a binary operator $\otimes \colon S \times S \rightarrow S$ that satisfies 
+associative property\\ 
+\[ \forall \text{ a, b, c} \in S \text{ such as } a \otimes b\otimes c = a \otimes (b \otimes c) \]
+
+\[ \textbf{ Monoid } \]
+A monoid is a triple $(S, \otimes, \overline{1})$ \\
+1. $\otimes$ is closed associative binary operator on the set $S$ \\
+2. $\overline{1}$ is identity element for $\otimes$ \\
+$\forall\quad a, b, c \in S$ such as\\
+\[ a \otimes b  \otimes c = a \otimes (b \otimes c)   \]
+\[ a \otimes \overline{1} = \overline{1} \otimes a =  a  \]
+
+\newpage
+\[ \text{ Category } \]
+A category is collection of objects and collection of arrow[morphism, map] which have following structure
+echo arrow has domain and codomain which are object     
+\[ f \colon X \rightarrow Y \text{ or } X \xrightarrow{f} Y\]
+Composition
+\[ f \colon X \rightarrow Y \text{ and } g \colon Y \rightarrow Z \quad g \circ f \colon X \rightarrow Z \quad \]
+Composition Identity
+\[ f \colon X \rightarrow Y \text{ and } g \colon Y \rightarrow Z  \quad \exists id_y \colon Y \rightarrow Y \mid id_y \circ f = f \text{ and } g \circ id_y = g \]
+Associative
+\[ f \colon X \rightarrow Y \quad g \colon Y \rightarrow Z \quad h \colon Z \rightarrow W \mid h \circ g \circ f = h \circ (g \circ f) \quad \]
+
+\[ \text{functor} \]
+
+\[ \text{ Ring } \]
+Let a, b, c $\in  \mathbb{R}$ There are addition and multiplication operations and satisfy associative and distributive laws\\
+
+Associative Law\\
+$ a \times b \times c = a \times (b \times c) $\\
+
+Distritutive Law\\
+$a \times (b + c) = a \times b + a \times c $\\
+
+Additive inverse\\
+For all a in $\mathbb{R}$, there exists -a such that\\
+$a + (-a) = 0$\\
+
+Multiplicative identity \\
+For all a in $\mathbb{R}$, there exist 1 such that\\
+$1a = a$ \\
+
+\[ \text{Division Ring} \] 
+Division Ring is a set $F$, together with two operations + and $\times$ 
+1. $F$ is abelian group under +
+2. The non-zero elements of $F$ form group under $\times$ (not necessary commutative)
+
+\[\text{Group homomorphism(operation preserving)}\]
+Given group $(G1, +)$ and $(G2, *)$,for all $a_1, a_2 \in G1$ and $b_1, b_2 \in G2$,\\
+if $\phi(a_1 + a_2) = \phi(b_1)*\phi(b_2)$, then $\phi$ is group homomorphism\\
+
+Given $G(\mathbb{R}, +)$ and $(\mathbb{R}, *)$, then $\phi(x) = e^x$ is homomorphism\\ 
+Let $a_1, b_1 \in \mathbb{R}$ and $a_2, b_2 \in \mathbb{R}$\\ 
+$\phi(a_1+b_1) = e^{a_1 + b_1}$ and $\phi(a_2)*\phi(b_2) = e^{a_2}*e^{b_2} = e^{a_2+b_2}$\\
+$\Rightarrow \phi(a_1 + b_1) = \phi(a_2)*\phi(b_2)$\\
+$\Rightarrow \phi(x) = e^{x}$ is homomorphism for $G(\mathbb{R}, +)$ and $G(\mathbb{R}, *)$
+
+\[\text{Normal Group} \]
+if $N$ is subgroup of $G$, and if $gH = Hg \quad \forall g \in G$, then $H$ is normal
+
+\[ \text{Coset} \]
+if $N$ is subgroup of $G$, and if $gH = \{gh: \forall g \in G \}$, then $gH$ is left coset of $H$ in $G$ with repsect to $g$.\\
+Similarly, if $Hg = \{hg: \forall g \in G \}$, then $Hg$ is right coset of $H$ in $G$ with repsect to $g$.\\
+\begin{center}
+\includegraphics[width=10cm,scale=1]{/Users/cat/myfile/github/image/coset.jpg}\\
+\end{center}
+
+\newpage
+Ring homomorphism(operation preserving)
+Let $\phi$ is a function between two rings $R$, then $\phi$ is a $\mathit{ring}$ homomorphism if
+for all $a \in R$ and $b \in R$ 
+\[\phi(a+b) = \phi(a) + \phi(b)\] 
+\[\phi(ab) = \phi(a)\phi(b)\]
+and \[\phi(1) = 1\]
+e.g. $G(\mathbb{N}, +)$ and $G(\mathbb{Z}/\mathbb{Z}_5, +)$\\
+
+Let $\phi: \mathbb{C} \rightarrow \mathbb{C}$ be the map send a complex number to its complex conjugate. Then $\phi$ is an automorphism of $\mathbb{C}$. 
+$\phi$ is its own inverse.\\
+
+\begin{equation}
+\begin{aligned}
+\phi(z) &= \overline{z}\\
+\phi(z_1 + z_2) &= \overline{z_1 + z_2}\\
+\overline{z_1 + z_2} &= \overline{z_1} + \overline{z_2}\\
+\phi(z_1 z_2) &= \overline{z_1 z_2}\\
+\overline{z_1 z_2} &= \overline{z_1} \cdot \overline{z_2} \nonumber\\
+\phi(\phi(z)) &= z\\
+\end{aligned}
+\end{equation}
+
+Let $\phi: \polyringr{x} \rightarrow  \polyringr{x}$ be the map that send $f(x)$ to $f(x+1)$. Then $\phi$ is an automorphism of $\polyringr{x}$.   
+The inverse map sends $f(x)$ to $f(x-1)$\\
+
+\[ \text{Ideal}\\ \]
+Let $R$ be a ring and let $I$ is additive subgroup of $R$, then $I$ is called an ideal of $R$ and write $I \triangleleft R$ 
+\quad if $\forall a \in I$ and $\forall r \in R $, and $ ar \in I$ and $ra \in I$\\
+
+Example\\
+$R = (\mathbb{N}, +)$ and $I = (2k, +) \quad k \in \mathbb{N}$\\
+
+Let $I$ be a kernal of $\phi$, then $I$ is an ideal of $R$\\
+Let $a \in I$ and $r \in R$, then $\phi(ra) = \phi(r)\phi(a)$\\
+$I$ is kernal of $\phi$ $\Rightarrow \phi(a) = 0 \therefore \phi(ra) = 0, \therefore ra \in I$\\
+
+$\textbf{If }  \gcd(a, b) = 1 \textbf{ and }  a \vert bc \quad$  $\Rightarrow a \vert c$ \\
+$\textbf{Proof}$ \\
+$\gcd(a, b) = 1  $\\
+$\Rightarrow ma+nb = 1\quad m, n \in \mathbb{N} $ \\
+$\Rightarrow mac + nbc = c$ \\
+$a \vert bc \Rightarrow ak = bc \quad k \in \mathbb{N} $ \\
+$\Rightarrow mac + n(ak)=c \quad    (ak=bc) $ \\
+$\Rightarrow a(mc + nk) = c$  \\
+$\Rightarrow a \vert c $ \\
+\\
+$\textbf{If } \gcd(a, b) = 1 \Rightarrow ma + nb = 1 \quad m, n \in \mathbb{N}$\\
+$\textbf{Proof}$\\
+\\
+$\textbf{Prove there is infinite prime}$\\
+\\
+$\textbf{Prove all the eigeivalues}\quad  \lambda \geq  0  \textbf{ if the matrix is symmetic}$\\
+\\
+$\textbf{If the determine of matrix } \det{A} > 0 \iff \textbf{the matrix is invertable}$\\
+\\
+Efficient Algorithm to compute Fibonacci Number \\
+Fibonacci Sequence   
+$F_{n} = F_{n} + F_{n-1}$ with $F_{0} = 0$
+$F_{1} = 1$ \\
+(1) Navier algorithm with recursion in $O(2^n)$ \\
+(2) Use Dynamic Algorithm in $O(n)$\\
+(3) Use matrix with repeated squaring to compute Fibonacci Sequence in $O(\log{n})$
+\[\left(\begin{array}{cc} F_{n+1} & F_{n} \\ F_{n} & F_{n-1} \end{array} \right)^n =  \left(\begin{array}{cc}1 & 1 \\ 1 & 0 \end{array} \right)^n \]
+\\
+\newpage
+
+\begin{flushleft}
+$\text{Visual proof}$\\
+$ (\sum_{k=1}^{n} k)^{2} = \sum_{k=1}^{n} k^{3}$\\
+\includegraphics[width=10cm,scale=1]{/Users/cat/myfile/github/image/cubeproof.png}
+\end{flushleft}
+
+\begin{flushleft}
+$\text{Show the sum of odd number are square number}$
+\medskip
+1\\
+1 + 3\\
+1 + 3 + 5 \\
+1 + 3 + 5 + ... + (2k+1) \\
+\medskip
+$S = \sum_{k=1}^{n} (2k-1)$ \\
+$S = \sum_{k=1}^{n} 2k - \sum_{k=1}^{n} 1$ \\
+$S = 2(\sum_{k=1}^{n} k) - n $ \\
+$S = 2 \frac{(1+n)n}{2} - n$ \\
+$S = (1+n)n - n$ \\
+$S = n^2 $ \\
+\end{flushleft}
+
+
+composition function \\
+$g \circ f \circ h $ \\
+$g \circ f \colon A\to B$ \\
+
+Find the sum of sequence of squares\\
+
+$\sum_{k=1}^{n}((k+1)^3 - k^3) = \sum_{k=1}^{n}(k^2+1+2k)(k+1) - k^3$
+
+$\sum_{k=1}^{n} (k^3+k+2k^2+k^2+1+2k)-k^3$
+
+$\sum_{k=1}^{n} (k^3+3k^2+3k+1)-k^3$
+
+$\sum_{k=1}^{n} (3k^2+3k+1)$ \\
+
+$\sum_{k=1}^{n} ((k+1)^3-k^3) = \sum_{k=1}^{n} (k+1)^3 - \sum_{k=1}^{n} k^3$
+
+$\Rightarrow 2^3 + 3^3 + ... + n^3 + (n+1)^3 - (1 + 2^3 + 3^3 + ... + n^3) = (n+1)^3 -1$
+
+$\Rightarrow  \sum_{k=1}^{n}(k+1)^3 - \sum_{k=1}^{n}k^3 =(n+1)^3 - 1$
+
+$\Rightarrow (n+1)^3-1 = \sum_{k=1}^{n}(3k^2+3k+1) $
+
+$\Rightarrow (n+1)^3-1 = 3\sum_{k=1}^{n} k^2 +  3\sum_{k=1}^{n} k + n $
+
+$\Rightarrow (n+1)^3-1 = 3\sum_{k=}^{n} k^2 + (n+1) n \frac{3}{2} + n$
+
+$\Rightarrow (n+1)^3-1 -  (n+1) n \frac{3}{2} - n= 3\sum_{k=1}^{n} k^2 $
+
+$\Rightarrow (n+1)((n+1)^2-n \frac{3}{2})-(n+1) = 3\sum_{k=1}^{n} k^2$
+
+$\Rightarrow (n+1)( (n+1)^2 -n\frac{3}{2}-1) = 3\sum_{k=1}^{n} k^2 $	
+
+$\Rightarrow (n+1)( n^2+1+2n-n\frac{3}{2} - 1) = 3\sum_{k=1}^{n} k^2 $	
+
+$\Rightarrow (n+1)(n^2 + \frac{1}{2}n) = \sum_{k=1}^{n} k^2$
+
+$\Rightarrow \frac{1}{2}(n+1)(2n^2+n)=\sum_{k=1}^{n} k^2$
+
+$\Rightarrow \frac{1}{6}n(n+1)(2n+1) = \sum_{k=1}^{n} k^2 $
+
+\pagebreak
+\[ \text{Vector Space} \]
+$\text{Let }\vec{u}, \vec{v}, \vec{w} \in \vec{V} \text{ and scalars } \alpha, \beta \in \mathbb{F}$\\
+Closure\\
+$\vec{u} + \vec{v} \text{ and } \in \vec{V}$\\
+Associative Law\\
+$\vec{u} + \vec{v} + \vec{w} = \vec{u} + (\vec{v} + \vec{w})$\\
+Commutative Law\\
+$\vec{u} + \vec{v} = \vec{v} + \vec{u} $\\
+Identity element of addition\\
+$\vec{0} \in \vec{V} \text{ such that } \vec{0} + \vec{u} = \vec{u}$\\
+Inverse element of addition\\
+$\exists -\vec{u} \text{ such that } \vec{u} + (-\vec{u}) = \vec{0}$\\
+Identity element of scalar multiplication\\
+$\exists \mathit{1} \in \mathbb{F} \text{ such that } \mathit{1}\vec{u} = \vec{u}$\\
+Distributivity of scale multiplication with respect to vector addition\\
+$\alpha(\vec{u} + \vec{v}) = \alpha\vec{u} + \alpha\vec{v}$\\
+Distributivity of scale multiplication with respect to field addition\\
+$(\alpha + \beta)\vec{u} = \alpha\vec{u} + \beta\vec{u}$\\
+
+\pagebreak
+Definition of Affine Space\\
+An affine space is a set of points that admits free transitive action of a vector space $\vec{V}$ That is, there is a map $X \times \vec{V} \rightarrow X:(x, \vec{v}) \mapsto x + \vec{v}$, called translation by a vector $\vec{v}$, such that\\
+1. Addition of vectors corresponds to composition of translation, i.e., for all $x \in X \text{ and } \vec{u}, \vec{v} \in \vec{V}, (x + \vec{u}) + \vec{v} = x + (\vec{u} + \vec{v})$\\ 
+2. The zero vector $\vec{0}$ acts as the identity vector, i.e., for all $x \in X, x + \vec{0} = x$\\
+3. The action is transitive, i.e., for all $x, y \in X, \text{ exists } \vec{v} \in \vec{V} \text{ such that } y = x + \vec{v}$\\
+4. The dimension of X is the dimension of vector space translations, $\vec{V}$\\\\
+Or There is unique map\\
+$X \times X \rightarrow \vec{V}:(x, y) \mapsto y - x \text{ such that } y = x + (y - x) \text{ for all }x, y \in X$
+It furthermore satifies\\ 
+1. For all $x, y, z \in X$, z - x = (z - y) + (y - x)\\
+2. For all $x, y, \in X$ and $\vec{u}, \vec{v} \in \vec{V}$, $ (y + \vec{v}) - (x + \vec{u}) = (y - x) + (\vec{v} - \vec{u})$\\
+3. For all $x \in X, x - x = \vec{0}$\\
+4. For all $x, y \in X, y - x = -(x - y)$\\
+
+Affine Space from linear system equation\\
+Consider an $(m \times n)$ linear sytem equations\\\\
+$\sum_{k=1}^{n} a_{i k} x_{k} = c_{i}, (1 \leq i \leq m) \quad\quad\quad \text{(1)}$\\\\
+where $d = n - rank(M), c_{i} \ne \vec{0} \in \mathbb{R}^{m}$\\
+When the system has at least one solution $x_{p}$ then the full set of solution is a d-dimension affine space
+$A \subset \mathbb{R}^{n}$\\ 
+Since $x_{p} \in A, \text{ we can declare point } x_{p} \text{ as origin of } A$ and then introduct A coordinates as follows:homogenous system\\
+
+$\sum_{k=1}^{n} a_{i k} x_{k} = \vec{0} (1 \leq i \leq m)$\\\\
+$\Rightarrow dim(Ker(M)) = d \quad \text{(Rank Theorem)}$\\
+$\text{(1) has d-linear independent solution } \vec{b_{j}} \in \mathbb{R}^{n} \quad\quad (1 \leq j \leq d)$\\
+$\text{Affine Space }\mathit{A}$ can be written as\\\\ 
+$A = \Big\{ x_{p} + \sum_{j=1}^{d}\alpha_{j}\vec{b_{j}} \quad \mid \quad \alpha_{j} \in \mathbb{R} \quad\quad (1 \leq j \leq d)\Big\} $\\\\
+$\text{The } \alpha_{j} \text{ can be served as coordinates in A, so that A looks as it were a d-dimension coordiate space.}$\\ 
+$\text{But note that addition(+) in the space refers to the chosen point } x_{p}, \text{ and not to the origin of the base vector space}$\\
+
+$
+        \begin{bmatrix}
+        1 & 2 & 3 \\
+        4 & 5 & 6    
+        \end{bmatrix}
+        \left[
+        \begin{array}{c}
+        x_1 \\
+        x_2 \\
+        x_3 
+        \end{array}
+        \right] = 
+        \left[ 
+        \begin{array}{c}
+        1 \\ 
+        2 
+        \end{array}
+        \right]
+$
+\newpage
+
+\noindent
+Theorem 1\\
+The image of transformation is spanned by the image of the any basis of its domain. For $T:\vec{V} \rightarrow \vec{W}, \text{ if } \beta=\{ \vec{b_1},\vec{b_2},...,\vec{b_n} \} \text{ is a basis of }\vec{V}, 
+\text{ then }T(\beta) = \{ T(\vec{b_1}), T(\vec{b_2}), ... ,T(\vec{b_n})\} \text{ spans the image of }T$\\
+
+\noindent
+Proof\\
+For all $\vec{v} \in \vec{V}, \vec{v} = \alpha_1\vec{b_1} + \alpha_2\vec{b_2} + ... + \alpha_n\vec{b_n}$\\
+$\Rightarrow T(\vec{v}) = T(\alpha_1\vec{b_1} + \alpha_2\vec{b_2} + ... + \alpha_n\vec{b_n})$\\
+$\Rightarrow T(\vec{v}) = \alpha_1 T(\vec{b_1}) + \alpha_2 T(\vec{b_2}) + ... + \alpha_n T(\vec{b_n})$\\
+$\Rightarrow \{ T(\vec{b_1}), T(\vec{b_2}),...,T(\vec{b_n})\} \text{ spans the image of }T$\\
+
+\noindent
+Rank Theorem\\
+If the domain is finite dimension, then the dimension of domain is the sum of rank and nullity of the transformation\\
+$\text{Let } T:\vec{V} \rightarrow \vec{W} \text{ be a linear transformation },\text{let n be the dimension of }\vec{V},$\\
+$\text{let k be nullity of }T \text{ and let k be the rank of }T$\\
+$\text{Show } n = k + r$\\
+
+$\text{Let }\beta = \{ \vec{b_1}, \vec{b_2},...,\vec{b_k}\} \text{ be the basis of kernal of }T, \text{ the basis can be extended to } \gamma = \{ \vec{b_1}, \vec{b_2},...,\vec{b_k}, \vec{b_{k+1}},...,\vec{b_n}\}$\\
+$\text{let }\vec{v} \in \vec{V} \Rightarrow \vec{v} = \alpha_1 \vec{b_1} + \alpha_2 + \vec{b_2} +,..., + \alpha_k \vec{b_k} + \alpha_{k+1}\vec{b}_{k+1}+,...,+\alpha_{n}\vec{b_n}$\\
+$\text{Let }T(\vec{v}) = T(\alpha_1 \vec{b_1} + \alpha_2 + \vec{b_2} +,..., + \alpha_k \vec{b_k} + \alpha_{k+1}\vec{b}_{k+1}+,...,+\alpha_{n}\vec{b_n}) = \vec{0}$\\
+$\Rightarrow \vec{v} = \alpha_1 \vec{b_1} + \alpha_2 + \vec{b_2} +,..., + \alpha_k \vec{b_k} + \alpha_{k+1}\vec{b}_{k+1}+,...,+\alpha_{n}\vec{b_n} \in \ker(T) \quad\quad \text{(1)}$\\
+$\because \vec{v} = \sigma_1 \vec{b_1} + \sigma_2 + \vec{b_2} +,..., + \sigma_k \vec{b_k} \in \ker(T) \quad\quad \text{(2)}$\\
+$(1) - (2) \Rightarrow \vec{0} = (\alpha_1-\sigma_1)\vec{b_1} + (\alpha_2 - \sigma_2)\vec{b_2}+,...,+ (\alpha_k - \sigma_k)\vec{b_k}+   \alpha_{k+1}\vec{b}_{k+1}+,...,+\alpha_{n}\vec{b_n} $\\
+$\because \vec{b}_{1}, \vec{b}_{2},...,\vec{b}_{k},\vec{b}_{k+1}, \vec{b}_{k+2},...,\vec{b_n} \text{ are linearly independent}$\\
+$\therefore \alpha_{k+1}, \alpha_{k+2}, ... , \alpha_{n} \text{ are all zero} \quad\quad \text{(3)}$\\
+$T(\vec{v}) = T(\alpha_1 \vec{b_1}) + T(\alpha_2 \vec{b_2}) +,..., + T(\alpha_k \vec{b_k}) + T(\alpha_{k+1}\vec{b}_{k+1})+,...,+T(\alpha_{n}\vec{b_n}) = \vec{0}$\\
+$T(\vec{v}) = \alpha_1 T(\vec{b_1}) + \alpha_2 T(\vec{b_2}) +,..., + \alpha_k T(\vec{b_k}) + \alpha_{k+1}T(\vec{b}_{k+1})+,...,+\alpha_{n}T(\vec{b_n}) = \vec{0}$\\
+$\because \beta = \{ \vec{b_1}, \vec{b_2},...,\vec{b_k}\} \text{ is the basis of kernal of }T$\\
+$\therefore T(\vec{b_1}) = \vec{0},..., T(\vec{b_k}) = \vec{0}$\\
+$\therefore T(\vec{v}) = \alpha_{k+1}T(\vec{b}_{k+1})+,...,+\alpha_{n}T(\vec{b_n}) = \vec{0} \quad\quad \text{(4)}$\\
+$\text{(3) and (4)} \Rightarrow \{ T(\vec{b}_{k+1}), T(\vec{b_{k+2}}), ... , T(\vec{b_{n}}) \} \text{ are linearly independent}$\\
+$\Rightarrow \dim(\vec{V}) = \text{ nullity(T) } + \text{ rank(T) } \text{ or }$\\
+$\Rightarrow \dim(\vec{V}) = \dim(\ker(T)) + \dim(\text{img(T)}) $\\
+$\Rightarrow n = k + r \quad \square$\\
+
+\noindent
+Affine plane\\
+Affine plane is a set, whose elements are called points, and a set of subset, called lines, satifying the following three axioms:\\
+1. Given two distinct points P and Q, there is one and only one containing both P and Q.\\
+2. Given a line l, and a point P not in l, there is one and only one line m which is parallel to l and which passes through P.\\
+3. There exists three non-collinear points.\\ 
+
+\noindent
+A coordinate system in an affine space $(\mathbf{X}, \mathbf{V}) \text{ consists of a point } \mathbf{O} \in \mathbf{X}$ is called origin, and basis 
+$\vec{v_1},...,\vec{v_n}\quad\text{ for } \vec{V} \text{ Any point }\mathbf{x} \in \mathbf{X} \text{ can be written as}$\\
+
+$\mathbf{x} - \mathbf{O} = \mathbf{x} - \mathbf{O}$\\
+$\Rightarrow \mathbf{x} = \mathbf{O} + (\mathbf{x} - \mathbf{O}) = \mathbf{O} + \sum_{k=1}^{n}\mathit{x_k}\vec{v_k}$\\
+$\text{where the numbers }\mathit{x_1},...,\mathit{x_n}\text{ are the coordinates for vector }\mathbf{x} - \mathbf{O}\text{ with respect to the basis }\vec{v_1},...\vec{v_n}.$\\
+$\text{They are now also called the coordinates for }\mathbf{x} \text{ with respect to the coordinate system }\mathbf{O}, \vec{v_1},...,\vec{v_n}$\\
+
+\noindent
+Projective plane\\
+A projective plane $\mathbb{S}$ is a set, whose elements are called points, and a set of subset, called lines, satifying the following four axioms.\\
+1. Two distinct points meets P, Q of S lie on one and only one line.\\ 
+2. Any two lines meet in at least one point.\\
+3. There exist three non-colinear points\\
+4. Every line contains at least three points.\\
+
+\noindent
+Manifold\\
+$\text{An subset }\mathbf{S} \text{ of } \mathbb{R}^{m} \text{ is called a manifold of dimension of d if every point p of }\mathbf{S} \text{ has a neighbourhood in }$
+$\mathbf{S}\text{ which is homeomorphic to an open set of }\mathbb{R}^{d}$\\
+
+\noindent
+Homeomorphrism\\
+$\text{Let S be a subset of }\mathbb{R}^{m} \text{ and sp be the subset of }\mathbb{R}^{n}. \text{ A map } \mathit{f}: \mathbb{R}^{m} \mapsto \mathbb{R}^{n}$\\
+$\text{ is called homeomorphism if }\mathit{f} \text{ is continuous and bijective and }\mathit{f}^{-1} \text{ is continuous}$\\
+
+
+\noindent
+Definition Open and Close Sets\\
+1. $\mathbf{S}$ is said to be open set if every point of $\mathbf{S}$ is an interior of $\mathbf{S}$\\
+2. $\mathbf{S}$ is said to be closed set if $\mathbb{R}\setminus\mathbf{S}$ is open\\  
+
+\noindent
+Proposition\\
+1. $\mathbf{S} \text{ is open if there exists } \delta > 0 \text{ such that } (\mathit{s} - \delta, \mathit{s} + \delta) \subseteq \mathbf{S}$\\
+2. $\mathbf{S} \text{ is open if any }\mathit{s} \in \mathbf{S} \text{ there exists a neighbourhood of }\mathit{s} \text{ included in }\mathbf{S}$\\  
+
+
+\noindent
+Terminology\\
+$\mathcal{M} \text{ Set (ZFC) book}$\\
+$\mathcal{Q} \text{ topology =: set of open set}$\\
+$(\mathcal{M}, \mathcal{Q}) \text{ toplogy space}$\\
+$\mathcal{U} \in \mathcal{Q} \iff \text{ all } \mathcal{U} \subseteq \mathcal{M} \text{ and open set}$\\
+$\mathcal{M} \setminus \mathcal{A} \iff   \text{ all }    \mathcal{A} \subseteq \mathcal{M} \text{ closed set}$\\
+$\text{open } \centernot\implies \text{ closed}$\\
+$\text{open } \centernot\impliedby \text{ closed}$\\
+
+\noindent
+Definition of Inner Product
+\noindent
+Positivity\\
+$\langle\vec{v}, \vec{v}\rangle \geq 0$\\
+$\langle \vec{v} , \vec{v} \rangle = \vec{0} \iff \vec{v} = \vec{0}$\\
+
+\noindent
+Bilinearity\\
+$\langle c_{1}\vec{v_1} + c_{2}\vec{v_2}, \vec{v_3}\rangle = c_{1}\langle \vec{v_1}, \vec{v_3}\rangle + c_{2}\langle\vec{v_2}, \vec{v_3} \rangle$\\
+
+\noindent
+Conjugate Symmetic\\
+$\langle \vec{v_1}, \vec{v_2} \rangle = \overline{\langle \vec{v_2}, \vec{v_1} \rangle}$
+
+
+\noindent
+Proof  Cauchy-Schwarz Inequality by picture\\
+$\vert a \cdot b \vert \leq \lVert a \lVert \lVert b \lVert$
+
+
+\pagebreak
+Calculate the Excel Sheet Row number algorithm
+Latex Environment has different mode\\
+{\it Math mode}\\
+{\it Text mode}\\
+{\it Command mode}\\
+
+Elliptic Curve and Group Structure Conic Curve\\
+$
+    \begin{bmatrix}
+    x & y & z 
+    \end{bmatrix}
+    \begin{bmatrix}
+    a & b & c \\
+    d & e & f \\   
+    g & h & i \\   
+    \end{bmatrix}
+    \left[
+    \begin{array}{c}
+    x \\
+    y \\
+    z 
+    \end{array}
+    \right] = 
+    \left[ 
+    \begin{array}{c}
+    0  
+    \end{array}
+    \right]
+$\\
+$ ax^{2} + ey^{2} + iz^{2} + (b+d)xy + (c+g)xz + (f+h)yz = 0$\\
+\\
+$\mathit{(x, y, z)} = \mathit{(x/z, y/z, 1)} (z \neq 0)$\\ 
+\\
+
+\noindent
+$
+\begin{array}{lcl}
+ax^{2} + ey^{2} + (b+d)xy + (c+g)x + (f+h)y + i &=& 0\\
+ax + by + c &=& 0
+\end{array}
+$\\
+sub (1) into (2) 
+$\Rightarrow ax^{2} + bx + c = 0$\\
+$\Rightarrow x = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a}$
+\\
+
+Exponential backoff algorithm\\
+\\
+$\frac{1}{N+1} \sum_{i=1}^{k}i$\\
+For example, the expected backoff time for the third collision, one could 
+calculate the maximum backoff time, N\\
+$N = 2^{c} - 1 (c = 3)$
+$N = 7$\\
+Calculate the mean of backoff time for the third collision(c=3)\\
+$\mathbf{E(c)} = \frac{1}{N+1}\sum_{i=0}^{N} i$\\
+$\mathbf{E(c)} = \frac{1}{N+1}\sum_{i=0}^{N} \Rightarrow \frac{1}{N+1} \frac{N(N+1)}{2} = \frac{N}{2}$\\
+$\mathbf{E(3)} = \frac{1}{7+1}\sum_{i=0}^{N} i = \frac{1}{8}(0+1+2+3+4+5+6+7) = \frac{28}{8}$\\
+$\mathbf{E(3)} = 3.5$\\
+
+Prove Square root of two is irrational
+$\sqrt{2} \notin \mathbb{Q}$\\
+$\text{Assume } \sqrt{2} \in \mathbb{Q}$\\
+$\text{let }n = min\{ n \in \mathbb{N} \mid n*\sqrt{2} \in \mathbb{N}\}$\\
+$\Rightarrow n*(\sqrt{2} - 1)*\sqrt{2} \in \mathbb{Q}$\\
+$\because \sqrt{2} - 1 < 1$\\
+$\Rightarrow n*(\sqrt{2} - 1)*\sqrt{2} < n*\sqrt{2}$\\
+$\Rightarrow n*(\sqrt{2} - 1) < n \text{ such as } n*(\sqrt{2} - 1)*\sqrt{2} \in \mathbb{N}$\\
+$\Rightarrow \text{This contracts our assumption } \quad \square$\\
+
+\pagebreak
+\noindent
+\[ \text{Prove Square root of 2 is irrational} \text{ [ Geometric proof ] }\]
+$\text{Assume } \sqrt{2} \in \mathbb{Q}$\\
+$\Rightarrow \frac{a}{b} = \sqrt{2} \quad a, b \in \mathbb{N} \text{ and } \gcd(a, b) = 1, a > b$\\
+
+given a right issoseles triangle\\
+$AB = AC = AE, \quad FE \text{  tangles to arc at point } E $\\
+$\Rightarrow AF = EF$\\
+$\text{Let } AB = AC = 1$\\
+$\Rightarrow BC = \sqrt{2}$\\
+$\Rightarrow FB = 1-EB = 1-(\sqrt{2} - 1) = 2-\sqrt{2}$\\
+$\because \frac{AC}{CB} = \frac{EB}{FB} = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}-1}{2-\sqrt{2}}$\\
+$\therefore \frac{1}{\sqrt{2}} =\frac{1}{\frac{a}{b}} = \frac{\sqrt{2}-1}{2-\sqrt{2}} = \frac{\frac{a}{b} - 1}{2-\frac{a}{b}}$\\
+$\therefore \frac{b}{a} = \frac{ \frac{a-b}{b} } {\frac{2b - a}{b}} = \frac{a-b}{2b-a}$\\
+$\because \sqrt{2} < \sqrt{4} = 2 \therefore  a < 2b $\\
+$\Rightarrow  \color{red} a-b < b $\\
+$\because 2a > 2b$\\
+$\Rightarrow  \color{red}2b -a < a$\\
+$\text{That contracts our assumption } \gcd(a, b) = 1$\\
+$\Rightarrow \frac{a}{b} \notin \mathbb{Q}$
+
+\pagebreak
+\noindent
+Geometric proof: square root of two is irrational\\
+$\text{Given an isosceles right triangle from above and let } \gcd(a, b)=1, \text{ from Pythagorean theorem}$\\
+$\Rightarrow a^2 = b^2 + b^2$\\
+$\Rightarrow \sqrt{2} = \frac{a}{b}$\\
+
+singular point on affine plane curve\\
+$\text{If } p \in (x, y) \text{ and } \frac{df}{dx}, \frac{df}{dy} \text{ are undefined on } p \in (x, y), \text{ then } p\in (x, y) \text{ is singular point}$\\
+
+
+\[\text{Eisenstein series}\]
+$L = [w_1, w_2] \in \mathbb{C}, G(L) = \sum_{w\in L\setminus \{0, 0\}} \frac{1}{w^k}$\\
+$\text{Let lattices } L=[1, \tau] \text{ and parametrized by }\tau  \text{ in the upper half plane } \mathbb{H} = \{ z \in\mathbb{C} : \Im(z) > 0 \} $\\
+$G(L) = G([1, \tau]) =G(\tau) = \sum_{m, n \in \mathbb{Z}}' \frac{1}{(m+n\tau)^k}$\\
+
+\noindent
+\[\text{Show } G_{k}(\tau + 1) = G_{k}(\tau)\]
+$G_{k}(\tau + 1) = \sum_{m, n \in \mathbb{Z}}' \frac{1}{(m+n(\tau+1))^k} = \sum_{m, n \in \mathbb{Z}}' \frac{1}{(m + n + n\tau)^k} = \sum_{m', n \in \mathbb{Z} }' \frac{1}{(m' + n\tau)^k}$\\
+$\Rightarrow G_{k}(\tau + 1) = G_{k}(\tau)$\\
+
+\noindent
+\[\text{Show } G_{k}(\tau) = \tau^{-k} G_{k}(\frac{-1}{\tau})\]
+$\tau^{-k} G_{k}(\frac{-1}{\tau}) =  \tau^{-k} \sum_{(m, n \in \mathbb{Z} )}' \frac{1}{(m+\frac{n}{\tau})^{k}}$\\
+$\tau^{-k} \sum_{m, n \in \mathbb{Z}}' \frac{1}{(m + \frac{n}{\tau})^{k}} = \tau^{-k} \sum_{m, n \in \mathbb{Z}}' \frac{1}{(\frac{m\tau}{\tau} + \frac{n}{\tau})^{k}} = \sum_{m, n \in \mathbb{Z}}' \textcolor{red}{(\tau^{-k}\tau^{k})} (m\tau + n)^{-k})$\\
+$\Rightarrow G_{k}(\tau) = \tau^{-k} G_{k}(\frac{-1}{\tau})$\\
+
+
+\noindent
+\[\text{Show }G_{k}(\tau) = 0 \text{ if } k = (2j+1) \quad j \in \mathbb{Z} \]
+$\text{For each }\omega = (m+n\tau) \in L, \text{there exists } -\omega = -(m+n\tau) \in L $\\
+$\because \omega ^{-(2J+1)} + (-1)^{-(2J+1)}\omega^{-(2j+1)} = 0$\\
+$\therefore \sum_{m,n \in \mathbb{Z}}' (m+n\tau)^{-k} = 0\quad \text{ for all } k \in (2j+1)$\\
+
+\noindent
+\[\text{Show for any lattices L, the sum } \sum_{\omega \in \mathit{L}}' \frac{1}{\omega^{k}} \text{ converges absoluately for all } k > 2 \]
+Proof:
+
+
+\pagebreak
+\noindent
+\[\text{Show }\frac{1}{(1-x)^2} = \sum_{n=0}^{\infty} (n+1)x^n \quad |x| < 1\]
+Proof:
+$\text{For all } |x| < 1, \text{ power series expansion} $\\
+\[(\frac{1}{1-x}\big) = (\sum_{n=0}^{\infty} x^n)\]\\
+Differentiate both sides\\
+\begin{equation}
+\begin{aligned}
+(\frac{1}{1-x}\big)' &= (\sum_{n=0}^{\infty} x^n)' \\
+(\frac{1}{1-x}\big)' &= (1-x)^{-2}\\ 
+\sum_{n=1}^{\infty} nx^{n-1} &= \sum_{i=0}^{\infty} (i+1)x^{i} \quad (n-1=i)\\
+\frac{1}{(1-x)^2} &= \sum_{n=0}^{\infty} (n+1)x^{n} \quad \text{ sub }(i = n)\\
+\end{aligned}
+\end{equation}
+
+\noindent
+\[\text{Weierstrass function } \wp \text{-function of lattice L is defined by} \]
+$\wp(z) = \wp(z; L) = \frac{1}{z^2} + \sum_{w \in L}' \big[ \frac{1}{(z-\omega)^2} + \frac{1}{\omega^2} \big]$\\
+
+\noindent
+Holomorphic\\
+A function $f(z)$ defined on some open neibourhood of a point $z_{0} \in \mathbb{C}$ is said to be holomorphic at $z_{0}$ if the complex derivative 
+\[ f'(z_{0}) = \lim_{h \to 0 } \frac{f(z_{0} + h) - f(z_{0})}{h} \] exists.
+We said $f$ is holomorphic on an open set $\Omega$ if it is holomorphic at every $z_{0} \in \Omega$ and we said $f$ is holomorphic in a closed set $\mathbf{C}$ if it is holomorphic on some open set $\Omega$ containing $\mathbf{C}$.
+Functions are holomorphic on all of $\mathbb{C}$ are said to be $\mathit{entire}$\\
+
+\noindent
+\[ \text{Show } f(z) = z^2 \text{ is holomorphic} \]
+\begin{equation}
+\begin{aligned}
+f'(z) &= \lim_{h \to 0} \frac{(z+h)^2 - z^2}{h} \\
+f'(z) &= \lim_{h \to 0} \frac{z^2 + 2hz + h^2 - z^2}{h}\\
+f'(z) &= \lim_{h \to 0} \frac{2hz + h^2}{h} \nonumber \\
+f'(z) &= \lim_{h \to 0} 2z + h\\
+f'(z) &= 2z
+\end{aligned}
+\end{equation}
+
+\pagebreak
+\noindent
+Differential\\
+A function $f(x)$ is differential on $x_{0} \in \mathbb{R}$ if \\
+\[  f'(x_{0}) =  \lim_{h \to 0} \frac{f(x_{0} +h) - f(x_{0})}{h} \]
+exists\\
+
+\[\text{Show } f(x) = x^{2} \text{ is differentiable for all } x  \in \mathbb{R} \]
+\begin{equation}
+\begin{aligned}
+f'(x) &=  \lim_{h \to 0} \frac{f(x +h) - f(x)}{h}\\
+f'(x) &= \lim_{h \to 0} \frac{x^2 + h^2 + 2xh - x^2  }{h} \nonumber \\
+f'(x) &= \lim_{h \to 0} \frac{h^2 + 2xh}{h}\\
+f'(x) &= \lim_{h \to 0} h+2x\\     
+f'(x) &= 2x \quad \text{ for all } x \in \mathbb{R}
+\end{aligned}
+\end{equation}
+
+\pagebreak
+\noindent
+\[ \text{Elliptic Curve}\]\\
+Find the formula for \[ s(n) = \sum_{k=1}^{n} k^2 \]\\
+\[ s(n) = \frac{(2n+1)(n+1)n}{2 \times 3} \]\\
+Let $y^2 = S(n)$ and $x=n$\\
+\[ y^2 = \frac{1}{6}x(x+1)(2x+1) \]\\
+\includegraphics[scale=4]{/Users/cat/myfile/github/geogebra/elliptic1.png}
+
+$ (x, y)=(0, 0), (-1, 0),(-\frac{1}{2}, 0)$ are on the curve\\
+
+\noindent
+\[ y^2 = x^3 + bx^2 + cx + d \]
+$\because (x+ \frac{b}{3})^3 =  x^3 + 3x^2 \frac{b}{3} + 3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3}$\\
+$y^2 = (x+ \frac{b}{3})^3  - 3x (\frac{b}{3})^{2} - (\frac{b}{3})^{3} + cx + d$\\
+$y^2 = (x+\frac{b}{3})^{3} - [3(\frac{b}{3})^{2} - c]x + d$\\
+let x + $\frac{b}{3} = x'$\\
+$y^2 = x'^{3} - [3(\frac{b}{3})^{2} - c][x' - \frac{b}{3}] + d$\\
+$y^2 = x'^{3} - [3(\frac{b}{3})^{2} - c]x' + 3(\frac{b}{3})^{3} - \frac{b}{3}c + d $\\
+$y^2 = x'^{3} +[c-3(\frac{b}{3})^2]x' + 3(\frac{b}{3})^{3} - \frac{b}{3}c + d $
+
+\noindent
+\[ \text{For any lattice } L, \text{the sum of  }\sum_{\omega_k \in L}'^{\infty} \frac{1}{\omega_k} \text{ is converges absoluately for all } k > 2 \]
+
+\newpage
+\noindent
+\[\text{Definition of topology}\]
+$\text{Let }\mathcal{M} \text{ be a set. A topology }\mathcal{Q} \text{ is a subset } \mathcal{Q} \subseteq \mathcal{P}(\mathcal{M})$\\
+Satisfy\\
+$1. \varnothing\subseteq \mathcal{Q}, \mathcal{M} \subseteq \mathcal{Q}$\\
+$2. \mathcal{U} \subseteq \mathcal{Q},   \mathcal{V} \subseteq \mathcal{Q} \implies \mathcal{U} \cap \mathcal{V} \in \mathcal{Q}$\\
+$3. \mathcal{U} \in \mathcal{Q} \implies \bigcup_{\alpha \in \mathcal{A}} \mathcal{U}_\alpha \in \mathcal{Q}$\\
+
+\noindent
+\[\text{Topological Space}\]
+a \textcolor{red}{topological space} is \textcolor{blue}{pair $(X, \tau)$} where $X$ is a set and $\tau$ is subset of $X$ satifying certain axioms. \textcolor{blue}{$\tau$} is called \textcolor{red}{topology}\\
+1. $\emptyset$ and \textcolor{red}{space} $X$ are both in \textcolor{blue}{$\tau$}\\
+2. the union of any collection of set in \textcolor{blue}{$\tau$} is contained in \textcolor{blue}{$\tau$}\\
+3. the intersection of any finitly many sets in \textcolor{blue}{$\tau$} is contained in \textcolor{blue}{$\tau$}\\
+
+\[ \text{Binomial Identity} \] 
+\[  \binom{n}{k} = \binom{n}{k-1} + \binom{n-1}{k-1} \] 
+\[ \binom{n}{0} = 1 \text{ with } 1 \leq k \leq n\] 
+
+\begin{equation}
+\begin{aligned}
+    \text{LHS} \quad \binom{n}{k} = \frac{P(n, k)}{k!} = \frac{\frac{n!}{(n-k)!}}{k!} &= \frac{n!}{(n-k)! k!}\\
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{P(n-1, k)}{k!} + \frac{P(n-1, k-1)}{(k-1)!}  \\  
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{\frac{(n-1)!}{(n-1-k)!}}{k!} + \frac{(n-1)!}{[(n-1)-(k-1))]!(k-1)!}\\    
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-1)!}{(n-k-1)!k!} + \frac{(n-1)!}{(n-k)!(k-1)!}\\    
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-k)(n-1)!}{(n-k)(n-k-1)!k!} + \frac{k(n-1)!}{k(n-k)!(k-1)!}\\    
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-k)(n-1)!}{(n-k)!k!} + \frac{k(n-1)!}{(n-k)!k!}\\    
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n-1)!(n-k+k)}{(n-k)!k!}\\    
+    \text{RHS} \quad \binom{n-1}{k} + \binom{n-1}{k-1} &= \frac{(n!}{(n-k)!k!} \nonumber \quad \square\\    
+\end{aligned}
+\end{equation}
+
+\newpage
+\[  \binom{n+1}{k} = \binom{n}{k-1} \binom{n-1}{k-1} \] 
+\includegraphics[width=10cm,scale=1]{/Users/cat/myfile/github/image/binomimage.jpg}
+
+\newpage
+\[\text{Computer Graphic Matrix} \]
+\[\text{Identity}\]
+\[
+        \begin{bmatrix}
+            1 & 0 & 0\\
+            0 & 1 & 0\\   
+            0 & 0 & 1  
+        \end{bmatrix}
+\]
+
+\[ \text{Scalar} \]
+\[
+        \begin{bmatrix}
+            x & 0 & 0\\
+            0 & y & 0\\   
+            0 & 0 & z  
+        \end{bmatrix}
+\]
+
+\[ \text{Translation} \]
+\[
+        \begin{bmatrix}
+            1 & 0 & 0 & x\\
+            0 & 1 & 0 & y\\   
+            0 & 0 & 1 & z\\  
+            0 & 0 & 0 & 1  
+        \end{bmatrix}
+\]
+
+\newpage
+\[\text{Computer Graphic Matrix} \]
+\[\text{Identity}\]
+\[
+        \begin{bmatrix}
+            1 & 0 & 0\\
+            0 & 1 & 0\\   
+            0 & 0 & 1  
+        \end{bmatrix}
+\]
+
+\[ \text{Scalar} \]
+\[
+        \begin{bmatrix}
+            x & 0 & 0\\
+            0 & y & 0\\   
+            0 & 0 & z  
+        \end{bmatrix}
+\]
+
+\[ \text{Translation} \]
+\[
+        \begin{bmatrix}
+            1 & 0 & 0 & x\\
+            0 & 1 & 0 & y\\   
+            0 & 0 & 1 & z\\  
+            0 & 0 & 0 & 1  
+        \end{bmatrix}
+\]
+
+\[ \text{Rotation} \]
+
+\begin{equation}
+\begin{aligned}
+    M_{z}(\beta) & =\begin{bmatrix}
+            \cos\beta & -\sin\beta & 0\\
+            \sin\beta & \cos\beta & 0\\   
+            0      &   0    & 1  
+        \end{bmatrix} \\
+    M_{y}(\beta) & =\begin{bmatrix}
+            \cos \beta & sin\beta & 0\\
+            0      &   1    & 0    \\  
+            -sin\beta & \cos\beta & 0   
+        \end{bmatrix} \\
+    M_{x}(\beta) & =\begin{bmatrix}
+            1 &   0      &     0   \\         
+            0 & \cos\beta & -\sin\beta\\
+            0 & sin\beta& \cos\beta   
+        \end{bmatrix} 
+\end{aligned}
+\end{equation}
+
+\[ \text{Find the matrix reflects a point with respect to x-axis} \]
+\[
+        A \left[ 
+        \begin{array}{c}
+        1\\
+        0    
+        \end{array}
+        \right]
+\]
+
+\end{document}
