@@ -1,0 +1,140 @@
+\documentclass[10pt]{article}
+\usepackage{tipa}
+\usepackage{pagecolor,lipsum}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{centernot}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{svg}
+\newcommand{\polyringz}[2][Z]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
+\newcommand{\polyringr}[2][R]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
+\newtheorem{propo}{Proposition}[section]
+\newtheorem{defin}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\begin{document}
+    \[ \textbf{Change Basis} \]
+    Given a vector space $U$ with basis $\{u_1, u_2, ... u_n \}$, and other vector space $W$ with basis
+    $\{w_1, w_2, ... w_n \}$ \\
+    Let $v \in V$, then we have
+    \begin{equation}
+    \begin{aligned} 
+        v &=  
+        \begin{bmatrix}
+        u_1 & u_2 & \cdots & u_n  
+        \end{bmatrix}
+        \left[ \begin{array}{cc} 
+        c_1 \\
+        c_2 \\
+        \vdots \\
+        c_n
+        \end{array}          
+        \right]    \label{eq:one} \\
+        \newline 
+        \left[v \right]_U &= 
+        \left[ \begin{array}{cc} 
+        c_1 \\
+        c_2 \\
+        \vdots \\
+        c_n
+        \end{array} 
+        \right]  \mbox{ is the coordinate relative to } U  
+    \end{aligned} 
+    \end{equation}\\
+    $\mbox{Since } \{w_1, w_2, ... w_n \} \mbox{ is basis for W}. u_1, u_2, ..., u_n  \mbox{ can be represented as} $
+
+    \begin{equation}
+    \begin{aligned} 
+        u_1 &=  
+        \left[w_{1}, w_{2} \,, \cdots \,, w_{n} \right]  
+        \left[ \begin{array}{cc} 
+        a_{11} \\
+        a_{21} \\
+        \vdots \\
+        a_{n1}
+        \end{array} 
+        \right] \\
+        u_2 &=  
+        \left[w_{1}, w_{2} \,, \cdots \,, w_{n} \right]  
+        \left[ \begin{array}{cc} 
+        a_{12} \\
+        a_{22} \\
+        \vdots \\
+        a_{n2}
+        \end{array} 
+        \right] \\
+        \cdots  \\
+        u_n &=   
+        \left[w_{1}, w_{2} ,\cdots , w_{n} \right]  
+        \left[ \begin{array}{cc} 
+        a_{1n} \\
+        a_{2n} \\
+        \vdots \\
+        a_{nn}
+        \end{array} 
+        \right] \\
+        \begin{bmatrix}
+        u_1 & u_2 & \cdots & u_n  
+        \end{bmatrix} &=
+        \left[w_1, w_2, \cdots, w_n \right]
+        \begin{bmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n} \\
+        a_{21} & a_{22} & \cdots & a_{2n} \\
+        \vdots  & \vdots  & \ddots & \vdots  \\
+        a_{n1} & a_{n2} & \cdots & a_{nn} 
+        \end{bmatrix}  \nonumber \\
+\end{aligned}
+\end{equation}
+
+\begin{equation} 
+\begin{aligned}
+        \mbox{From (1), we have} \\
+        v &=
+        \left[w_1, w_2, \cdots, w_n \right]
+        \begin{bmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n} \\
+        a_{21} & a_{22} & \cdots & a_{2n} \\
+        \vdots  & \vdots  & \ddots & \vdots  \\
+        a_{n1} & a_{n2} & \cdots & a_{nn} 
+        \end{bmatrix}
+        \left[ \begin{array}{cc} 
+        c_1 \\
+        c_2 \\
+        \vdots \\
+        c_n
+        \end{array} 
+        \right] \\
+        \left[ v \right]_{\scriptscriptstyle{W}} &=
+        \begin{bmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n} \\
+        a_{21} & a_{22} & \cdots & a_{2n} \\
+        \vdots  & \vdots  & \ddots & \vdots  \\
+        a_{n1} & a_{n2} & \cdots & a_{nn} 
+        \end{bmatrix}
+        \left[ \begin{array}{cc} 
+        c_1 \\
+        c_2 \\
+        \vdots \\
+        c_n
+        \end{array} 
+        \right] \\
+\end{aligned}
+\end{equation}
+Let $P_{ \scriptscriptstyle{U} \rightarrow \scriptscriptstyle{W}}$ to be the change basis matrix from $V$ to $W$ \\ 
+\begin{equation} 
+\begin{aligned}
+        P_{ \scriptscriptstyle{U} \rightarrow \scriptscriptstyle{W} } &= 
+        \begin{bmatrix}
+        \left[ u_1 \right]_{w} &\left[ u_2 \right]_{w} & \cdots & \left[ u_n \right]_{w}    
+        \end{bmatrix} \\
+        \left[ v \right]_{\scriptscriptstyle{W}} &=
+        P_{ \scriptscriptstyle{U} \rightarrow \scriptscriptstyle{W} } 
+        \left[  v \right]_{\scriptscriptstyle{U}}  \\
+        \text{Since } P_{ \scriptscriptstyle{U} \rightarrow \scriptscriptstyle{W} } \mbox{is invertable matrix} \\ 
+        \left[  v \right]_{\scriptscriptstyle{U}} &= P_{ \scriptscriptstyle{U} \rightarrow \scriptscriptstyle{W}}^{-1} \left[ v \right]_{\scriptscriptstyle{W}} \nonumber
+\end{aligned} 
+\end{equation} 
+\end{document} 

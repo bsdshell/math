@@ -1,0 +1,94 @@
+\documentclass{article} \usepackage{amsmath} \usepackage{amsfonts}
+\usepackage{amssymb}
+\begin{document}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{defn}{Definition}[section]
+
+\begin{defn}
+Continuity
+Differentiability
+\end{defn}
+
+\begin{defn}
+Let $X$ be a set and $\rho: X^2 \rightarrow \mathbb{R}$ a function with the following properties
+    \begin{enumerate}
+        \item  $\rho(x, y) \geq 0 \quad \forall x, y \in X$ 
+        \item  $\rho(x, y) = 0 \quad \iff x = y \quad \forall x, y \in X$ 
+        \item  $\rho(x, y) + \rho(y, z) \geq \rho(x, z) \quad \forall x, y, z \in X$ 
+    \end{enumerate}
+Show that if we set $d(x, y) = \rho(x, y) + \rho(y, x)$, then $(X, d)$ is a $\textbf{metric space}$
+\end{defn}
+
+\begin{defn}
+Let $(X,, d)$ is a metric space. We say the subset $\mathbf{E}$ is open in $X$ if, whenever $e \in \mathbf{E}$, we can find $\epsilon > 0$ such that
+\[ x \in \mathbf{E} \mbox{ whenever } d(e, x) < \epsilon \]
+\end{defn}
+
+\noindent
+\mbox{Examples for open sets}
+\begin{enumerate}
+    \item Let $(X, d)$ be a metric space. If $r > 0$, then
+    \[ B(x, r) = \{ y: d(x, y) < r \}\]
+    is open
+    \item If we work on $\mathbb{R}^n$ with Euclidean metric, then the one point set $\{x\}$ is not open 
+\end{enumerate}
+
+
+
+
+
+\begin{defn}
+    $\textbf{A topological space}$ is pair $(X, \mathcal{T})$ where $X$ is a set and $U$ is subset of $X$ satifying certain axioms. $\mathcal{T}$ is called topology
+    \begin{enumerate}
+        \item $\emptyset \in \mathcal{T}$ and space $X \in \mathcal{T}$ 
+        \item If $U_1 \in \mathcal{T}, U_2 \in \mathcal{T}$, then $U_1 \cap U_2 \in \mathcal{T}$ $\textbf{[finite]}$ 
+        \item If $U_i \in \mathcal{T}$ then $\bigcup_{i \in I} U_i \in \mathcal{T}$ $\textbf{ [finite or infinite]}$ 
+    \end{enumerate}
+\end{defn}
+
+\noindent
+The elements of $\mathcal{T}$ is called \textbf{open sets} \\
+Property $\mathit{2}$ implies any $\mathbf{finite}$ intersection of open sets is open \\
+Property $\mathit{3}$ implies union of any open sets is open \\
+Collection of subsets of $X$ satifies above properties is called $\textbf{topology}$ on $X$ \\
+
+\begin{defn}
+    An subset $S$ of $\mathbf{R}^m$ is called \textbf{topological manifold} of dimension of d if every point $s \in S$ has a neighbourhood in $S$ which is homeomorphic to an open set of $\mathbf{R}^d$
+\end{defn}
+
+\begin{defn}
+    A \textbf{distance function} d on a set $X$ is real valued function on $X \times X$ such that \\
+    1. it is symmetric $d(x, y) = d(y, x) \quad \forall x, y \in X$ \\
+    2. $d(x, y) \geq 0 $ with equality only if $x = y$ \\
+    3. the triangle equality holds  
+    \[ d(x, z) \leq d(x, y) + d(y, z) \quad \forall x, y, y \in X \]
+    Given a distance function d on $X$ we define $B_r(p)$, the open ball with center at $p \in X$ of radius $r > 0$ by:\\
+    \[ B_r(p) = \{x \in X : d(x, p) < r\} \]
+    Given a distance function d on $X$ we define $\mathcal{T}$ as follows:
+    \[ \text{If } p \in \mathcal{U}, \exists r > 0 \text{ and } B_r(p) \subset \mathcal{U} \text{ then } \mathcal{U} \in \mathcal{T} \]
+    The $\textbf{topology}$ is called $\textbf{metric topology}$ induced by d. A topology is called $\textbf{metric}$ if it is induced by some distance function
+\end{defn}
+
+
+\begin{defn}
+    A \textbf{chart} is pair $(U, \phi)$ where $U$ is open set  in $X$ and $\phi: U \rightarrow \mathbb{R}^n$ is homeomorphism onto it image.
+    The componments of $\phi = (x_0, x_1, \cdots , x_n)$ are called coordinates.
+    Given two chars $(U_1, \phi_1)$ and $(U_2, \phi_2)$ then we get transition maps  
+\end{defn}
+
+\begin{defn}
+A smooth d-manifold is \textbf{Hausdorff}, \textbf{second countable} and \textbf{topological space} $X$ together with an atlas, $\mathcal{A}$
+\end{defn}
+
+\begin{equation}
+\begin{aligned} 
+   \phi_2 \circ \phi_1^{-1}:\phi_1(U_1 \cap U_2) \rightarrow \phi_2(U_1 \cap U_2) \\  
+   \phi_1 \circ \phi_2^{-1}:\phi_1(U_1 \cap U_2) \rightarrow \phi_2(U_1 \cap U_2) 
+\end{aligned} 
+\end{equation}
+
+\begin{defn}
+Two chars are compatible if the transition map are smooth.
+\end{defn}
+
+\end{document}

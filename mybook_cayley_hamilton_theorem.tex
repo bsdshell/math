@@ -1,0 +1,157 @@
+\documentclass[10pt]{article}
+\usepackage{tipa}
+\usepackage{pagecolor,lipsum}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{centernot}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{svg}
+\newcommand{\polyringz}[2][Z]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
+\newcommand{\polyringr}[2][R]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
+\newtheorem{propo}{Proposition}[section]
+\newtheorem{defin}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\begin{document}
+    \[ \textbf{Similar Matrix} \]
+\begin{defin}
+    For invertable matrix $\mathbf{A}$, if there exist matrix $\mathbf{P}$ such that
+    \[ \mathbf{A}  = \mathbf{P} \mathbf{B} \mathbf{P}^{-1} \]
+    then $\mathbf{A}$ is similar to $\mathbf{B}$
+\end{defin}
+
+\begin{propo}
+Let $\mathbf{A}$ be an $n \times n$ matrix, $\mathbf{P}$ is non-singular $n \times n$ matrix, and
+$\mathbf{B} = \mathbf{P} \mathbf{A} \mathbf{P}^{-1}$. Then the matrices have the same characteristic polynomials.
+\end{propo}
+
+Proof. The characteristic polynomials of $\mathbf{A}$ and $\mathbf{B}$ are given as 
+    \begin{equation}
+    \begin{aligned}
+     \det (\mathbf{A} - \lambda \mathbf{I}) & = \det (\mathbf{P} \mathbf{B} \mathbf{P}^{-1} - \lambda \mathbf{I}) \\
+     & = \det (\mathbf{P} \mathbf{B} \mathbf{P}^{-1} - \lambda \mathbf{P} \mathbf{P}^{-1}) \\ 
+     & = \det (\mathbf{P} \mathbf{B} \mathbf{P}^{-1} - \mathbf{P} \lambda \mathbf{P}^{-1}) \\
+     & = \det (\mathbf{P} \mathbf{B} \mathbf{P}^{-1} - \mathbf{P} \lambda \mathbf{I} \mathbf{P}^{-1})  \\
+     & = \det (\mathbf{P} (\mathbf{B} - \lambda \mathbf{I}) \mathbf{P}^{-1}) \\
+     & = \det (\mathbf{P}) \det(\mathbf{B} - \lambda \mathbf{I}) \det (\mathbf{P}^{-1}) \\
+     & = \det(\mathbf{B} - \lambda \mathbf{I}) \nonumber\\
+    \end{aligned}
+    \end{equation}
+\[ \textbf{Cayley-Hamilton Theorem} \]
+
+\begin{theorem}
+Let $\mathbf{A}$ be an n $\times$ n matrix, and let $p_{A}(\lambda) = \det(\mathbf{A} - \lambda \mathbf{I})$ be the corresponding characteristic polynomial. 
+Then $p_{\mathbf{A}}(\mathbf{A}) = \mathbf{0}$
+\end{theorem}
+
+\pagebreak
+\[ \textbf{Find the characteristic polynomial of given matrix} \] 
+\begin{equation} 
+\begin{aligned}
+    A= \begin{bmatrix}
+    1 & 2 & 3\\
+    0 & -2 & 1\\
+    1 & 1 & 0 
+    \end{bmatrix}  \nonumber
+\end{aligned}
+\end{equation}
+\begin{equation} 
+\begin{aligned}
+    & \det \left( \begin{bmatrix}
+    1 & 2 & 3\\
+    0 & -2 & 1\\
+    1 & 1 & 0 
+    \end{bmatrix} - 
+    \lambda
+    \begin{bmatrix}
+    1 & 0 & 0\\
+    0 & 1 & 0\\
+    0 & 0 & 1 
+    \end{bmatrix} \right) \\  
+    \newline 
+    & \det \left( \begin{bmatrix}
+    1 & 2 & 3\\
+    4 & 5 & 6\\
+    7 & 8 & 9 
+    \end{bmatrix} - 
+    \begin{bmatrix}
+    \lambda & 0 & 0\\
+    0 & \lambda & 0\\
+    0 & 0 & \lambda 
+    \end{bmatrix} \right)   \\  
+    \newline 
+    & \det \begin{bmatrix}
+    1 - \lambda & 2 & 3\\
+    4 & 5 - \lambda & 6\\
+    7 & 8 & 9 - \lambda  
+    \end{bmatrix}  \nonumber \\ 
+\end{aligned}
+\end{equation}
+
+\begin{equation} 
+\begin{aligned}
+    p_{\mathbf{A}}(\lambda) = 
+    & (-1)^{1+1} (1 - \lambda) 
+    \begin{vmatrix}
+    5 - \lambda & 6 \\
+    8 & 9 - \lambda  
+    \end{vmatrix} +  \\
+    & (-1)^{1+2} 4 
+    \begin{vmatrix}
+    2 & 3 \\ 
+    8 & 9 - \lambda 
+    \end{vmatrix} +  \\
+    & (-1)^{1+3} 7 
+    \begin{vmatrix}
+    2 & 3 \\
+    5 - \lambda & 6 
+    \end{vmatrix} \\
+    p_{\mathbf{A}}(\lambda) = 
+    & (-1)^{1+1} (1 - \lambda)(5- \lambda)(9-\lambda) - 48 + \\ 
+    & (-1)^{1+2} 4 \times 2 (9-\lambda) - 24 + \\ 
+    & (-1)^{1+3} 7 \times 12 - 3 (15 - 3 \lambda) \\ 
+    p_{\mathbf{A}}(\lambda) = 
+    & (1 - \lambda)(5 - \lambda)(9 - \lambda) - 48 + \\ 
+    & -8(9 - \lambda) - 24 +  \\
+    & 84 - (15 - 3 \lambda) \\
+    p_{\mathbf{A}}(\lambda) = 
+    & (9 - \lambda) \left[ (1 - \lambda) (5 -\lambda) - 8 \right] - (15 - 3 \lambda) + 12 \\ 
+    p_{\mathbf{A}}(\lambda) = 
+    & - \lambda^{3} - \lambda^{2} + 6 \lambda + 7  \\ 
+    p_{\mathbf{A}}(\mathbf{A}) = 
+    & - \mathbf{A}^{3} - \mathbf{A}^{2} + 6 \mathbf{A} + 7\mathbf{I}  \nonumber \\ 
+\end{aligned}
+\end{equation}
+
+\begin{equation} 
+\begin{aligned}
+    7A^{0} = 
+    \begin{bmatrix}
+    7 & 0 & 0\\
+    0 & 7 & 0\\
+    0 & 0 & 7 
+    \end{bmatrix}
+    6A = 
+    \begin{bmatrix}
+    6 & 12 & 3\\
+    0 & -2 & 1\\
+    6 & 6  & 0
+    \end{bmatrix}  
+    A^{2} = 
+    \begin{bmatrix}
+    4 & 1  & 5\\
+    1 & 5 & -2\\
+    1 & 0  & 4 
+    \end{bmatrix}  
+    A^{3} = 
+    \begin{bmatrix}
+    9 & 11  & 13\\
+    -1 & -10 & 8\\
+    5 & 6  & 3 
+    \end{bmatrix} \nonumber \\
+\end{aligned}
+\end{equation}
+    \[ p_{\mathbf{A}}(\mathbf{A}) = - \mathbf{A}^{3} - \mathbf{A}^{2} + 6\mathbf{A} + 7\mathbf{I} = \mathbf{0} \]
+\end{document} 

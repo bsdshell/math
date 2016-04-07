@@ -1,0 +1,143 @@
+\documentclass[10pt]{article}
+\usepackage{tipa}
+\usepackage{pagecolor,lipsum}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{centernot}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{svg}
+
+\newcommand{\polyringz}[2][Z]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
+\newcommand{\polyringr}[2][R]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
+\newtheorem{propo}{Proposition}[section]
+
+\begin{document}
+
+\[ \textbf{Three elementary properties of the determinant function} \] 
+\noindent 
+\begin{enumerate}
+\item If $\mathbf{A}^{\ast}$ matrix is obtained from a square matrix by swapping two rows or two columns, then $det(\mathbf{A}^{\ast}) = -\det(\mathbf{A})$  
+\item If $\mathbf{A}^{\ast}$ matrix is obtained by $\mathbf{A}$ multiplying the i-th row, or j-th column scalar c, then 
+   $\det (\mathbf{A^{\ast}}) = c\det (\mathbf{A})$
+\item If $\mathbf{A^{\ast}}$ matrix is obtained by replacing the k-row of $A_{k}$ by $A_{k} + cA_{i}$, or k-column by $A^{k} + cA^{i}$ with $k \neq j$, then
+   $\det (\mathbf{A^{\ast}}) = \det (\mathbf{A})$ 
+\end{enumerate}
+
+\noindent
+$\mbox{Given a matrix}$  
+\[
+    \mathbf{A} =  
+    \begin{bmatrix}
+    a_{11} & a_{12} & a_{13}\\
+    a_{21} & a_{22} & a_{23}\\
+    a_{31} & a_{32} & a_{33}\\
+    \end{bmatrix} \nonumber
+\] \\
+
+\begin{equation}
+\begin{aligned} 
+    \mathbf{C} &= 
+    \begin{pmatrix} 
+      +\left| \begin{array}{cc}
+       a_{22} & a_{23} \\
+       a_{32} & a_{33} \\
+      \end{array} \right| 
+      & 
+      -\left| \begin{array}{cc}
+       a_{21} & a_{23} \\
+       a_{31} & a_{33} \\ 
+      \end{array} \right| 
+      +\left| \begin{array}{cc} 
+       a_{21} & a_{22} \\
+       a_{31} & a_{32} \\[5pt] 
+     \end{array} \right| \\
+     -\left| \begin{array}{cc}
+       a_{12} & a_{13} \\[5pt]
+       a_{32} & a_{33} \\
+      \end{array} \right| 
+      & 
+      +\left| \begin{array}{cc}
+       a_{11} & a_{31} \\
+       a_{13} & a_{33} \\ 
+      \end{array} \right| 
+      -\left| \begin{array}{cc} 
+       a_{11} & a_{12} \\
+       a_{31} & a_{32} \\ 
+     \end{array} \right| \\
+     +\left| \begin{array}{cc}
+       a_{22} & a_{23} \\[5pt]
+       a_{32} & a_{33} \\
+      \end{array} \right| 
+      & 
+      -\left| \begin{array}{cc}
+       a_{21} & a_{23} \\[5pt]
+       a_{31} & a_{33} \\ 
+      \end{array} \right| 
+      +\left| \begin{array}{cc} 
+       a_{11} & a_{12} \\
+       a_{21} & a_{22} \\
+     \end{array} \right| 
+    \end{pmatrix} \nonumber \\
+\end{aligned} 
+\end{equation}
+\noindent
+$\mbox{Cofactor of a matrix}$ \\
+\[ \mathbf{C_{i,j}} = (-1)^{i+j}\mathbf{A_{i,j}} \] \\
+$\mbox{Adjoint of a matrix}$ \\
+\[ \mathbf{Adj}(\mathbf{A}) = \mathbf{C}^{t} \]  \\
+$\mbox{Inverse of a matrix}$ \\
+\[ \mathbf{A^{-1}} = \frac{\mathbf{Adj}(\mathbf{A})}{\det(\mathbf{A})} \] \\ 
+
+ 
+\pagebreak
+\begin{propo}
+   Consider an $n \times n$ matrix $\mathbf{B}$ such as $j^{th}$ column vector for $j = 1, 2, \cdots n-1$ is the basic vector $e_{j+1}$
+   while the last column of $\mathbf{B}$ is the vector $[-b_0, -b_1, \cdots ,-b_n]^{T}$. In other words, $\mathbf{B}$ has the following form \\
+    \[
+        \mathbf{B} = 
+        \begin{pmatrix}
+        0 & 0 & \cdots & -b_0 \\
+        1 & 0 & \cdots & -b_1 \\
+        0 & 1 & \cdots & -b_2 \\
+        \vdots  & \vdots  & \ddots & \vdots  \\
+        0 & 0 & \cdots & -b_{n-1}
+        \end{pmatrix} 
+    \]
+
+    then, the characteristic polynomial of $\mathbf{B}$ is given by \\ 
+    \[ (-1)^{n}P_{B}(t) = b_{n-1} t^{n-1} + \cdots + b_2 t^{2} + b_1 t^{1} + b_0 \]
+    \textbf{If n is odd}\\
+    $b_0 + b_1t = b_0 -t(-b_1)$\\
+    \newline 
+    $b_0 + b_1t  + b_2 t^2 + b_3 t^3$ \\
+    $b_0 -t(-b_1 - b_2 t - b_3 t^2)$ \\
+    $b_0 -t(-b_1 -t(b_2 -b_3 t))$ \\
+    $b_0 -t(-b_1 -t(b_2 -t(-b_3)))$\\
+    \newline 
+    \textbf{If n is even}\\
+    $b_0 + b_1t  + b_2t^2= b_0 -t(-b_1 - b_2t) = b_0 -t(-b_1 - t(b_2))$\\
+    \newline
+    $b_0 + b_1t  + b_2 t^2 + b_3 t^3 + b_4 t^4$\\
+    $b_0 -t(-b_1 -b_2t -b_3t^2 - b_4 t^3)$\\
+    $b_0 -t(-b_1 -t(b_2 +b_3t + b_4 t^2))$\\
+    $b_0 -t(-b_1 -t(b_2 -t(-b_3 -b_4t)))$\\
+    $b_0 -t(-b_1 -t(b_2 -t(-b_3 -t(b_4))))$\\
+    \newline 
+    we will calculate the determinant $\mathbf{B} - t \mathbf{I}$ by doing the co-factor expansion along the first row.
+    Let $\mathbf{B}_1$ the matrix obtained by deleting the first row and the first column from $\mathbf{B} - t \mathbf{I}$
+    and let $\mathbf{D}$ the matrix obtained by deleting the first row and the last column from $\mathbf{B} - t \mathbf{I}$,
+    \[ \det (\mathbf{B} - t \mathbf{I} ) = -t \det \mathbf{B_1} + (-1)^n b_0 \det (\mathbf{D})   \]
+    Now $\mathbf{D}$ is the upper triangle with ones on the diagonal, and therefore $\det(D) = 1$. The matrix $\mathbf{B_1}$ has 
+    the same structure as $\mathbf{B} - t \mathbf{I}$, only it's 1 size smaller. To the end let $\det \mathbf{B_2}$ be the matrix
+    obtained by deleting the first row and the last column from $\mathbf{B_1} - t \mathbf{I}$. By the same reason as above
+    \[ \det(\mathbf{B_1}) = -t \det (\mathbf{B_2}) + (-1)^{n-1} b_1 \]
+    then thereforce\\
+    \[ \det (\mathbf{B} - t \mathbf{I} ) = -t(-t \det (\mathbf{B_2}) + (-1)^{n-1} b_1)  + (-1)^n b_0 \det (\mathbf{D})   \]
+    continuously inductively we see that for even n, the determinant of $\mathbf{B} - t \mathbf{I}$ will have the form:
+    \[ b_1 -t(-b_1 -t(b_2 -t(-b_3 -t(\cdots)))) = b_0 + b_1t + b_2t^2 + b_3t^3 + \cdots + b_{n-1} t^{n-1} + t^n  \]
+    For an odd n, $ \det (\mathbf{B} - t \mathbf{I}) $ will be just like the formula above, but multiplied through by a negative sign
+
+\end{propo} 
+\end{document}
