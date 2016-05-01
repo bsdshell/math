@@ -1,0 +1,111 @@
+\documentclass{article} 
+\usepackage{amsmath} 
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{IEEEtrantools}
+\begin{document}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{defn}{Definition}[section]
+\setlength\parindent{0pt}
+
+\[ \textbf{Property of bezier curve} \]
+\[ \textbf{C}(t) = \sum_{k=0}^{n} \textbf{B}_{n,k}(t) \textbf{P}_k\]
+$\textbf{Unity of partition}$ 
+\[ \textbf{B}_{n,k}(t) = \binom{n}{k} t^k (1-t)^{n-k} \]
+$ \textbf{Derivative of Bezier Curve} $
+\begin{equation}
+\begin{aligned} 
+    \textbf{C}(t) &= \sum_{k=0}^{n} \textbf{B}_{n,k}(t) \textbf{P}_k \\
+    \textbf{B}_{n,k}(t) &= \binom{n}{k} t^{k} (1-t)^{n-k} \\
+    \textbf{B}_{n,k}(t) &= \frac{n!}{k!(n-k)!} t^{k} (1-t)^{n-k} \\
+    \textbf{B}'_{n,k}(t) &= \frac{n!}{k!(n-k)!}\left[ (t^{k})' (1-t)^{n-k} + t^{k}((1-t)^{n-k})' \right] \\
+    \textbf{B}'_{n,k}(t) &= \frac{n!}{k!(n-k)!}\left[ k t^{k-1} (1-t)^{n-k} - (n-k)t^{k}(1-t)^{n-k-1} \right] \\
+    \textbf{B}'_{n,k}(t) &= \frac{n!}{(k-1)!(n-k)!} t^{k-1} (1-t)^{n-k} - \frac{n!}{k!(n-k-1)!} t^{k} (1-t)^{n-k-1} \\
+    \textbf{B}'_{n,k}(t) &= n\frac{(n-1)!}{(k-1)!(n-k)!} t^{k-1} (1-t)^{n-k} - n\frac{(n-1)!}{k!(n-k-1)!} t^{k} (1-t)^{n-k-1} \\
+    \textbf{B}'_{n,k}(t) &= n \left[ \binom{n-1}{k-1} t^{k-1} (1-t)^{n-k} - \binom{n-1}{k} t^{k} (1-t)^{n-k-1} \right] \\
+    \textbf{B}'_{n,k}(t) &= n \left[ \textbf{B}_{n-1,k-1}(t) - \textbf{B}_{n-1,k}(t) \right] \\
+    \textbf{C}'(t) &= \textbf{B}'_{3,0}(t) \textbf{P}_0  + \textbf{B}'_{3,1}(t)\textbf{P}_1 + \textbf{B}'_{3,2}(t) \textbf{P}_2 + \textbf{B}'_{3,3}(t)\textbf{P}_3 \quad \text{when } n = 3 \nonumber \\
+\end{aligned} 
+\end{equation} \\
+\begin{equation}
+\begin{aligned} 
+    \textbf{B}'_{n,k}(t) &= n \left[ \textbf{B}_{n-1,k-1}(t) - \textbf{B}_{n-1,k}(t) \right] \\
+    \textbf{C}'(t)  &= n \left[ \textbf{B}_{n-1,k-1}(t) - \textbf{B}_{n-1,k}(t) \right] \textbf{P}_k \nonumber \\  
+    \newline
+    \textbf{C}'(t)  &= n \left[ \textbf{B}_{n-1,-1}(t) - \textbf{B}_{n-1,0}(t) \right] \textbf{P}_0 \quad \text{where } k = 0\nonumber \\  
+    \textbf{C}'(t)  &= n \left[ \textbf{B}_{n-1,0}(t) - \textbf{B}_{n-1,1}(t) \right] \textbf{P}_1 \quad \text{where } k = 1\nonumber \\  
+    \textbf{C}'(t)  &= n \left[ \textbf{B}_{n-1,1}(t) - \textbf{B}_{n-1,2}(t) \right] \textbf{P}_2 \quad \text{where } k = 2\nonumber \\  
+    \textbf{C}'(t)  &= n \left[ \textbf{B}_{n-1,n-2}(t) - \textbf{B}_{n-1,n-1}(t) \right] \textbf{P}_{n-1} \quad \text{where } k = n-1\nonumber \\  
+                    &\vdots \\
+    \textbf{C}'(t)  &= n \left[ \textbf{B}_{n-1,n-1}(t) - \textbf{B}_{n-1,n}(t) \right] \textbf{P}_{n} \quad \text{where } k = n\nonumber \\  
+\end{aligned} 
+\end{equation}
+
+\begin{IEEEeqnarray}{rCl}
+    \textbf{C}'(t) &=& 3\left[ \textbf{B}_{2,{\color{red}-1}}(t) - \textbf{B}_{2,0}(t) \right]\textbf{P}_0 + \nonumber \\
+                     && \> 3\left[ \textbf{B}_{2,0}(t) - \textbf{B}_{2,1}(t) \right]\textbf{P}_1 + \nonumber \\
+                     && \> 3\left[ \textbf{B}_{2,1}(t) - \textbf{B}_{2,2}(t) \right] \textbf{P}_2+ \nonumber \\
+                     && \> 3\left[ \textbf{B}_{2,2}(t) - \textbf{B}_{2,{\color{red}3}}(t) \right] \textbf{P}_3 \nonumber \\
+                   &=&  3 \textbf{B}_{2,0}(t)(\textbf{P}_1 - \textbf{P}_0) + \nonumber \\
+                     && \> 3 \textbf{B}_{2,1}(t)(\textbf{P}_2 - \textbf{P}_1) + \nonumber \\
+                     && \> 3 \textbf{B}_{2,2}(t)(\textbf{P}_3 - \textbf{P}_2) \nonumber \\
+                   &=& 3 \sum_{k=0}^{3-1} (\textbf{P}_{k+1} - \textbf{P}_{k}) \nonumber \\
+    \newline
+    \textbf{C}'(t) &=& \textbf{B}_{n-1,k}(t) \left[ n(\textbf{P}_{k+1} - \textbf{P}_{k}) \right] \nonumber \\
+    \textbf{C}'(t) &=& \textbf{B}_{n-1,k}(t) \textbf{Q}_{k}  \quad \text{where } \textbf{Q}_{k} = n(\textbf{P}_{k+1} - \textbf{P}_{k}) \nonumber \\
+\end{IEEEeqnarray} 
+Therefor, the derivative of Bezier curve is also a Bezier curve of degree n-1 
+defined by n-1 control points $n(P_1-P_0) + \dots + n(P_n - P_{n-1})$ \\
+\newline
+$ \textbf{Bezier curve are tangent to their first and last Legs} $ \\
+\newline
+$\textbf{C}'(t) = \textbf{B}_{n-1,k}(t) \left[ n(\textbf{P}_{k+1} - \textbf{P}_{k}) \right] $ \\
+$\textbf{C}'(0) = n(\textbf{P}_{1} - \textbf{P}_{0}) $ where $t = 0$ and $k = 0$ \\
+$\textbf{C}'(1) = n(\textbf{P}_{n} - \textbf{P}_{n-1}) $ where $t = 1$ and $k = n$ \\
+\newline
+$\textbf{C}'(0)$ means the tangent vector at point $t=0$ is in the direction of $P_1 - P_0$ multipled by $n$.
+Therefor, the first leg in the indicated direction is tangent to Bezier curve. \\
+\newline
+$\textbf{C}'(1)$ means the tangent vector at point $t=1$ is in the direction of $P_n - P_{n-1}$ multipled by $n$.
+Therefor, the second leg in the indicated direction is tangent to Bezier curve. \\
+\newline
+$ \textbf{Join two Bezier curve with } \textbf{C}^{1} \textbf{continuity} $ \\
+Let the first Bezier curve $\textbf{C}(t)$ is defined by $m+1$ control points $\textbf{P}_0 \dots \textbf{P}_m$ and the second Bezier curve $\textbf{D}(t)$ is defined by $n+1$ 
+control points $\textbf{Q}_0 \dots \textbf{Q}_n$ \\
+If we want to join two Bezier curve, the last point $\textbf{P}_m$ of $\textbf{C}(t)$ has to be identical to the first point $\textbf{Q}_0$ of $\textbf{D}(t)$ \\ 
+\newline
+This guarantees the $\textbf{C}^0$ continuous join, but it is not yet $\textbf{C}^1$ continuity. \\
+Recall the first curve is tangent to the last leg and the second curve is tangent to the first leg, to achieve the smooth transition, $\textbf{P}_{m-1}, \textbf{P}_m=\textbf{Q}_0 \text{ and } \textbf{Q}_1$ must be on the same line such as the direction from $\textbf{P}_m$ to $\textbf{P}_{m-1}$ and the direction from $\textbf{Q}_1$ to $\textbf{Q}_0$ are the same.\\
+\newline
+$\textbf{Berstein Polynomial}$ \\ 
+Berstein polynomial can be defined as following formula \\
+\[ \textbf{B}_{n,k}(t) = \binom{n}{k}t^k (1-t)^{n-k}  \]
+where the term $\binom{n}{k}$ are called binomial coefficients. They can easily be computed using following equation.\\
+\[ \binom{n}{k} = \frac{n!}{k!(n-k)!} \]
+\newline
+$\textbf{Matrix representation of Cubic Bezier Curve or Bezier basis matrix}$ 
+\begin{IEEEeqnarray}{rCl}
+    \textbf{C}(t) & = & t^3\textbf{P}_0 + 3 t^2 (1-t)\textbf{P}_1 + 3 t(1-t)^2\textbf{P}_2 + (1-t)^3\textbf{P}_3  \nonumber \\
+    \textbf{C}(t) & = &\>(1 - 3t + 3t^2 - t^3)\textbf{P}_0 + (1 + 3t + 6t^2 + 3t^3)\textbf{P}_1 +  \nonumber \\
+                       && +\>(0 - 0  +  3t^2 - 3t^3)\textbf{P}_2 + (0 - 0  +   0   - t^3)\textbf{P}_3 \nonumber \\
+    \textbf{C}(t) & = & 
+    \left[1, t, t^2, t^3 \right]
+    \begin{bmatrix}
+    1  & 0  & 0  & 0 \\
+    -3 & 3  & 0  & 0 \\
+    3  & -6 & 3  & 0 \\
+    -1 & 3  & -3 & 1 \\
+    \end{bmatrix}
+    \left[ 
+    \begin{array}{cc} 
+    P_3 \\
+    P_2 \\
+    P_1 \\
+    P_0 \\
+    \end{array} 
+    \right]  \nonumber \\
+\end{IEEEeqnarray} 
+$\textbf{Coverx Hull defined by the control points of Bezier polygon contains the Bezier curve}$ \\ 
+\end{document}

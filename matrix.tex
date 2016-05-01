@@ -8,144 +8,245 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{svg}
-
 \newcommand{\polyringz}[2][Z]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
 \newcommand{\polyringr}[2][R]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
 
 \begin{document}
 
-\[\text{Computer Graphic Matrix} \]
-\[\text{Identity}\]
+$$\textbf{mati2}$$
 \[
-        \begin{bmatrix}
-            1 & 0 & 0\\
-            0 & 1 & 0\\   
-            0 & 0 & 1  
-        \end{bmatrix}
+    I_2 = \begin{bmatrix}
+    1 & 0\\
+    0 & 1 
+    \end{bmatrix} \\
 \]
 
-\[ \text{Scalar} \]
+$$\textbf{mati3}$$
 \[
-        \begin{bmatrix}
-            x & 0 & 0\\
-            0 & y & 0\\   
-            0 & 0 & z  
-        \end{bmatrix}
+    I_3 = \begin{bmatrix}
+        1 & 0 & 0\\
+        0 & 1 & 0\\   
+        0 & 0 & 1  
+    \end{bmatrix} \\
 \]
 
-\[ \text{Translation} \]
+$$ \textbf{matr2} $$
 \[
-        \begin{bmatrix}
+    R_2 = \begin{bmatrix}
+    \cos(\beta) & -\sin(\beta)\\
+    \sin(\beta) & \cos(\beta)
+    \end{bmatrix} \\
+\]
+
+$$\textbf{matry}$$
+\[
+    M_{y}(\alpha) =\begin{bmatrix}
+        cos\alpha & sin\alpha & 0\\
+        0      &   1    & 0    \\  
+        -sin\alpha & cos\alpha & 0   
+    \end{bmatrix} \\
+\]
+
+$$\textbf{matrx}$$
+\[
+    M_{x}(\alpha) =\begin{bmatrix}
+            1 &   0      &     0   \\         
+            0 & cos\alpha & sin\alpha\\
+            0 & -sin\alpha& cos\alpha   
+    \end{bmatrix} \\
+\]
+
+$$\textbf{matrz}$$
+\[
+    M_{z}(\alpha) =\begin{bmatrix}
+            cos\alpha & sin\alpha & 0\\
+            -sin\alpha & cos\alpha & 0\\   
+            0      &   0    & 1  
+    \end{bmatrix} \\
+\]
+
+$$\textbf{matt}$$
+\[
+    S = \begin{bmatrix}
             1 & 0 & 0 & x\\
             0 & 1 & 0 & y\\   
             0 & 0 & 1 & z\\  
             0 & 0 & 0 & 1  
-        \end{bmatrix}
+    \end{bmatrix} \\
 \]
 
-\[ \text{Rotation} \]
+$$\textbf{mats}$$
 \[
-    M_{z}(\alpha)=\begin{bmatrix}
-            cos\alpha & sin\alpha & 0\\
-            -sin\alpha & cos\alpha & 0\\   
-            0      &   0    & 1  
-        \end{bmatrix}
+    T =\begin{bmatrix}
+            x & 0 & 0\\
+            0 & y & 0\\   
+            0 & 0 & z  
+    \end{bmatrix} \\
 \]
 
+$$\textbf{matii}$$
 \[
-    M_{y}(\alpha)=\begin{bmatrix}
-            cos\alpha & sin\alpha & 0\\
-            0      &   1    & 0    \\  
-            -sin\alpha & cos\alpha & 0   
-        \end{bmatrix}
+    A = \left| \begin{array}{ccc}
+    a & b & c \\
+    d & e & f \\
+    g & h & i \end{array} \right|  \\
 \]
 
+$$\textbf{matmn}$$
 \[
-    M_{x}(\alpha)=\begin{bmatrix}
-            1 &   0      &     0   \\         
-            0 & cos\alpha & sin\alpha\\
-            0 & -sin\alpha& cos\alpha   
-        \end{bmatrix}
+    A_{m,n} = 
+    \begin{pmatrix}
+    a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\
+    a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
+    \vdots  & \vdots  & \ddots & \vdots  \\
+    a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
+    \end{pmatrix} \\
 \]
 
-\newpage
-\[ \text{Find the matrix reflects a point with respect to x-axis} \]
-
+$$\textbf{matik}$$
 \[
-        M \left[ 
-        \begin{array}{c}
-        1\\
-        0    
-        \end{array}
-        \right] = 
-        \left[
-        \begin{array}{c}
-        1 \\
-        0
-        \end{array}
-        \right]
-\]
-\[
-        M \left[ 
-        \begin{array}{c}
-        0\\
-        1    
-        \end{array}
-        \right] = 
-        \left[
-        \begin{array}{c}
-        0 \\
-        -1 
-        \end{array}
-        \right]
+    A =\left( \begin{array}{ccc}
+    a & b & c \\
+    d & e & f \\
+    g & h & i \end{array} \right)\\
 \]
 
+$$\textbf{matii}$$
 \[
-        M \begin{bmatrix}
-            0 & 1\\
-            1 & 0 
-        \end{bmatrix} = 
-        \begin{bmatrix}
-            1 & 0\\
-            0 & -1 
-        \end{bmatrix}
-\]
-\[
-\Rightarrow 
-        M = \begin{bmatrix}
-            1 & 0\\
-            0 & -1 
-        \end{bmatrix}
+    \chi(\lambda) = \left| \begin{array}{ccc}
+    \lambda - a & -b & -c \\
+    -d & \lambda - e & -f \\
+    -g & -h & \lambda - i \end{array} \right| \\
 \]
 
-Let point $p(1, 0)$ on the x-axis and matrix $M$ reflects the point counterclockwise $\alpha$ to a point $p'$\\
-let line $\mathit{l}$ passes origin with angle $\alpha$ between $\mathit{l}$ and x-axis
-
+$$\textbf{matv}$$
 \[
+    v =\left[ \begin{array}{cc} 
+    c_1 \\
+    c_2 \\
+    c_n
+    \end{array} 
+    \right] 
+\]
+
+$$\textbf{matii}$$
+\[
+    v =\left[ \begin{array}{cc} 
+    c_1 \\
+    c_2 \\
+    \vdots \\
+    c_n
+    \end{array} 
+    \right] \\
+\]
+
+$$\textbf{matii}$$
+\[
+    \left[ \begin{array}{c} 
+    x_1 \\ 
+    x_2 
+    \end{array} \right] 
+    = \begin{bmatrix} 
+    A & B \\ 
+    C & D 
+    \end{bmatrix} 
+    \times 
+    \left[ 
+    \begin{array}{c} 
+    y_1 \\ 
+    y_2 
+    \end{array} 
+    \right] \\
+\]
+
+$$\textbf{matii}$$
+\[
+    \begin{bmatrix} 
+    xz & xw \\ 
+    yz & yw 
+    \end{bmatrix} = \left[ 
+    \begin{array}{c} 
+    x \\ 
+    y 
+    \end{array} 
+    \right] \times \left[ 
+    \begin{array}{cc} 
+    z & w 
+    \end{array} 
+    \right]\\
+\]
+$$\textbf{matii}$$
+\[
+    A =\begin{Bmatrix} 
+    x & y \\ 
+    z & v 
+    \end{Bmatrix} \\ 
+\]
+$$\textbf{matii}$$
+\[
+    A = \begin{pmatrix} 
+    x & y \\ 
+    z & v 
+    \end{pmatrix} \\
+\]
+
+$$\textbf{matii}$$
+\[
+    v =
+    \left[w_1, w_2, w_3 \right]
     \begin{bmatrix}
-        cos\alpha & sin\alpha\\
-        -sin\alpha & cos\alpha   
-    \end{bmatrix} e_{1} = 
-    \left[
-        \begin{array}{c}
-            cos\alpha \\
-            -sin\alpha
-        \end{array}
-    \right]
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}  \\
+    \end{bmatrix}
+    \left[ \begin{array}{cc} 
+    c_1 \\
+    c_2 \\
+    c_3
+    \end{array} 
+    \right] \\
 \]
-
+$$\textbf{matii}$$
 \[
+    v =
+    \left[w_1, w_2, w_3 \right]
     \begin{bmatrix}
-        cos\alpha & sin\alpha\\
-        -sin\alpha & cos\alpha   
-    \end{bmatrix} e_{2} = 
-    \left[
-        \begin{array}{c}
-            sin\alpha \\
-            cos\alpha
-        \end{array}
-    \right]
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}  \\
+    \end{bmatrix} \\
 \]
-
-
+$$\textbf{matii}$$
+\[
+    v =
+    \begin{bmatrix}
+    a_{11} & a_{12} & a_{13} \\
+    a_{21} & a_{22} & a_{23} \\
+    a_{31} & a_{32} & a_{33}  \\
+    \end{bmatrix} 
+    \left[ \begin{array}{cc} 
+    c_1 \\
+    c_2 \\
+    c_3
+    \end{array} 
+    \right] \\
+\]
+$$\textbf{matii}$$
+\[
+    v =
+    \left[w_1, w_2, \cdots, w_n \right]
+    \begin{bmatrix}
+    a_{11} & a_{12} & \cdots & a_{1n} \\
+    a_{21} & a_{22} & \cdots & a_{2n} \\
+    \vdots & \vdots  & \ddots & \vdots  \\
+    a_{n1} & a_{n2} & \cdots & a_{nn} 
+    \end{bmatrix}
+    \left[ \begin{array}{cc} 
+    c_1 \\
+    c_2 \\
+    \vdots \\
+    c_n
+    \end{array} 
+    \right] \\
+\]
 \end{document}

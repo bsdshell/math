@@ -1,0 +1,17 @@
+\documentclass{article} 
+\usepackage{amsmath} 
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\begin{document}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{defn}{Definition}[section]
+
+Given a set $S$ of n points in a plane, we wish to associate with each point $s$ a region consisting of all points in the plane closer to $s$
+than any other point $s'$ in $S$. The can be described formally as
+\[ 
+    \mathbf{Vor}(\mathbf{s}) = \{p: \textbf{dist}(s, p) \leq \textbf{dist}(s', p), \forall s' \in S \}
+\]
+Where $\mathbf{Vor}(\mathbf{s})$ is the Voronoi region for a point $s$
+\end{document}

@@ -1,4 +1,6 @@
-\documentclass{article} \usepackage{amsmath} \usepackage{amsfonts}
+\documentclass{article} 
+\usepackage{amsmath} 
+\usepackage{amsfonts}
 \usepackage{amssymb}
 \begin{document}
 \newtheorem{theorem}{Theorem}[section]
@@ -14,15 +16,24 @@ Let $X$ be a set and $\rho: X^2 \rightarrow \mathbb{R}$ a function with the foll
     \begin{enumerate}
         \item  $\rho(x, y) \geq 0 \quad \forall x, y \in X$ 
         \item  $\rho(x, y) = 0 \quad \iff x = y \quad \forall x, y \in X$ 
-        \item  $\rho(x, y) + \rho(y, z) \geq \rho(x, z) \quad \forall x, y, z \in X$ 
+        \item  $\rho(x, y) + \rho(y, z) \geq \rho(x, z) \quad \forall x, y, z \in X$. 
     \end{enumerate}
 Show that if we set $d(x, y) = \rho(x, y) + \rho(y, x)$, then $(X, d)$ is a $\textbf{metric space}$
 \end{defn}
 
 \begin{defn}
-Let $(X,, d)$ is a metric space. We say the subset $\mathbf{E}$ is open in $X$ if, whenever $e \in \mathbf{E}$, we can find $\epsilon > 0$ such that
+Let $(X, d)$ is a $\textbf{metric space}$. We say the subset $\mathbf{E}$ is open in $X$ if, whenever $e \in \mathbf{E}$, we can find $\epsilon > 0$ such that
 \[ x \in \mathbf{E} \mbox{ whenever } d(e, x) < \epsilon \]
 \end{defn}
+
+\begin{theorem}
+If $(X, d)$ is $\textbf{metric space}$, then the following statements are true.
+    \begin{enumerate} 
+    \item The empty set $\varnothing$ and the space $X$ are open.
+    \item If $U_{\alpha}$ for all $\alpha \in A$, then $\bigcup_{\alpha \in A} U_{\alpha}$ is open.(In other words, the union of open set is open)
+    \item If $U_{j}$ is open for all $0 \leq j \leq n$, then $\bigcap_{j}^{n} U_j$ is open
+    \end{enumerate}
+\end{theorem}
 
 \noindent
 \mbox{Examples for open sets}
@@ -34,13 +45,10 @@ Let $(X,, d)$ is a metric space. We say the subset $\mathbf{E}$ is open in $X$ i
 \end{enumerate}
 
 
-
-
-
 \begin{defn}
     $\textbf{A topological space}$ is pair $(X, \mathcal{T})$ where $X$ is a set and $U$ is subset of $X$ satifying certain axioms. $\mathcal{T}$ is called topology
     \begin{enumerate}
-        \item $\emptyset \in \mathcal{T}$ and space $X \in \mathcal{T}$ 
+        \item $\varnothing \in \mathcal{T}$ and space $X \in \mathcal{T}$ 
         \item If $U_1 \in \mathcal{T}, U_2 \in \mathcal{T}$, then $U_1 \cap U_2 \in \mathcal{T}$ $\textbf{[finite]}$ 
         \item If $U_i \in \mathcal{T}$ then $\bigcup_{i \in I} U_i \in \mathcal{T}$ $\textbf{ [finite or infinite]}$ 
     \end{enumerate}
