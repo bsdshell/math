@@ -1,0 +1,138 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{listings}
+\setlength\parindent{0pt}
+\usepackage[inline]{asymptote}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{defintion}{Definition}
+\newtheorem{collorary}{Collorary}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{note}{Note}
+
+\begin{document}
+\section{Introduction}
+This document compares two sort algorithms: Quick Sort and Merge Sort such as runtime and memory cost.
+\subsection{Quick Sort Algorithm} 
+How the algorithm work
+\begin{itemize}
+\item choose an element called pivot from the list 
+\item permutate the list such that all the elements are less than the pivot on the left side of the list and all the elements are greater than the pivot are on the right side of the list.
+\item recurs the processes until the list is empty
+\end{itemize} 
+
+Quick Sort algorithm average runtime is $\mathcal{O}(n\log{}n)$.
+But the worst runtime is $\mathcal{O}(n^2)$
+
+\subsection{Quick Sort Memory Usage} 
+Quick Sort memory cost is $\mathcal{O}(1)$
+because elements are swapped in an array only.
+
+\subsection{Merge Sort Algorithm} 
+How the algorithm work
+\begin{itemize}
+\item partition a list to two parts 
+\item recurs the processes untile the list is empty
+\item merge the two parts of the list to one sorted order list 
+\end{itemize} 
+Merge Sort Algorithm average runtime is $\mathcal{O}(n\log{}n)$. Also, the worst runtime is $\mathcal{O}(n\log{}n)$
+
+\subsection{Merge Sort Memory Usage} 
+Merge Sort memory usage is $\mathcal{O}(n)$ since
+when two sorted arrays are merged, another array are needed to hold the sorted elements. 
+
+\begin{note}
+There is algorithm called Kronrod's merge algorithm is first publiced to do it in place using $\mathcal{O}(n)$ time and $\mathcal{O}(1)$ space cost.
+\end{note}
+
+\pagebreak
+
+\subsection{Quick Sort Implementation in Java} 
+\lstset{language=Java,
+basicstyle=\ttfamily
+}
+\begin{lstlisting}[frame=single]
+void swap(int[] arr, int i, int j){
+    int tmp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = tmp;
+}
+
+int partition(int[] arr, int lo, int hi){
+    int pIndex = -1;
+    if(lo < hi){
+        pIndex = 0;
+        int pivot = arr[hi];
+
+        for(int i=lo; i<=hi; i++){
+            if(arr[i] < pivot){
+                swap(arr, pIndex, i);
+                if( < hi)
+                    pIndex++;
+            }
+        }
+    }
+    return pIndex;
+}
+
+void quickSort(int[] arr, int lo, int hi){
+    if(lo < hi){
+        int pIndex = partition(arr, lo, hi);
+        quickSort(arr, lo, pIndex-1);
+        quickSort(arr, pIndex+1, hi);
+    }
+}
+\end{lstlisting}
+
+\pagebreak
+\subsection{Merge Sort Implementation in Java} 
+\lstset{language=Java}
+\begin{lstlisting}[frame=single]
+void merge(int[] arr, int lo, int mid, int hi){
+    // [i..mid] [j...hi]
+    int i = lo; j = mid+1, k = 0;
+    int[] array = new int[hi - lo + 1];
+    while(i <= mid || j <= hi){
+        if(i > lo ){            
+            array[k] = arr[j];
+            j++;
+        }else if(j > hi){
+            array[k] = arr[i];
+            i++;
+        }else{
+            if(arr[i] < arr[j]){
+                array[k] = arr[i];
+                i++;
+            }
+            else if(arr[i] > arr[j]){
+                array[k] = arr[j];
+                j++
+            }
+            else{
+                array[k] = arr[i];
+                k++;
+                array[k] = arr[j];
+                i++;
+                j++;
+            }
+        }
+        k++;
+    }
+    for(int i=lo; i<=hi; i++)
+        arr[i] = array[i-lo];
+}
+void mergeSort(int[] arr, int lo, int hi){
+    if(lo < hi){
+    int mid = (lo + hi)/2
+        mergeSort(arr, lo, mid);
+        mergeSort(arr, mid+1, hi);
+        merge(arr, lo, mid, hi);
+    }
+}
+\end{lstlisting} 
+
+\end{document}

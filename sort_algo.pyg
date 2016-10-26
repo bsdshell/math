@@ -1,0 +1,31 @@
+void swap(int[] arr, int i, int j){
+    int tmp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = tmp;
+}
+
+int partition(int[] arr, int lo, int hi){
+    int pIndex = -1;
+    if(lo < hi){
+        pIndex = 0;
+        int pivot = arr[hi];
+
+        for(int i=lo; i<=hi; i++){
+            if(arr[i] < pivot){
+                swap(arr, pIndex, i);
+                if( < hi)
+                    pIndex++;
+            }
+        }
+    }
+    return pIndex;
+}
+
+void quickSort(int[] arr, int lo, int hi){
+    if(lo < hi){
+        int pIndex = partition(arr, lo, hi);
+        quickSort(arr, lo, pIndex-1);
+        quickSort(arr, pIndex+1, hi);
+    }
+}
+%\end{verbatim}

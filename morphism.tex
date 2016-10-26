@@ -1,0 +1,65 @@
+\documentclass[UTF8]{article}
+\usepackage{pagecolor,lipsum}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{centernot}
+\usepackage{xcolor}
+\usepackage{fullpage}
+\usepackage[inline]{asymptote}
+\newtheorem{theorem}{Theorem}
+\newtheorem{defintion}{Definition}
+\newtheorem{collorary}{Collorary}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{note}{Note} 
+% no indentation
+\setlength\parindent{0pt}
+
+\begin{document}
+\title{%
+  Homomorphism and Homeomorphism \\
+  \large Function, Map}
+\author{XXX}
+\maketitle
+
+\section{Homomorphism}
+\begin{defintion}
+defintion of Homomorphism
+\end{defintion}
+
+\begin{example} 
+Homomorphism is preserve structure
+\end{example}
+
+\subsection{What is function}
+\begin{defintion}
+defintion of function.
+\end{defintion}
+\begin{example} 
+Group, Ring Field
+\end{example}
+
+\begin{asy}
+size(5cm);
+for (int n = 3; n <= 7; ++n) {
+    draw(shift(2.2*n, 0) * polygon(n));
+}
+\end{asy}
+
+
+\section{Homeomorphism}
+\begin{defintion} 
+defintion of Homeomorphism
+\end{defintion}
+
+\begin{example}
+$ R = (\mathbb{R}, +, *)$ 
+\end{example}
+
+\begin{example}
+$ G =(\mathbb{R}, \oplus)$ 
+\end{example}
+
+\end{document}

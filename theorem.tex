@@ -1,0 +1,200 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\setlength\parindent{0pt}
+\usepackage[inline]{asymptote}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{defintion}{Definition}
+\newtheorem{collorary}{Collorary}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{note}{Note}
+
+\begin{document}
+
+\begin{enumerate}
+\item Latex is cool
+\item Haskell is fun
+    \begin{enumerate}
+    \item quick sort is $\mathcal{O}(n\log{}n)$  
+    \item merge sort is $\mathcal{O}(2^n)$  
+    \item extends 
+    \item quick sort is O(nlog n)
+    \item Could you give me an update on the essential result? 
+    \item Could you give me an update on the test result?
+    \end{enumerate}
+\end{enumerate} 
+
+Quick Sort algorithm 
+    \begin{verbatim}
+    List<Node> list = new ArrayList<Node>();
+    for(int i=0; i<len; i++){
+        int n = list.get(i);
+    }
+    \end{verbatim} 
+
+
+\begin{enumerate}
+\item Latex is cool
+\item Haskell is fun
+\begin{enumerate}
+\item Continuous
+\item Continue
+\item Consecutive
+\item Contingent
+\item Topology is cool and Homomorphism and Homeomorphism  
+\item fundamental group
+\end{enumerate}
+\end{enumerate} 
+
+\[
+\left| \begin{array}{ccc}
+a & b & c \\
+d & e & f \\
+g & h & i \end{array} \right|
+\] 
+
+
+\[
+\left| \begin{array}{cc}
+a & b \\
+c & d \end{array} \right|
+\] 
+
+$\det (\mathbf{A})$ 
+
+\[ A= \begin{bmatrix}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{bmatrix}  \]
+
+\[  A= \begin{bmatrix}
+ \cos(\beta) & -\sin(\beta)\\
+ \sin(\beta) & \cos(\beta)
+ \end{bmatrix} 
+ \]
+
+\[
+\left| \begin{array}{ccc}
+1 & 2 & 3 \\
+4 & 5 & 6 \\
+9 & 0 & 9 \end{array} \right|
+\] 
+
+\[
+\left| \begin{array}{ccc}
+a & b & c \\
+d & e & f \\
+g & h & i \end{array} \right|
+\] 
+
+\begin{defintion}
+What is topology?
+Topology is about the shape of objects. There is no length.
+Objects can be deformed to different shape(figure) according to some rules.
+The typical example is donuts and coffee cup are the same since they both have
+only one hole.
+\end{defintion}
+
+\begin{asy}
+    settings.render=16;
+    size(345.0pt,0);
+    import graph3;
+    currentprojection = perspective(20*dir(15,0));
+    real r1=5, r0=1;
+    int nu = 36, nv = 26;
+    path3 crossSection = Circle(r=r0, c=(r1,0,0), normal=Y, n= nu);
+    pen colorFunction(int u, real theta) {
+        real z = sin(u/nu * 2pi);
+        real t = (z + 1) / 2;
+    return t*red + (1-t)*lightblue;
+    }
+    surface torus = surface(crossSection, c=(0,0,0), axis=Z, n=nv,
+        angle1=90, angle2=10, color=colorFunction);
+    draw(torus);
+\end{asy}
+
+\section{Introduction}
+Hello World Theorem
+\begin{theorem}
+Any two straight lines intersect at lease one point in projective space.
+This is good theorem, and it is very cool
+This is good theorem, and it is very cool
+\end{theorem}
+
+\begin{theorem}
+Two points defines a line
+\end{theorem}
+
+$E = MC^2$ \\
+$E = MC^2$ \\
+$E = MC^2$ \\
+
+\begin{equation}
+\begin{aligned}
+x & = y + 1 \\
+x & = z + 3 \\
+x & = z + 3 \\
+x & = z + 3 \\
+\end{aligned}
+\end{equation} 
+
+\begin{enumerate}
+\item Latex is cool
+\item Haskell is fun
+\begin{enumerate}
+\item Binary Search Tree[BST]
+\item Binary Tree
+\item Binary Search Tree
+\item quick sort is $\mathcal{O}(2^n)$  
+\item merge sort is $\mathcal{O}(2^n)$  
+\item Continuous
+\item Continue
+\item Consecutive
+\item Contingent
+\item Contingent
+\item Contingent
+\item The runtime is $\mathcal{O}(n\log{}n)$ 
+\end{enumerate}
+\end{enumerate} 
+
+\pagebreak
+What is different between quick sort and merge sort? 
+\begin{enumerate}
+\item Quick Sort average runtime is $\mathcal{O}(n\log{}n)$  
+\item Merge sort average runtime is $\mathcal{O}(n\log{}n)$  
+\item The worst runtime for quick sort is $\mathcal{O}(n^2)$  
+\item The worst runtime for merge sort is $\mathcal{O}(n\log{}n)$ 
+\item Memory space for QuickSort is $\mathcal{O}(1)$ 
+\item Memory space for MergeSort is $\mathcal{O}(n)$
+\item Quick Sort is unstable sort
+\item MergeSort is stable sort
+\end{enumerate} 
+
+
+$\mathcal{O}(n\log{}n)$
+$\mathcal{O}(n^2)$
+$\mathcal{O}(2^n)$ 
+
+\begin{theorem}
+Three points are colinear if three points are on the same line.
+\end{theorem}
+
+\begin{defintion}
+The sum of angles for any triangle is 180 degrees in Euclidean Space
+\end{defintion}
+
+\begin{collorary}
+For all $n$ such as $n \in \mathbb{N}$ is either even or odd
+\end{collorary}
+
+
+
+\begin{note}
+Negative number is true for above collorary.
+\end{note}
+\end{document}

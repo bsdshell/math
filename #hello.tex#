@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage[tc]{titlepic}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tipa}
+\usepackage{pagecolor,lipsum}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{centernot}
+\usepackage{xcolor}
+\usepackage{listings}
+ 
+\begin{document}
+\textbf{Hello World}
+\begin{verbatim}
+    for(int i=0; i<3; i++){
+    }
+\end{verbatim}
+\end{document}
+
+

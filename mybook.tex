@@ -7,12 +7,19 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{amsthm}
 \usepackage{centernot}
 \usepackage{xcolor}
+\usepackage{fullpage}
+\usepackage[inline]{asymptote}
+\newtheorem{theorem}{Theorem}
+
+\setlength\parindent{0pt}
 \definecolor{title}{RGB}{180,0,0}
 \definecolor{other}{RGB}{171,0,255}
 \definecolor{name}{RGB}{255,0,0}
 \definecolor{phd}{RGB}{0,0,240}
+
 
 \newcommand{\polyringz}[2][Z]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
 \newcommand{\polyringr}[2][R]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
@@ -24,7 +31,7 @@
  \textcolor{other}{in partial fulfilment my dream} \\[2cm]
 \textsc{\Large{\textcolor{phd}{Doctor of Philosophy}}} \\[5pt]
   \textcolor{other}{in some crazy subject} \vspace{0.4cm} \\[1in]
-  \textcolor{other}{By}\\[5pt] {\Large \sc \textcolor{name}{Aron Situ}}
+  \textcolor{other}{By}\\[5pt] {\Large \sc \textcolor{name}{XXX}}
    \vspace{2cm}
 \titlepic{\includegraphics[width=0.19\textwidth]{example-image-a}\\[5pt]
 \textcolor{other}{Department of Subject}\\[5pt]
@@ -34,6 +41,15 @@
  \textcolor{other}{April 2016}}}
 \date{}
 \maketitle
+
+\section{Introduction}
+The Latex doc will have many random stuff on it, there is no particular content or theme on the document.
+I will write whatever I would like to write based on my mood. The main objective of the document is to 
+help me to learn some Latex. Latex is a program language used for typesetting technical documents. 
+Latex is free program package created in 1985 by the American computer scientist Leslis Lamport as an addition
+to the Tex typesetting system. Latex is created to make it easier to product general-purpose books and articles within Tex
+
+\begin{proof}
 \[ \textbf{Prove the power series } exp(A) = \sum_{k=0}^{n} \frac{A^{k}}{k!} \textbf{ is convegent when A is nxn matrix} \]
 $\exp(X) = \sum_{k=0}^{n} \frac{X^{k}}{k!}$\\
 $\sin(X) = \sum_{k=0}^{n} (-1)^{k}\frac{X^{2k}}{2k!}$\\
@@ -97,6 +113,8 @@ $
         \end{bmatrix}
 $
 
+\end{proof}
+
 \[ \textbf{Group} \]
 $\text{Let a, b, c} \in \mathbb{G} $\\
 There is binary operation * and satisfies\\
@@ -133,9 +151,11 @@ $\forall\quad a, b, c \in S$ such as\\
 \[ a \otimes \overline{1} = \overline{1} \otimes a =  a  \]
 
 \newpage
+\[ \text{Category is an algebraic structure comprises "objects" that are linked by arrows} \] 
+
 \[ \text{ Category } \]
 A category is collection of objects and collection of arrow[morphism, map] which have following structure
-echo arrow has domain and codomain which are object     
+each arrow has domain and codomain which are object     
 \[ f \colon X \rightarrow Y \text{ or } X \xrightarrow{f} Y\]
 Composition
 \[ f \colon X \rightarrow Y \text{ and } g \colon Y \rightarrow Z \quad g \circ f \colon X \rightarrow Z \quad \]
@@ -144,7 +164,19 @@ Composition Identity
 Associative
 \[ f \colon X \rightarrow Y \quad g \colon Y \rightarrow Z \quad h \colon Z \rightarrow W \mid h \circ g \circ f = h \circ (g \circ f) \quad \]
 
-\[ \text{functor} \]
+\[ \text{Functor} \]
+
+Functor can be formally defined by a pair of functions $f_1 \mbox{ and } f_0$ 
+so that $f_0:Ob(Hask) \rightarrow Ob(Hask)$ and $f_1:Hom(Hask) \rightarrow Hom(Hask)$
+where $Hom(Hask)$ refers to the union of all sets $a \rightarrow b$ where $a, b \in Ob(Hask)$
+so that the following holds \\
+
+0. $id::a \rightarrow a $ \\
+1. If $g::a \rightarrow b $ then $f_1(g)::f_0(a) \rightarrow f_0(b)$ \\
+2. For all $a \in \mbox{Ob(Hask)}, \quad f_1(id_a) = id_{f_0(a)} $ \\
+3. If $g,h \in \mbox{Hom(Hask)} \mbox{ then } \quad f_1(g \circ h) = f_1(g) \circ f_1(h)$ \\
+Given $f_0(a) = \mbox{List } a \quad f_1(g) = \mbox{ map } g   $ \medskip 
+Prove $f_0$ and $f_1$ is a Functor \\
 
 \[ \text{ Ring } \]
 Let a, b, c $\in  \mathbb{R}$ There are addition and multiplication operations and satisfy associative and distributive laws\\
@@ -505,6 +537,7 @@ Latex Environment has different mode\\
 {\it Text mode}\\
 {\it Command mode}\\
 
+
 Elliptic Curve and Group Structure Conic Curve\\
 $
     \begin{bmatrix}
@@ -557,6 +590,18 @@ $\mathbf{E(c)} = \frac{1}{N+1}\sum_{i=0}^{N} i$\\
 $\mathbf{E(c)} = \frac{1}{N+1}\sum_{i=0}^{N} \Rightarrow \frac{1}{N+1} \frac{N(N+1)}{2} = \frac{N}{2}$\\
 $\mathbf{E(3)} = \frac{1}{7+1}\sum_{i=0}^{N} i = \frac{1}{8}(0+1+2+3+4+5+6+7) = \frac{28}{8}$\\
 $\mathbf{E(3)} = 3.5$\\
+
+\begin{proof}
+If x is rational and y is irrational, then x + y is irrational \\
+Assume $x + y$ is rational \\
+    $\Rightarrow \frac{n}{m} = x + y  \quad m, n \in  \mathbb{N}$ \\ 
+    $\Rightarrow \frac{n}{m} - \frac{n_1}{m_1} = y \quad m_1, n_1 \in  \mathbb{N}$ \\
+    $\Rightarrow \frac{n m_1}{m m_1} - \frac{n_1 m}{m m_1} = y$  \\
+    $\Rightarrow \frac{n m_1 - n_1 m}{m m_1} = y$  \\
+    $\Rightarrow \mbox{y is rational}$  \\
+    $\Rightarrow \mbox{this contracts y is irrational}$ \\
+    $\Rightarrow \mbox{y is irrational}$ \\
+\end{proof}
 
 Prove Square root of two is irrational
 $\sqrt{2} \notin \mathbb{Q}$\\
@@ -624,9 +669,9 @@ $\text{For each }\omega = (m+n\tau) \in L, \text{there exists } -\omega = -(m+n\
 $\because \omega ^{-(2J+1)} + (-1)^{-(2J+1)}\omega^{-(2j+1)} = 0$\\
 $\therefore \sum_{m,n \in \mathbb{Z}}' (m+n\tau)^{-k} = 0\quad \text{ for all } k \in (2j+1)$\\
 
-\noindent
-\[\text{Show for any lattices L, the sum } \sum_{\omega \in \mathit{L}}' \frac{1}{\omega^{k}} \text{ converges absoluately for all } k > 2 \]
-Proof:
+\begin{theorem}
+Show for any lattices $L$, the sum $\sum_{\omega \in \mathit{L}}' \frac{1}{\omega^{k}} \text{ converges absoluately for all } k > 2$
+\end{theorem}
 
 
 \pagebreak
@@ -687,28 +732,65 @@ f'(x) &= 2x \quad \text{ for all } x \in \mathbb{R}
 \end{equation}
 
 \pagebreak
-\noindent
-\[ \text{Elliptic Curve}\]\\
-Find the formula for \[ s(n) = \sum_{k=1}^{n} k^2 \]\\
-\[ s(n) = \frac{(2n+1)(n+1)n}{2 \times 3} \]\\
-Let $y^2 = S(n)$ and $x=n$\\
-\[ y^2 = \frac{1}{6}x(x+1)(2x+1) \]\\
-\includegraphics[scale=4]{/Users/cat/myfile/github/geogebra/elliptic1.png}
+Elliptic Curve \\
+\begin{equation}
+\begin{aligned}
+S(n) &= \sum_{k=1}^{n} k^2 \\
+S(n) &= \frac{(2n+1)(n+1)n}{2 \times 3} \\
+\mbox{Let } y^2 = S(n) \mbox{ and } x=n \nonumber \\
+  y^2 &= \frac{1}{6}x(x+1)(2x+1) 
+\end{aligned}
+\end{equation} 
+
+\begin{center}
+\begin{asy}
+    unitsize(1cm);
+    draw((-4,0) -- (4,0), arrow=Arrow(TeXHead));
+    draw((0,-4) -- (0,4), arrow = Arrow(TeXHead));
+
+    unitsize(1cm);
+    import contour;
+    real f(real x, real y) { return 6*y^2 -
+        x*(x+1)*(2*x+1); }
+    guide[][] thegraphs = contour(f,
+        a=(-4,-4), b=(4,4), new real[] {0});
+
+    /* The next line draws the first (and
+        only) entry in thegraphs. This entry
+        is itself an array, since it
+        represents a disconnected path. */
+
+    draw(thegraphs[0]);
+\end{asy} 
+\end{center}
 
 $ (x, y)=(0, 0), (-1, 0),(-\frac{1}{2}, 0)$ are on the curve\\
 
+\pagebreak
+\begin{proof}
+How to derive  $y^2 = x'^3 + Ax' + B$ from $y^2 = x^3 + bx^2 + cx + d$ \\
+We use following trick similar to \textbf{Completing the square} in quadratic polynomial\\
 \noindent
-\[ y^2 = x^3 + bx^2 + cx + d \]
-$\because (x+ \frac{b}{3})^3 =  x^3 + 3x^2 \frac{b}{3} + 3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3}$\\
-$y^2 = (x+ \frac{b}{3})^3  - 3x (\frac{b}{3})^{2} - (\frac{b}{3})^{3} + cx + d$\\
-$y^2 = (x+\frac{b}{3})^{3} - [3(\frac{b}{3})^{2} - c]x + d$\\
-let x + $\frac{b}{3} = x'$\\
-$y^2 = x'^{3} - [3(\frac{b}{3})^{2} - c][x' - \frac{b}{3}] + d$\\
-$y^2 = x'^{3} - [3(\frac{b}{3})^{2} - c]x' + 3(\frac{b}{3})^{3} - \frac{b}{3}c + d $\\
-$y^2 = x'^{3} +[c-3(\frac{b}{3})^2]x' + 3(\frac{b}{3})^{3} - \frac{b}{3}c + d $
-
-\noindent
-\[ \text{For any lattice } L, \text{the sum of  }\sum_{\omega_k \in L}'^{\infty} \frac{1}{\omega_k} \text{ is converges absoluately for all } k > 2 \]
+\begin{equation}
+\begin{aligned}
+ (x+ \frac{b}{3})^3 &=  x^3 + 3x^2 \frac{b}{3} + 3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3} \\
+ (x+ \frac{b}{3})^3 &=  x^3 + bx^2 + 3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3}  \\
+ (x+ \frac{b}{3})^3 - [3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3}] &=  x^3 + bx^2 + [3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3}] - [3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3}] \\
+ (x+ \frac{b}{3})^3 &=  x^3 + 3x^2 \frac{b}{3} + 3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3} \\ 
+ (x+ \frac{b}{3})^3 &=  x^3 + bx^2 + 3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3} \\ 
+ (x+ \frac{b}{3})^3 - [3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3}] &=  x^3 + bx^2 + [3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3}] - [3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3}] \\ 
+ (x+ \frac{b}{3})^3 - [3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3}] + cx + d &=  x^3 + bx^2 + [3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3}] - [3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3}] + cx + d \\ 
+ (x+ \frac{b}{3})^3 - 3x (\frac{b}{3})^{2} - (\frac{b}{3})^{3} + cx + d &=  x^3 + bx^2 + [3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3}] - [3x (\frac{b}{3})^{2} + (\frac{b}{3})^{3}] + cx + d \\ 
+ (x+\frac{b}{3})^{3} - [3(\frac{b}{3})^{2} - c]x - (\frac{b}{3})^{3} + d &= x^3 + bx^2 + cx + d  \\ 
+\mbox{Let }  x + \frac{b}{3} = x' \mbox{ or } x = x' - \frac{b}{3} \\
+ x'^{3} - [3(\frac{b}{3})^{2} - c](x' - \frac{b}{3}) + d - (\frac{b}{3})^3 &= x^3 + bx^2 + cx + d \\
+ x'^{3} - [3(\frac{b}{3})^{2} - c]x' + [3(\frac{b}{3})^{2} - c]\frac{b}{3} + d &= x^3 + bx^2 + cx + d  \\
+ x'^{3} - [3(\frac{b}{3})^{2} - c]x' + 3(\frac{b}{3})^{3} - \frac{b}{3}c + d &= x^3 + bx^2 + cx + d \\
+ x'^{3} +[c-3(\frac{b}{3})^2]x' + 3(\frac{b}{3})^{3} - \frac{b}{3}c + d &= x^3 + bx^2 + cx + d  \\
+ \therefore A = [c-3(\frac{b}{3})^2] \quad B =  3(\frac{b}{3})^{3} - \frac{b}{3}c + d \\ 
+\end{aligned}
+\end{equation} 
+\end{proof}
 
 \newpage
 \noindent
