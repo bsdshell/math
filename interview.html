@@ -1,0 +1,409 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="algorithms-are-important-for-interview">Algorithms are important for interview</h1>
+<ol>
+<li><p>SQL</p>
+<ul>
+<li><p>Innter join, outer join</p></li>
+<li><p>foreign key</p></li>
+<li><p>Database Sharing, indexing</p></li>
+<li><p>noSQL, key and value</p></li>
+</ul></li>
+<li><p>Networking</p>
+<ul>
+<li><p>Three ways hands shake</p></li>
+<li><p>slide window inside the package</p></li>
+<li><p>DNS, resolve domain name, IP</p></li>
+<li><p>TCP, UDP, HTTPS</p></li>
+</ul></li>
+<li><p>Design</p>
+<ul>
+<li><p>load balance</p></li>
+<li><p>DB replication</p></li>
+<li><p>Sub-Pub</p></li>
+<li><p>command pattern</p></li>
+<li><p>visit pattern</p></li>
+<li><p>Singleton,</p></li>
+<li><p>Double-checked locking</p></li>
+<li><p>message queue</p></li>
+<li><p>consume and producer</p></li>
+</ul></li>
+<li><p>Quick Sort</p>
+<ul>
+<li><p>The average runtime is <span class="math">O(<em>n</em>log<em>n</em>)</span></p></li>
+<li><p>The worst case is <span class="math">O(<em>n</em><sup>2</sup>)</span></p>
+<ul>
+<li><p>Given an array <span class="math">[1, 2, 3, 4]</span>, choose the right most element as<br />pivot which is [4] <span class="math"> =  &gt; </span> [1, 2, 3][4] <span class="math"> =  &gt; </span> [1, 2][3] <span class="math"> =  &gt; </span> [1][2]</p></li>
+<li><p>How to choose the pivot is critical.</p></li>
+</ul></li>
+<li><p>Memory space is <span class="math">O(1)</span></p></li>
+<li><p>Untable sort and Stable sort</p>
+<ul>
+<li><p>If the keys keep the same relative orders after keys are sorted<br />then the sort algorithm is stable. Otherwise it is unstable.<br /><br />Sort the second coordinates<br /></p>
+<p>(s) at (0,0); at (s) <span>(4,1)</span>; (s) at (1.2,0); at (s) <span>(2,3)</span>; (s) at (2.4,0); at (s) <span>(4,3)</span>;</p>
+<p><br /></p>
+<p>Sort the first coordinates [stable sort]<br /></p>
+<p>(s) at (0,0); at (s) <span>(2,3)</span>; (s) at (1.2,0); at (s) <span>(4,1)</span>; (s) at (2.4,0); at (s) <span>(4,3)</span>;</p>
+<p><br /></p></li>
+<li><p>Find the Kth smaller element in a given unsorted array in <span class="math">O(<em>n</em>)</span></p></li>
+<li><p>Merge Sort,</p>
+<ul>
+<li><p>The average and worst runtime is <span class="math">O(<em>n</em>log<em>n</em>)</span></p></li>
+<li><p>Stable sort</p></li>
+</ul></li>
+<li><p>Max distance for <span class="math"><em>j</em> − <em>i</em></span> given <span class="math"><em>a</em><em>r</em><em>r</em>[<em>j</em>] &gt; <em>a</em><em>r</em><em>r</em>[<em>i</em></span>]</p></li>
+<li><p>Single linked list</p>
+<ul>
+<li><p>reverse, iteration, recursion</p></li>
+<li><p>remove,</p></li>
+<li><p>insert to sorted list</p></li>
+<li><p>clone list</p></li>
+<li><p>check circular linkedlist</p></li>
+</ul></li>
+<li><p>Double linkedlist</p>
+<ul>
+<li><p>remove node</p></li>
+<li><p>insert node</p></li>
+<li><p>append node</p></li>
+</ul></li>
+<li><p>Eight queen problem</p></li>
+<li><p>Sudoku Solver problem</p></li>
+<li><p>Connected island</p></li>
+<li><p>Implement heap with array</p>
+<ul>
+<li><p>Heap with array<br /></p>
+<p>[level distance=1.5cm, level 1/.style=<span>sibling distance=6.3cm</span>, level 2/.style=<span>sibling distance=3.3cm</span>] child <span>node <span>[<span class="math"><em>k</em><sub>1</sub> = 2<em>k</em><sub>0</sub> + 1 = 1</span>]</span> child <span>node <span>[<span class="math"><em>k</em><sub>3</sub> = 2<em>k</em><sub>1</sub> + 1 = 3</span>]</span></span> child <span>node <span>[<span class="math"><em>k</em><sub>4</sub> = 2<em>k</em><sub>1</sub> + 2 = 4</span>]</span></span> </span> child <span>node <span>[<span class="math"><em>k</em><sub>2</sub> = 2<em>k</em><sub>0</sub> + 2 = 2</span>]</span> child <span>node <span>[<span class="math"><em>k</em><sub>5</sub> = 2<em>k</em><sub>2</sub> + 1 = 5</span>]</span></span> child <span>node <span>[<span class="math"><em>k</em><sub>6</sub> = 2<em>k</em><sub>2</sub> + 2 = 6</span>]</span></span> </span>;</p></li>
+</ul></li>
+<li><p>Serialize Binary Tree</p>
+<ul>
+<li><p>Use technic similar to the implementation of Heap with array level nodes<br /><br /><span class="math">2<sup>0</sup> + 2<sup>1</sup> + … + 2<sup><em>k</em></sup></span><br /> <br /><span class="math">2<sup><em>k</em> − 1</sup> = 1, 2</span><br /></p>
+<p>[level distance=1.5cm, level 1/.style=<span>sibling distance=7cm</span>, level 2/.style=<span>sibling distance=3.5cm</span>] child <span>node <span>[<span class="math"><em>k</em><sub>2</sub> = 2<em>k</em><sub>1</sub> = 2</span>]</span> child <span>node <span>[<span class="math"><em>k</em><sub>4</sub> = 2<em>k</em><sub>2</sub> = 4</span>]</span></span> child <span>node <span>[<span class="math"><em>k</em><sub>5</sub> = 2<em>k</em><sub>2</sub> + 1 = 5</span>]</span></span> </span> child <span>node <span>[<span class="math"><em>k</em><sub>3</sub> = 2<em>k</em><sub>1</sub> + 1 = 3</span>]</span> child <span>node <span>[<span class="math"><em>k</em><sub>6</sub> = 2<em>k</em><sub>3</sub> = 6</span>]</span></span> child <span>node <span>[<span class="math"><em>k</em><sub>7</sub> = 2<em>k</em><sub>3</sub> + 1 = 7</span>]</span></span> </span>;</p>
+<p>[level distance=0.8cm, level 1/.style=<span>sibling distance=1.7cm</span>, level 2/.style=<span>sibling distance=1.1cm</span>] child <span>node <span>3</span> child <span>node <span>2</span></span> child <span>node <span>5</span></span> </span> child <span>node <span>7</span> child <span>node <span>6</span></span> child <span>node <span>9</span></span> </span>;</p>
+<pre><code>    // [0 : 8] [1 : 3] [2 : 7] [3 : 2] [4 : 5] [5 : 6] [6 : 9]
+    level_serial(Node root, int index, String file){
+        if(root != null){
+            try{
+            BufferedWriter bf = new BufferedReader(new FileWriter(file)); 
+                bf.write(index + &quot;:&quot; + root.data + &quot;\n&quot;);
+                level_serial(root.left, 2*index+1, file);
+                level_serial(root.right, 2*index+2, file);
+            }catch(IOException e){
+                e.printStackTrack();
+            }
+            
+        }
+    }
+
+    Map&lt;Integer, Integer&gt; createMap(String file){
+        BufferedReader bufr = new BufferedReader(FileReader(file));         
+        Map&lt;Integer, Integer&gt; map = new HashMap&lt;&gt;();
+        String line;
+        try((line = buf.readLine()) != null){
+            String[] arr = line.split(&quot;:&quot;);
+            map.put(arr[0], arr[1]);
+        }catch(IOException e){
+            e.printStackTrack();
+        }
+        return map;
+    }
+    // index = 0;
+    Node buildTree(Map&lt;Integer, Integer&gt; map, int index){
+        Node r = null;
+        Integer n = map.get(index); 
+        if(n != null){
+            r = new Node(n);
+            r.left = buildTree(map, index + 1);
+            r.right = buildTree(map, index + 2);
+        }
+        return rk;
+    }
+
+    </code></pre></li>
+</ul></li>
+<li><p>Serialize general tree</p></li>
+<li><p>Tree Traveral</p>
+<ul>
+<li><p>preorder</p>
+<ul>
+<li><p>pretty print</p></li>
+<li><p>use it to serialize Binary Tree, postorder can be deserialized BT.</p></li>
+</ul></li>
+<li><p>inorder</p>
+<ul>
+<li><p>Check if a Binary Tree is Binary Search Tree</p></li>
+</ul></li>
+<li><p>postorder</p>
+<ul>
+<li><p>deserialize</p></li>
+</ul></li>
+<li><p>levelorder</p>
+<ul>
+<li><p>use two queues</p></li>
+<li><p>one queue for odd level</p></li>
+<li><p>other queue for even level</p></li>
+</ul></li>
+<li><p>print level without queues</p>
+<ul>
+<li><p>compute the height of of the Binary Tree</p></li>
+<li><p><span class="math"><em>N</em><em>o</em><em>d</em><em>e</em>(<em>k</em>) = 2<sup><em>k</em> − 1</sup> <em>k</em> = 1, …, <em>n</em></span></p>
+<pre><code>            level(Node root, Map&lt;Integer, Integer&gt; map, int index){
+                if(root != null){
+                    mpa.put(index, root.data);
+                    print(root.data);
+                    level(root.left, 2*index)
+                    level(root.right, 2*index + 1)
+                }
+            } 
+
+            void printLevel(Map&lt;Integer, Integer&gt; map){
+                int count = 0;
+                int size = 0;
+                while(size &lt; map.size()){
+                    int m = (int)Math.pow(2, k);
+                    for(int i=1; i&lt;=m; i++){
+                        Integer n = map.get(count + i);
+                        if(n != null){
+                            print(n.data);
+                            size++;
+                        }
+                    }
+                    count += m;
+                }
+            }
+
+            Node buildTree(Map&lt;Integer, Integer&gt; map, int index){
+                Node r = null;
+                Integer n = map.get(index);
+                if(n != null){
+                    r = new Node(n);
+                    r.left = buildTree(map, 2*index);
+                    r.right = buildTree(map, 2*index + 1);
+                }
+                return r;
+            }
+         </code></pre></li>
+</ul></li>
+<li><p>iteration preorder, inorder, postorder, levelorder</p></li>
+<li><p>iteration preorder</p>
+<ul>
+<li><p>initialize <span class="math"><em>r</em> = <em>r</em><em>o</em><em>o</em><em>t</em></span>, stack</p></li>
+<li><p>iterate left children with <span class="math"><em>r</em></span> and push the <span class="math"><em>r</em></span> to stack, at the same time printing out the data</p></li>
+<li><p>if <span class="math"><em>r</em></span> is null, then pop a node from the stack and set the curr reference to the right child of the node</p></li>
+<li><p>it will terminate if <span class="math"><em>r</em></span> is null and stack is empty</p></li>
+</ul>
+<pre><code>         preorder(Node r){
+             if(r != null){
+                 r.data
+                 preorder(r.left)  // implicitly r = r.left
+                 preorder(r.right) // implicitly pop() =&gt; r = r.right
+             }
+         }
+
+        preorderIte(Node r) {
+            Stack&lt;Integer&gt; stack = new Stack&lt;&gt;();
+            while(r != null || !stack.isEmpty()) {
+                if(r != null) {
+                    print(r.data)
+                    stack.push(r)
+                    r = r.left
+                } else {
+                    Node n = stack.pop()
+                    r = n.right
+                }
+            }
+        }
+        </code></pre></li>
+<li><p>iteration inorder</p>
+<ul>
+<li><p>xxxx</p>
+<p>[level distance=0.8cm, level 1/.style=<span>sibling distance=1.7cm</span>, level 2/.style=<span>sibling distance=1.1cm</span>] child <span>node[minimum size=6mm, draw, circle] <span>2</span></span> child <span>node[minimum size=6mm, draw, circle] <span>3</span></span>;</p>
+<p><span>|c|c|c|c|c|c|c|c|c|</span> 0 &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7<br />r=root &amp; <span class="math"><em>r</em> → <em>l</em></span> &amp; <span class="math"><em>r</em> → <em>l</em> → <em>l</em></span> &amp; null &amp; <span class="math">2 → <em>l</em></span>=null &amp; <span class="math">1 → <em>r</em></span> &amp; <span class="math">3 → <em>l</em></span>=null &amp; <span class="math">3 → <em>r</em></span>=null<br />stack &amp; push 1 &amp; push 2 &amp; pop 2 &amp; pop 1 &amp; push 3 &amp; pop 3 &amp; x<br />print &amp; x &amp; x &amp; 2 &amp; 1 &amp; x &amp; 3 &amp; x<br /></p>
+<pre><code>        inorder(Node r){
+            if(r != null){
+                inorder(r.left)  // =&gt; r = r.left, push to stack
+                print(r.data)    // =&gt; pop(), print(r.data)
+                inorder(r.right) // =&gt; r = r.right
+            }
+        }
+
+        inorderIte(Node r){
+            Stack&lt;Node&gt; stack = new Stack&lt;&gt;();
+            while(r != null || !stack.isEmpty()){
+                if(r != null){
+                    stack.push(r)
+                    r = r.left
+                }else{
+                    Node n = stack.pop();
+                    print(n.data)
+                    r = n.right
+                }
+            }
+        }
+
+         </code></pre></li>
+</ul></li>
+<li><p>iteration postorder</p>
+<pre><code>        postorderIte(Node r){
+            Stack&lt;Node&gt; s1, s2 = new Stack&lt;&gt;();
+            if(r != null){
+                s1.push(r);
+                while(!s1.empty()){
+                    Node top = s1.pop();
+                    if(top.left != null)
+                        s1.push(top.left);
+                    if(top.right != null)
+                        s1.push(top.right);
+
+                    s2.push(top);
+                }
+
+                while(!s2.empty())
+                    s2.pop()
+            }
+        }
+        </code></pre>
+<div class="figure">
+<img src="/Library/WebServer/Documents/zsurface/image/postorder2.png" alt="Iteration postorder traveral with two stacks" /><p class="caption">Iteration postorder traveral with two stacks</p>
+</div></li>
+<li><p>level order sequence with two stacks</p>
+<ul>
+<li><p>Use two stacks <span class="math"> → </span> print Binary Tree in sequency order</p></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><p>Rotate square array</p></li>
+<li><p>Print rectangle array in spiral shape.</p></li>
+<li><p>Multiply long integers using array</p></li>
+<li><p>Find the maximum elements from sorted array are shifted</p></li>
+<li><p>Find the minimum elements from sorted array are shifted</p></li>
+<li><p>Merge sorted arrays</p></li>
+<li><p>Merge k sorted arrays</p></li>
+<li><p>Maximum and minimum heap</p></li>
+<li><p>Use array to represent heap</p>
+<ul>
+<li><p>The technic can be used to serialize and deserialize Binary Tree</p></li>
+</ul></li>
+<li><p>heap sort</p></li>
+<li><p>Dynamic Programming</p>
+<ul>
+<li><p>maximum continuous sum in <span class="math">O(<em>n</em>)</span></p>
+<ul>
+<li><p>how to support negative number</p></li>
+<li><p>print the indexes out</p></li>
+</ul></li>
+<li><p>maximum non-continuous sum <span class="math">O(<em>n</em>)</span></p></li>
+<li><p>multiply all the elements in an array except current element <span class="math">O(<em>n</em>)</span></p></li>
+</ul></li>
+<li><p>Graphic Problem</p>
+<ul>
+<li><p>Graph</p></li>
+<li><p>find a path from two nodes (Use Breadth First Search)</p>
+<ol>
+<li><p>Check if the n1 and n2 are equal</p></li>
+<li><p>if n1 and n2 are equal. we are done!</p></li>
+<li><p>if n1 and n2 are not equal.</p></li>
+<li><p>add n1 to a list</p></li>
+<li><p>get the first child of n1 and recur with the child.</p></li>
+</ol></li>
+<li><p>find the shortest path from two nodes</p></li>
+<li><p>find the minimum weight path from two nodes</p></li>
+<li><p>how to find the loop in a graph</p></li>
+<li><p>find all the neighbours which are kth distance from a given node</p></li>
+</ul></li>
+<li><p>How to represent a Graph</p>
+<ul>
+<li><p>adjecent matrix</p></li>
+<li><p>adjecent list</p></li>
+<li><p>What is the different between the two data structures</p></li>
+</ul></li>
+<li><p>BackTracking</p>
+<ul>
+<li><p>Coin Change problem.</p>
+<ul>
+<li><p>find the minimum number of coins [shortest path from the root]</p></li>
+<li><p>find the maximum number of coins [longest path from the root]</p></li>
+<li><p>dynamic programming with HashMap</p></li>
+</ul></li>
+<li><p>Eight Queen Problem</p></li>
+<li><p>Sudoku Solver</p></li>
+<li><p>Find the maximum number of connected dots in an 2d array</p></li>
+<li><p>Find the path from one word to other word that you can change one letter to a valid word in dictionary only once for each step. (Facebook question)</p>
+<ul>
+<li><p>Use Depth First Search, DFS</p></li>
+<li><p>Given two word1 and word2 and a dictinary</p></li>
+<li><p>start from the first word</p></li>
+<li><p>change the first position <span class="math"><em>w</em><em>o</em><em>r</em><em>d</em>[0]</span> from <span class="math">[<em>a</em> − <em>z</em>]</span></p></li>
+<li><p>if the new word is a valid word in the dictionary</p></li>
+<li><p>move to second position and test <span class="math">[<em>a</em> − <em>z</em>]</span> recursively</p></li>
+<li><p>if try all possible words from <span class="math">[<em>a</em> − <em>z</em>]</span> and non of them are valid word</p></li>
+<li><p>return back to the previous recursive call and try the next letter</p></li>
+<li><p>until the second word2 is found.</p></li>
+<li><p>otherwise, there is no path from word1 to word2</p></li>
+</ul></li>
+</ul></li>
+<li><p>Binary Tree</p></li>
+<li><p>Check a Binary Tree is Binary Search Tree</p></li>
+<li><p>recursion technic</p></li>
+<li><p>defintion technic</p></li>
+<li><p>Check whether two Binary Tree are isomorphic</p></li>
+<li><p>Find the mirror of a Binary Tree</p></li>
+<li><p>Find the longest path in a Binary Tree</p></li>
+<li><p>Print all the paths in a Binary Tree</p></li>
+<li><p>Find the maximum sum of path in a Binary Tree</p></li>
+<li><p>Invert a Binary Tree</p></li>
+<li><p>Binary Tree to linkedlist</p></li>
+<li><p>Binary Tree to circular double linked list [hard]</p></li>
+<li><p>Binary Tree to single linked list with one queue</p></li>
+<li><p>Delete whole tree</p></li>
+<li><p>Delete whole tree</p></li>
+<li><p>Delete whole tree</p></li>
+<li><p>Use two queues</p></li>
+<li><p>Post order traveral</p></li>
+<li><p>Use memory space <span class="math">O(1)</span></p></li>
+<li><p>Move one branch to branch</p></li>
+</ul></li>
+<li><p>Lease Recent Used[LRU]</p></li>
+<li><p>Implements HashMap</p>
+<ul>
+<li><p>Context Switch invoke switching reg, stack pointer, program counter</p></li>
+</ul>
+<ul>
+<li><p>Synchronize LinkedList</p>
+<ul>
+<li><p><span class="math">$\color{red}{add()}$</span> and <span class="math">$\color{red}{delete()}$</span></p></li>
+<li><p>Use two locks</p>
+<ul>
+<li><p>if the node is a head, lock it and delete it, easy!</p></li>
+<li><p>if the node is not head, then lock the previous and current nodes</p></li>
+<li><p>if a node is found, delete it</p></li>
+</ul></li>
+<li><p>Why it works?</p>
+<ul>
+<li><p>If the current node is locked, you can delete the next node safely</p></li>
+<li><p>If current node is deleted, then previous node must be locked</p></li>
+</ul></li>
+</ul></li>
+<li><p>What is deadlock</p></li>
+<li><p>What is starvation</p></li>
+<li><p>Mutex is same for Binary Semaphore</p></li>
+<li><p>Semaphore is synchronization construct that can be used to provide mutual exclusion and conditional synchronization</p></li>
+<li><p>Context Switch</p></li>
+<li><p>Singleton, double-checked locking</p></li>
+<li><p>Consumer and Producer</p></li>
+<li><p>Single LinkedList with two locks add() and delete()</p></li>
+<li><p>Java concurrent.Atomic library, AtomicInt, AtomicRef</p></li>
+<li><p>Compare and Set [CAS]</p></li>
+<li><p>Thread, Process, Lock, Spinlocks, Mutex, Semaphore, Compare And Set[CAS]</p></li>
+<li><p>Synchronize delete or add node in LinkedList. when and where to lock</p></li>
+</ul></li>
+</ol>
+</body>
+</html>

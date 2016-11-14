@@ -98,3 +98,5 @@ INPUT /usr/local/texlive/2013/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/local/texlive/2013/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/local/texlive/2013/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/local/texlive/2013/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+OUTPUT hello2.dvi
+INPUT hello2.aux
