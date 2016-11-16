@@ -15,7 +15,7 @@
 \usepackage{tikz, ifthen}
 \usepackage{enumitem}
 \usepackage{forest}
-\usetikzlibrary{positioning}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
 
 \usetikzlibrary{calc}
 
@@ -26,7 +26,6 @@
 \newtheorem{remark}{Remark}
 \newtheorem{note}{Note} 
 \newcommand{\arr}{\rightarrow}
-\tikzset{main node/.style={circle,fill=blue!20,draw,minimum size=1cm,inner sep=0pt},} 
 
 \begin{document}
 \section{Algorithms are important for interview}
@@ -230,6 +229,9 @@ more info
 \pagebreak
 \section{path problem}
 \textbf{Find the all paths from two given nodes} \\
+
+%\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+\tikzset{main node/.style={circle,fill=red!20,draw,minimum size=1cm,inner sep=0pt},} 
 \begin{center}
   \begin{tikzpicture}
     \begin{scope}[xshift=4cm]
@@ -284,20 +286,31 @@ more info
                             list.remove i
                 else
                     print list
-
-
-            
     \end{lstlisting} 
 
-\textbf{Find the shortest path from two given nodes} \\
+\textbf{Find the shortest path from two given nodes}
 \begin{lstlisting}[
 mathescape,
 columns=fullflexible,
 basicstyle=\fontfamily{lmvtt}\selectfont,
 ]
-        shortest arr2d n1 n2 list
+        shortest arr2d n1 n2 list mlist
             height = arr2d.length
             width  = arr2d[0].length
+            if n1 < height
+                if n1 != n2
+                    for i=0 i<width i++
+                        if arr2d[n1][i] == 1
+                            list.add i
+                            shortest arr2d i n2 mlist
+                            list.remove i
+                else
+                    if mlist.size == 0
+                        mlist = list
+                    else
+                        if list.size < mlist.size
+                            mlist = list
+
 \end{lstlisting} 
 
 

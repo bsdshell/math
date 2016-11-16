@@ -1,0 +1,60 @@
+\documentclass[UTF8]{article}
+\usepackage{pagecolor,lipsum}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{centernot}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{fullpage}
+\usepackage[inline]{asymptote}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+\newtheorem{theorem}{Theorem}
+\newtheorem{defintion}{Definition}
+\newtheorem{collorary}{Collorary}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{note}{Note} 
+% no indentation
+\setlength\parindent{0pt}
+
+\begin{center}
+  \begin{tikzpicture}
+    \begin{scope}[xshift=4cm]
+    \node[main node] (0) {$0$};
+    \node[main node] (1) [right = 2cm  of 0] {$1$};
+    \node[main node] (2) [below = 2cm  of 0] {$2$};
+    \node[main node] (3) [right = 2cm  of 2] {$3$};
+    \node[main node] (4) [right = 2cm  of 1] {$4$};
+    \node[main node] (5) [below = 2cm  of 4] {$5$};
+
+    \path[draw,thick]
+    (0) edge[->] node {} (1)
+    (1) edge[->] node {} (4)
+    (4) edge[->] node {} (5)
+    (1) edge[->] node {} (5)
+    (0) edge[->] node {} (3)
+    (3) edge[->] node {} (4)
+    (0) edge[->] node {} (2)
+    (2) edge[->] node {} (3)
+    (3) edge[->] node {} (5)
+    (1) edge[->] node {} (2);
+    \end{scope}
+\end{tikzpicture}
+\end{center}
+
+
+\begin{document}
+\[ 
+    A= \begin{bmatrix}
+    0 & 1 & 1 & 1 & 0 & 0 \\ 
+    0 & 0 & 1 & 0 & 0 & 1 \\ 
+    0 & 0 & 0 & 1 & 0 & 0 \\ 
+    0 & 0 & 0 & 0 & 1 & 1 \\ 
+    0 & 0 & 0 & 0 & 0 & 1 \\ 
+    0 & 0 & 0 & 0 & 0 & 0 \\ 
+    \end{bmatrix} 
+\]
+
+\end{document}

@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1479097382 "tryg1.tex" "tryg1.pdf" "tryg1" 1479097383
-  "/dev/null" 1479097345 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1479188207 "tryg1.tex" "tryg1.pdf" "tryg1" 1479188208
+  "/dev/null" 1479188185 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii" 1337017135 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/local/texlive/2013/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1284331290 1458 43ab4710dc82f3edeabecd0d099626b2 ""
@@ -93,8 +93,8 @@
   "/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1369923225 1072746 3ce1f23f203cb4a0015ca3c8411dee4a ""
   "/usr/local/texlive/2013/texmf-var/web2c/pdftex/pdflatex.fmt" 1369923264 3827029 ad4432546849f432c3154779662c76c8 ""
   "/usr/local/texlive/2013/texmf.cnf" 1369923207 577 cbc827f6294276973a1952e86e8ad73a ""
-  "tryg1.aux" 1479097383 8 a94a2480d3289e625eea47cd1b285758 ""
-  "tryg1.tex" 1479097382 892 94efe0da3c1dacb939127e088cc30148 ""
+  "tryg1.aux" 1479188208 8 a94a2480d3289e625eea47cd1b285758 ""
+  "tryg1.tex" 1479188207 892 94efe0da3c1dacb939127e088cc30148 ""
   (generated)
   "tryg1.aux"
   "tryg1.log"

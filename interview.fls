@@ -194,7 +194,15 @@ INPUT /usr/local/texlive/2013/texmf-dist/tex/latex/environ/environ.sty
 INPUT /usr/local/texlive/2013/texmf-dist/tex/latex/environ/environ.sty
 INPUT /usr/local/texlive/2013/texmf-dist/tex/latex/trimspaces/trimspaces.sty
 INPUT /usr/local/texlive/2013/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+INPUT /usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+INPUT /usr/local/texlive/2013/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+INPUT /usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex
+INPUT /usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex
+INPUT /usr/local/texlive/2013/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+INPUT /usr/local/texlive/2013/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex
+INPUT /usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
 INPUT /usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+INPUT /usr/local/texlive/2013/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypetri.code.tex
 INPUT interview.aux
 INPUT interview.aux
 OUTPUT interview.aux
