@@ -1,0 +1,125 @@
+\documentclass{article}
+\usepackage[tc]{titlepic}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tipa}
+\usepackage{fullpage}
+\usepackage{pagecolor,lipsum}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{centernot}
+\usepackage{xcolor}
+\usepackage{listings}
+
+% no indentation
+\setlength\parindent{0pt}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{defintion}{Definition}
+\newtheorem{collorary}{Collorary}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{note}{Note} 
+
+\begin{document}
+\vspace*{0.1cm}
+\large
+\begin{center}
+\textbf{Save your hundred of key strokes with Vim 8.0 feature}
+\end{center}
+\vspace*{0.2cm}
+
+A few months ago, Vim 8.0 is released and it was a major release in last ten years. It is pretty significant. There are many new features are added in the release, one of them is called \textbf{timer} which is like a stopwatch in your phone. 
+
+Technically specking,
+\textbf{timer} is similar to event handler in $C\#$ or event listener in Java, except that it is much easier to use. 
+\begin{itemize}
+ \item A function is subscribed in event queue. 
+ \item The function is trigged by a specific event.  
+ \item[] \textbf{Another Analogy}
+ \item You \textbf{join} the line to wait for ordering you Caramel Macchiato in Starbucks
+ \item You \textbf{order} your Caramel Macchiato in a specific time. 
+\end{itemize}
+
+
+There are two important functions for timer.
+\begin{itemize}
+\item timer{\_}start() which starts the timer and call a function in specific time
+\item timer{\_}stop() which stops the timer immediately
+\end{itemize}
+
+\begin{example}
+If you want to write a function to save your current buffer in every 2 seconds,
+you can do it in one line with Vim script.  
+\begin{verbatim}
+    func! SaveFile(timer)
+      silent! :w!
+    endfunc
+\end{verbatim} 
+\end{example}
+\textbf{timer} $\quad$ A variable is initialized by timer{\_}start() \\
+\textbf{silent} $\quad$ Execute silently. Normal message will not be given or added to the message history. when [!] is added, error message will also be skipped. \\
+
+The \textbf{SaveFile} function is surprisedly simple but extremely useful because you don't need to constantly press a key to save your file when you edit a file.
+
+\begin{verbatim}
+    let timer = timer_start(2000, 'SaveFile',{'repeat':-1})
+    func! SaveFile(timer)
+      silent! :w!
+    endfunc
+\end{verbatim} 
+
+enjoy your Vim 8 feature!
+
+\pagebreak
+\section{There is, are}
+If you want to speak about the existence of a person or a thing, you should use 
+$\textbf{there is/are}$
+
+\begin{itemize}
+\item[] There is man who know you 
+\item[] there is many pupils in the school  
+\item[] is there any exit to the street    
+\item[] there are three boys in the family   
+\item[] there is one table and four chair in this room  
+\item[] there is one table and four chair in that room  
+\item Simple past  
+\item[] there was a car here, but it went away 
+\item[] there were many pedestrians in the street at the time
+\item Simple future
+\item[] There will be a scandal if people know that
+\item Future "Going to" 
+\item[] is there going to be strike tomorrow
+\item[] there is going to be strike tomorrow 
+\item Present perfect
+\item[] There has been a lots of victims in the accident
+\item Modal Auxiliaries:Can/Can't,physical or intellectual ability/inability/impossibility
+\item[] There can only be one explanation
+\item[] There can not be more people in this small room
+\item[] There can not be more people in this small room
+\item May : Eventually/permission
+\item[] There may be snow tomorrow
+\item[] There may not be a mistake here
+\item Must : obligation, near-certitude / interdiction
+\item[] Must there be two policemen with him?
+\item[] There must not be any kid here
+\item Should : advice / suggestion
+\item[] There should be traffic lights in the crossroads
+\item[] There should not be as many fans near the singer
+\item $\color{red}{\textbf{When there is no matches return a empty list}}$
+\end{itemize}
+\begin{itemize}
+\item despite 
+\item[] Haskell is still not a popular programming language despite the language has developed since 1990s
+\item I have failed the Microsoft inerview despite I have begun to prepare since last month. 
+\item In despite of + ing,  despite + ing
+\item[] He is very fast in despite of being terribly overweight 
+\item[] They arrive late despite leaving in plenty of time  
+\end{itemize}
+
+
+
+
+\end{document} 
+

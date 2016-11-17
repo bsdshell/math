@@ -4,15 +4,26 @@
 \usepackage{graphicx}
 \usepackage{tipa}
 \usepackage{pagecolor,lipsum}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{amsthm}
 \usepackage{centernot}
 \usepackage{xcolor}
 \usepackage{fullpage}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath,amsfonts}
+\DeclareMathOperator{\SPAN}{Span}
+
 \usepackage[inline]{asymptote}
+
 \newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{collorary}{Collorary}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{note}{Note} 
+\newenvironment{solution}
+ {\begin{proof}[Solution]}
+ {\end{proof}}
+
 
 \setlength\parindent{0pt}
 \definecolor{title}{RGB}{180,0,0}
@@ -48,24 +59,22 @@ I will write whatever I would like to write based on my mood. The main objective
 help me to learn some Latex. Latex is a program language used for typesetting technical documents. 
 Latex is free program package created in 1985 by the American computer scientist Leslis Lamport as an addition
 to the Tex typesetting system. Latex is created to make it easier to product general-purpose books and articles within Tex
-
+\section{Power series}
 \begin{proof}
-\[ \textbf{Prove the power series } exp(A) = \sum_{k=0}^{n} \frac{A^{k}}{k!} \textbf{ is convegent when A is nxn matrix} \]
-$\exp(X) = \sum_{k=0}^{n} \frac{X^{k}}{k!}$\\
-$\sin(X) = \sum_{k=0}^{n} (-1)^{k}\frac{X^{2k}}{2k!}$\\
-$\cos(X) = \sum_{k=0}^{n} (-1)^{k}\frac{X^{2k+1}}{(2k+1)!}$\\
-$\cosh(X) = \sum_{k=0}^{n} \frac{X^{2k}}{(2k)!}$\\
-$\sinh(X) = \sum_{k=0}^{n} \frac{X^{2k+1}}{(2k+1)!}$\\
-
-Let $ X = 
-    \begin{bmatrix}
-    0 & -\beta \\
-    \beta & 0 
-    \end{bmatrix}
-$\\
-
-$
-    \exp(X) = 
+$\textbf{The power series } exp(A) = \sum_{k=0}^{n} \frac{A^{k}}{k!} \textbf{ is convegent when A is nxn matrix}$ 
+\begin{align*}
+    \begin{split}
+    \exp(X) &= \sum_{k=0}^{n} \frac{X^{k}}{k!}\\
+    \sin(X) &= \sum_{k=0}^{n} (-1)^{k}\frac{X^{2k}}{2k!}\\
+    \cos(X) &= \sum_{k=0}^{n} (-1)^{k}\frac{X^{2k+1}}{(2k+1)!}\\
+    \cosh(X) &= \sum_{k=0}^{n} \frac{X^{2k}}{(2k)!}\\
+    \sinh(X) &= \sum_{k=0}^{n} \frac{X^{2k+1}}{(2k+1)!}\\
+    \text{Let } X = \begin{bmatrix}
+        0 & -\beta \\
+        \beta & 0 
+        \end{bmatrix} \\
+    % -- not working here for \intertext{}
+    \exp(X) &= 
         \begin{bmatrix}
         1 & 0 \\
         0 & 1 
@@ -80,8 +89,8 @@ $
         \begin{bmatrix}
         -\beta^{2} & 0 \\
         0 & \beta^{2} 
-        \end{bmatrix}
-        +
+        \end{bmatrix} \\
+        &\quad+
         \frac{1}{3!}
         \begin{bmatrix}
         0 & \beta^{3} \\
@@ -98,23 +107,171 @@ $
         \begin{bmatrix}
         0 & -\beta^{5}\\
         \beta^{5} & 0 
-        \end{bmatrix}
-$\\
-$
-    \exp(X) = 
+        \end{bmatrix} \\
+        %
+        \exp(X) &= 
         \begin{bmatrix}
         1 + \frac{1}{2!}(-\beta^{2}) + \frac{1}{4!}\beta^{4} + ... & -\beta + \frac{1}{3!}\beta^{3} + ...\\
         \beta + \frac{1}{3!}-\beta^{3} + ... & 1 + \frac{1}{2!}\beta^{2} + \frac{1}{4!}\beta^{4} + ...
-        \end{bmatrix}
-        = 
+        \end{bmatrix} \\
+        \exp(X) &=
         \begin{bmatrix}
         \sin(\beta) & -\cos(\beta)\\
         \cos(\beta) & \sin(\beta)
         \end{bmatrix}
-$
-
+     \end{split}
+\end{align*}
 \end{proof}
-
+\pagebreak
+\section{Given real a symmetric matrix $A$, prove that all the eigenvalues of $A$ are real numbers}
+\begin{definition}
+Given an real  $n \times n$ matrix $A$, $\lambda \in \mathbb{K} \quad  \vec{v} \in \mathbb{R}^{n}$ if 
+      \[ \mathbf{A} \vec{v} = \lambda \vec{v} \]   
+then $\lambda$ is the eigenvalue and $\vec{v}$ is the eigenvector such as $\vec{v} \ne \vec{0}$ 
+\end{definition}
+\begin{example}
+\textbf{Find the eigenvalue and eigenvector of the following matrix}
+\[  \mathbf{A}_{2\times2}(\mathbb{R})= 
+    \begin{bmatrix}
+    1 & 2\\
+    5 & 4
+    \end{bmatrix}  \]
+\end{example}
+%
+\begin{align*}
+\intertext{From the definition, we have $\lambda \in \mathbb{C}$ and $\vec{v} \in \mathbb{R}^{n}$}
+    \det \mathbf{A} - \lambda \vec{I} = 0  \\
+    \det\left(\begin{bmatrix}
+    1 & 2\\
+    5 & 4
+    \end{bmatrix} - \lambda 
+    \begin{bmatrix}
+    1 & 0\\
+    0 & 1
+    \end{bmatrix} \right)  = 0  \\
+    \det\left(\begin{bmatrix}
+    1 - \lambda & 2\\
+    5 & 4 - \lambda
+    \end{bmatrix} \right)= 0 \\
+    (1-\lambda)(4-\lambda)-2 \times 5  = 0 \\
+    \lambda^2 - 5\lambda + 4 - 10  = 0 \\
+    \lambda^2 - 5\lambda - 6  = 0 \\
+    (\lambda -6) (\lambda + 1) = 0 \\ 
+    \Rightarrow \lambda = 6 \mbox{ or }  \lambda = -1 
+\end{align*}
+Let $\lambda = 6$ and 
+$\vec{v} =\left[ \begin{array}{c} 
+        x \\
+        y 
+        \end{array} 
+        \right] $ 
+we have following
+\begin{align*}
+        \begin{bmatrix}
+        1 & 2 \\
+        5 & 4  
+        \end{bmatrix} 
+        \left[ \begin{array}{c} 
+        x \\
+        y 
+        \end{array} 
+        \right]  &= 
+        6\left[ \begin{array}{c} 
+        x \\
+        y 
+        \end{array} \right] \\
+        \left[ \begin{array}{c} 
+        x + 2y -6x\\
+        5x + 4y - 6y 
+        \end{array} 
+        \right] &= \vec{0} \\
+        \left[ \begin{array}{c} 
+        -5x + 2y\\
+        5x - 2y 
+        \end{array} 
+        \right] &= \vec{0} \\
+        \left[ \begin{array}{c}   
+        x \\
+        y
+        \end{array} \right] &=  
+        \left[ \begin{array}{c}   
+        5 \\
+        2 
+        \end{array} \right] \\ 
+        \mathit{E}_{\lambda=6} &= \SPAN \left\{
+            \left[ \begin{array}{c}   
+            5 \\
+            2 
+            \end{array} \right]
+        \right\}
+\end{align*}
+Let $\lambda = -1$ we have following
+\begin{align*}
+        \begin{bmatrix}
+        1 & 2 \\
+        5 & 4  
+        \end{bmatrix} 
+        %
+        \left[ \begin{array}{c} 
+        x \\
+        y 
+        \end{array} 
+        \right]  &= 
+        -1\left[ \begin{array}{c} 
+        x \\
+        y 
+        \end{array} \right] \\
+        %
+        \left[ \begin{array}{c} 
+        x + 2y + x\\
+        5x + 4y + y 
+        \end{array} 
+        \right] &= \vec{0} \\
+        \left[ \begin{array}{c} 
+        2x + 2y \\
+        5x + 5y 
+        \end{array} 
+        \right] &= \vec{0} \\
+        \left[ \begin{array}{c} 
+        x \\
+        y 
+        \end{array} 
+        \right] &= 
+        \left[\begin{array}{c} 
+        1 \\
+        -1 
+        \end{array} 
+        \right] \\ 
+        \mathit{E}_{\lambda=-1} &= \SPAN \left\{
+            \left[ \begin{array}{c}   
+            1 \\
+            -1 
+            \end{array} \right]
+        \right\}
+\end{align*}
+\begin{proof}
+Let $A$ is real and symmetric matrix, prove all the eigenvalues of $A$ are real,
+We have following
+   \[ A = A^{T} \]  
+Let $\lambda \in \mathbb{C}$ to be eigenvalue, $\vec{v} \in \mathbb{R}^n$ to be the eigenvector of $A$ such as $\vec{v} \ne \vec{0}$. From the definition, we have following
+    \begin{align*}
+        A \vec{v} &= \lambda \vec{v} \\ 
+        (A \vec{v})^{\ast}   &= (\lambda \vec{v})^{\ast} \\   
+        (\vec{v})^{\ast} A^{\ast} &= (\vec{v})^{\ast} \lambda^{\ast} \\     
+\intertext{Since $A$ is real and $\vec{v} \in \mathbb{R}^n$}
+        (\vec{v})^{T} A &= (\vec{v})^{T} \lambda^{\ast} \qquad \because (\vec{v})^{\ast} = (\vec{v})^T \mbox{ and } A = A^{\ast}    
+\intertext{Multiple both side by $\vec{v}$}
+        (\vec{v})^{T} A \vec{v} &= (\vec{v})^{T} \lambda^{\ast} \vec{v} \\   
+        \left< \vec{v} \,, A \vec{v} \right> &= \left< \vec{v} \,, \lambda^{\ast} \vec{v} \right> \\  
+        \left< \vec{v} \,, \lambda \vec{v} \right> &= \left< \vec{v} \,, \lambda^{\ast} \vec{v} \right>\quad \because A \vec{v} = \lambda \vec{v} \\
+        \overline{\lambda} \left< \vec{u} \,, \vec{u} \right> &= \lambda \left< \vec{u} \,, \vec{u} \right> \quad \because \lambda^{\ast} = \overline{\lambda} \mbox{ and } \left< \vec{v} \,, a\vec{u} \right> = \overline{a} \left< \vec{v} \,, \vec{u} \right> \\ 
+        \Rightarrow \overline{\lambda} &= \lambda \\
+        \Rightarrow \lambda & \in \mathbb{R}
+    \end{align*}
+\end{proof}
+%
+\pagebreak
+%
 \[ \textbf{Group} \]
 $\text{Let a, b, c} \in \mathbb{G} $\\
 There is binary operation * and satisfies\\

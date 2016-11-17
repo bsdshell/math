@@ -1,0 +1,202 @@
+\documentclass{article}
+\usepackage[tc]{titlepic}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tipa}
+\usepackage{fullpage}
+\usepackage{pagecolor,lipsum}
+\usepackage{amsmath,amsfonts}
+\DeclareMathOperator{\SPAN}{Span}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{centernot}
+\usepackage{xcolor}
+\usepackage{listings}
+\newenvironment{solution}
+ {\begin{proof}[Solution]}
+ {\end{proof}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{collorary}{Collorary}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{note}{Note} 
+
+\begin{document}
+\section{Given real a symmetric matrix $A$, prove that all the eigenvalues of $A$ are real numbers}
+\begin{definition}
+Given an real  $n \times n$ matrix $A$, $\lambda \in \mathbb{K} \quad  \vec{v} \in \mathbb{R}^{n}$ if 
+      \[ \mathbf{A} \vec{v} = \lambda \vec{v} \]   
+then $\lambda$ is the eigenvalue and $\vec{v}$ is the eigenvector such as $\vec{v} \ne \vec{0}$ 
+\end{definition}
+\begin{example}
+\textbf{Find the eigenvalue and eigenvector of the following matrix}
+\[  \mathbf{A}_{2\times2}(\mathbb{R})= 
+    \begin{bmatrix}
+    1 & 2\\
+    5 & 4
+    \end{bmatrix}  \]
+\end{example}
+%
+\begin{align*}
+\intertext{From the definition, we have $\lambda \in \mathbb{C}$ and $\vec{v} \in \mathbb{R}^{n}$}
+    \det \mathbf{A} - \lambda \vec{I} = 0  \\
+    \det\left(\begin{bmatrix}
+    1 & 2\\
+    5 & 4
+    \end{bmatrix} - \lambda 
+    \begin{bmatrix}
+    1 & 0\\
+    0 & 1
+    \end{bmatrix} \right)  = 0  \\
+    \det\left(\begin{bmatrix}
+    1 - \lambda & 2\\
+    5 & 4 - \lambda
+    \end{bmatrix} \right)= 0 \\
+    (1-\lambda)(4-\lambda)-2 \times 5  = 0 \\
+    \lambda^2 - 5\lambda + 4 - 10  = 0 \\
+    \lambda^2 - 5\lambda - 6  = 0 \\
+    (\lambda -6) (\lambda + 1) = 0 \\ 
+    \Rightarrow \lambda = 6 \mbox{ or }  \lambda = -1 
+\end{align*}
+Let $\lambda = 6$ and 
+$\vec{v} =\left[ \begin{array}{c} 
+        x \\
+        y 
+        \end{array} 
+        \right] $ 
+we have following
+\begin{align*}
+        \begin{bmatrix}
+        1 & 2 \\
+        5 & 4  
+        \end{bmatrix} 
+        \left[ \begin{array}{c} 
+        x \\
+        y 
+        \end{array} 
+        \right]  &= 
+        6\left[ \begin{array}{c} 
+        x \\
+        y 
+        \end{array} \right] \\
+%        \begin{bmatrix}
+%        1 & 2 \\
+%        5 & 4  
+%        \end{bmatrix} 
+%        \left[ \begin{array}{c} 
+%        x \\
+%        y 
+%        \end{array} 
+%        \right] - 6  
+%        \left[ \begin{array}{c} 
+%        x \\
+%        y 
+%        \end{array} \right] &= \vec{0} \\
+%        \left[ \begin{array}{c} 
+%        x + 2y \\
+%        5x + 4y 
+%        \end{array} 
+%        \right] - \left[ \begin{array}{c}   
+%        6x \\
+%        6y
+%        \end{array} \right] &= \vec{0} \\
+        \left[ \begin{array}{c} 
+        x + 2y -6x\\
+        5x + 4y - 6y 
+        \end{array} 
+        \right] &= \vec{0} \\
+        \left[ \begin{array}{c} 
+        -5x + 2y\\
+        5x - 2y 
+        \end{array} 
+        \right] &= \vec{0} \\
+%        \begin{bmatrix}
+%        -5 & 2 \\
+%        5 & -2  
+%        \end{bmatrix} 
+%        \left[ \begin{array}{c}   
+%        x \\
+%        y
+%        \end{array} \right] \\
+        \left[ \begin{array}{c}   
+        x \\
+        y
+        \end{array} \right] &=  
+        \left[ \begin{array}{c}   
+        5 \\
+        2 
+        \end{array} \right] \\ 
+        \mathit{E}_{\lambda=6} &= \SPAN \left\{
+            \left[ \begin{array}{c}   
+            5 \\
+            2 
+            \end{array} \right]
+        \right\}
+\end{align*}
+Let $\lambda = -1$ we have following
+\begin{align*}
+        \begin{bmatrix}
+        1 & 2 \\
+        5 & 4  
+        \end{bmatrix} 
+        %
+        \left[ \begin{array}{c} 
+        x \\
+        y 
+        \end{array} 
+        \right]  &= 
+        -1\left[ \begin{array}{c} 
+        x \\
+        y 
+        \end{array} \right] \\
+        %
+        \left[ \begin{array}{c} 
+        x + 2y + x\\
+        5x + 4y + y 
+        \end{array} 
+        \right] &= \vec{0} \\
+        \left[ \begin{array}{c} 
+        2x + 2y \\
+        5x + 5y 
+        \end{array} 
+        \right] &= \vec{0} \\
+        \left[ \begin{array}{c} 
+        x \\
+        y 
+        \end{array} 
+        \right] &= 
+        \left[\begin{array}{c} 
+        1 \\
+        -1 
+        \end{array} 
+        \right] \\ 
+        \mathit{E}_{\lambda=-1} &= \SPAN \left\{
+            \left[ \begin{array}{c}   
+            1 \\
+            -1 
+            \end{array} \right]
+        \right\}
+\end{align*}
+\begin{proof}
+Let $A$ is real and symmetric matrix, prove all the eigenvalues of $A$ are real,
+We have following
+   \[ A = A^{T} \]  
+Let $\lambda \in \mathbb{C}$ to be eigenvalue, $\vec{v} \in \mathbb{R}^n$ to be the eigenvector of $A$ such as $\vec{v} \ne \vec{0}$. From the definition, we have following
+    \begin{align*}
+        A \vec{v} &= \lambda \vec{v} \\ 
+        (A \vec{v})^{\ast}   &= (\lambda \vec{v})^{\ast} \\   
+        (\vec{v})^{\ast} A^{\ast} &= (\vec{v})^{\ast} \lambda^{\ast} \\     
+\intertext{Since $A$ is real and $\vec{v} \in \mathbb{R}^n$}
+        (\vec{v})^{T} A &= (\vec{v})^{T} \lambda^{\ast} \qquad \because (\vec{v})^{\ast} = (\vec{v})^T \mbox{ and } A = A^{\ast}    
+\intertext{Multiple both side by $\vec{v}$}
+        (\vec{v})^{T} A \vec{v} &= (\vec{v})^{T} \lambda^{\ast} \vec{v} \\   
+        \left< \vec{v} \,, A \vec{v} \right> &= \left< \vec{v} \,, \lambda^{\ast} \vec{v} \right> \\  
+        \left< \vec{v} \,, \lambda \vec{v} \right> &= \left< \vec{v} \,, \lambda^{\ast} \vec{v} \right>\quad \because A \vec{v} = \lambda \vec{v} \\
+        \overline{\lambda} \left< \vec{u} \,, \vec{u} \right> &= \lambda \left< \vec{u} \,, \vec{u} \right> \quad \because \lambda^{\ast} = \overline{\lambda} \mbox{ and } \left< \vec{v} \,, a\vec{u} \right> = \overline{a} \left< \vec{v} \,, \vec{u} \right> \\ 
+        \Rightarrow \overline{\lambda} &= \lambda \\
+        \Rightarrow \lambda & \in \mathbb{R}
+    \end{align*}
+\end{proof}
+\end{document}
