@@ -123,7 +123,11 @@
   "interview.aux"
   "interview.dvi"
   "interview.log"
+<<<<<<< HEAD
 ["pdflatex"] 1479436474 "interview.tex" "interview.pdf" "interview" 1479436476
+=======
+["pdflatex"] 1479168486 "interview.tex" "interview.pdf" "interview" 1479168488
+>>>>>>> 0a4c7280fb3137ee41b70ae5da8fc8598d63c41d
   "/Library/WebServer/Documents/zsurface/image/postorder2.png" 1478139117 208760 99894120693451cb534eafa9000c0116 ""
   "/Users/cat/myfile/github/graphviz/two_stack.pdf" 1478302352 17177 4bf4b22208a73a600079307af2189d94 ""
   "/Users/cat/myfile/github/image/quicksort3.png" 1478290291 423131 89975b1089e29ce6fd490b09bb0b72bd ""
@@ -316,8 +320,13 @@
   "/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1369923225 1072746 3ce1f23f203cb4a0015ca3c8411dee4a ""
   "/usr/local/texlive/2013/texmf-var/web2c/pdftex/pdflatex.fmt" 1369923264 3827029 ad4432546849f432c3154779662c76c8 ""
   "/usr/local/texlive/2013/texmf.cnf" 1369923207 577 cbc827f6294276973a1952e86e8ad73a ""
+<<<<<<< HEAD
   "interview.aux" 1479436476 2966 61bf9e458591b8cd1407d7e5d3a82f8b ""
   "interview.tex" 1479436474 39946 bfb8ddf14a2d4818ad8b8301d3bbb7c0 ""
+=======
+  "interview.aux" 1479168488 2966 61bf9e458591b8cd1407d7e5d3a82f8b ""
+  "interview.tex" 1479168486 39946 bfb8ddf14a2d4818ad8b8301d3bbb7c0 ""
+>>>>>>> 0a4c7280fb3137ee41b70ae5da8fc8598d63c41d
   (generated)
   "interview.pdf"
   "interview.log"

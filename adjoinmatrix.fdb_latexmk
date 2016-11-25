@@ -1,5 +1,5 @@
 # Fdb version 3
-["latex"] 1477030449 "adjoinmatrix.tex" "adjoinmatrix.dvi" "adjoinmatrix" 1477030450
+["latex"] 1477030449 "adjoinmatrix.tex" "adjoinmatrix.dvi" "adjoinmatrix" 1477820303
   "/usr/local/texlive/2013/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -64,5 +64,5 @@
   "adjoinmatrix.tex" 1459494644 5597 ff960b9431163315beb57de362f469b3 ""
   (generated)
   "adjoinmatrix.dvi"
-  "adjoinmatrix.log"
   "adjoinmatrix.aux"
+  "adjoinmatrix.log"
