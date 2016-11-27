@@ -1,0 +1,22 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<pre><code>Out objective for today is to show you how to use hightlight, selection and substitute
+text     =&gt; $\color{red}{[}$nice$\color{red}{]}$
+nice text=&gt; $\color{red}{[}$nice nice$\color{red}{]}$
+
+1. select text
+2. press &lt;Shift-v&gt;
+3. type  s/\%V\w\+/[\0]/gc  Enter
+    what is \%V here? \%V matches inside the Visual area. If \%V is not used, the whole line is used to match
+    \w\+ matches one or more [0-9] or [a-z] or [A-Z] or underscore, e.g. it match my_text123 
+    \0 is the whole match</code></pre>
+</body>
+</html>
