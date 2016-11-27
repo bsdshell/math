@@ -1,0 +1,41 @@
+\documentclass[UTF8]{article}
+\usepackage{pagecolor,lipsum}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{centernot}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{fullpage}
+\usepackage[inline]{asymptote}
+\usepackage{listings}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+\newtheorem{theorem}{Theorem}
+\newtheorem{defintion}{Definition}
+\newtheorem{collorary}{Collorary}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{note}{Note} 
+% no indentation
+\setlength\parindent{0pt}
+\begin{document}
+
+\begin{lstlisting}[
+mathescape,
+columns=fullflexible,
+basicstyle=\fontfamily{lmvtt}\selectfont,
+]
+Out objective for today is to show you how to use hightlight, selection and substitute
+text     => $\color{red}{[}$nice$\color{red}{]}$
+nice text=> $\color{red}{[}$nice nice$\color{red}{]}$
+
+1. select text
+2. press <Shift-v>
+3. type  s/\%V\w\+/[\0]/gc  Enter
+    what is \%V here? \%V matches inside the Visual area. If \%V is not used, the whole line is used to match
+    \w\+ matches one or more [0-9] or [a-z] or [A-Z] or underscore, e.g. it match my_text123 
+    \0 is the whole match
+\end{lstlisting} 
+
+\end{document}
