@@ -1,5 +1,5 @@
 # Fdb version 3
-["latex"] 1477030450 "beziercurve.tex" "beziercurve.dvi" "beziercurve" 1477030450
+["latex"] 1477030450 "beziercurve.tex" "beziercurve.dvi" "beziercurve" 1477820303
   "/usr/local/texlive/2013/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -55,6 +55,6 @@
   "beziercurve.aux" 1477030450 8 a94a2480d3289e625eea47cd1b285758 ""
   "beziercurve.tex" 1459631232 4637 628465808ae8f0ba5eac90704c9596a2 ""
   (generated)
-  "beziercurve.dvi"
   "beziercurve.log"
+  "beziercurve.dvi"
   "beziercurve.aux"

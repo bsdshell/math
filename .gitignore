@@ -3,3 +3,9 @@
 *.pdf
 *.aux
 *.gz
+*.pre
+*.ps
+*.fls
+*.prc
+*.png
+*.svg

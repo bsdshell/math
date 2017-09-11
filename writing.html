@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<p><strong>Save your hundred of key strokes with Vim 8.0 feature</strong></p>
+<p>A few months ago, Vim 8.0 is released and it was a major release in last ten years. It is pretty significant. There are many new features are added in the release, one of them is called <strong>timer</strong> which is like a stopwatch in your phone.</p>
+<p>Technically specking, <strong>timer</strong> is similar to event handler in <span class="math"><em>C</em>#</span> or event listener in Java, except that it is much easier to use.</p>
+<ul>
+<li><p>A function is subscribed in event queue.</p></li>
+<li><p>The function is trigged by a specific event.</p></li>
+<li><p><strong>Another Analogy</strong></p></li>
+<li><p>You <strong>join</strong> the line to wait for ordering you Caramel Macchiato in Starbucks</p></li>
+<li><p>You <strong>order</strong> your Caramel Macchiato in a specific time.</p></li>
+</ul>
+<p>There are two important functions for timer.</p>
+<ul>
+<li><p>timer<span>_</span>start() which starts the timer and call a function in specific time</p></li>
+<li><p>timer<span>_</span>stop() which stops the timer immediately</p></li>
+</ul>
+<p>If you want to write a function to save your current buffer in every 2 seconds, you can do it in one line with Vim script.</p>
+<pre><code>    func! SaveFile(timer)
+      silent! :w!
+    endfunc</code></pre>
+<p><strong>timer</strong> <span class="math"> </span> A variable is initialized by timer<span>_</span>start()<br /><strong>silent</strong> <span class="math"> </span> Execute silently. Normal message will not be given or added to the message history. when [!] is added, error message will also be skipped.<br /></p>
+<p>The <strong>SaveFile</strong> function is surprisedly simple but extremely useful because you don’t need to constantly press a key to save your file when you edit a file.</p>
+<pre><code>    let timer = timer_start(2000, &#39;SaveFile&#39;,{&#39;repeat&#39;:-1})
+    func! SaveFile(timer)
+      silent! :w!
+    endfunc</code></pre>
+<p>enjoy your Vim 8 feature!</p>
+</body>
+</html>

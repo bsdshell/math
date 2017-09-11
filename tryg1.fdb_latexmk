@@ -1,0 +1,11 @@
+# Fdb version 3
+["pdflatex"] 1480044315 "tryg1.tex" "tryg1.pdf" "tryg1" 1480044315
+  "/usr/local/texlive/2013/texmf-dist/web2c/texmf.cnf" 1366045088 31707 0953c15448e216a6585e92ee639d2dc2 ""
+  "/usr/local/texlive/2013/texmf-var/web2c/pdftex/pdflatex.fmt" 1369923264 3827029 ad4432546849f432c3154779662c76c8 ""
+  "/usr/local/texlive/2013/texmf.cnf" 1369923207 577 cbc827f6294276973a1952e86e8ad73a ""
+  "tryg1.aux" 1479608820 8 a94a2480d3289e625eea47cd1b285758 ""
+  "tryg1.tex" 1480044314 2013 601d8f39a6c1d4acd7bcb5259f605c00 ""
+  (generated)
+  "tryg1.aux"
+  "tryg1.log"
+  "tryg1.pdf"
