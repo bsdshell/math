@@ -15,21 +15,22 @@
 \newenvironment{solution}
  {\begin{proof}[Solution]}
  {\end{proof}}
-
+%
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}
 \newtheorem{collorary}{Collorary}
 \newtheorem{example}{Example}
 \newtheorem{remark}{Remark}
 \newtheorem{note}{Note} 
-
+%
 \begin{document}
-\section{Given real a symmetric matrix $A$, prove that all the eigenvalues of $A$ are real numbers}
+%
 \begin{definition}
-Given an real  $n \times n$ matrix $A$, $\lambda \in \mathbb{K} \quad  \vec{v} \in \mathbb{R}^{n}$ if 
+Given an real  $n \times n$ matrix $A$, $\lambda \in \mathbb{C} \quad  \vec{v} \in \mathbb{R}^{n}$ if 
       \[ \mathbf{A} \vec{v} = \lambda \vec{v} \]   
-then $\lambda$ is the eigenvalue and $\vec{v}$ is the eigenvector such as $\vec{v} \ne \vec{0}$ 
+then $\lambda$ is the \textbf{eigenvalue} and $\vec{v}$ is the \textbf{eigenvector} such as $\vec{v} \ne \vec{0}$ 
 \end{definition}
+%
 \begin{example}
 \textbf{Find the eigenvalue and eigenvector of the following matrix}
 \[  \mathbf{A}_{2\times2}(\mathbb{R})= 
@@ -38,9 +39,8 @@ then $\lambda$ is the eigenvalue and $\vec{v}$ is the eigenvector such as $\vec{
     5 & 4
     \end{bmatrix}  \]
 \end{example}
-%
 \begin{align*}
-\intertext{From the definition, we have $\lambda \in \mathbb{C}$ and $\vec{v} \in \mathbb{R}^{n}$}
+\intertext{From the definition, we have $\lambda \in \mathbb{C}$ and $\vec{v} \in \mathbb{R}^{2}$}
     \det \mathbf{A} - \lambda \vec{I} = 0  \\
     \det\left(\begin{bmatrix}
     1 & 2\\
@@ -179,6 +179,9 @@ Let $\lambda = -1$ we have following
             \end{array} \right]
         \right\}
 \end{align*}
+
+%
+\section{Given real a symmetric matrix $A$, prove that all the eigenvalues of $A$ are real numbers}
 \begin{proof}
 Let $A$ is real and symmetric matrix, prove all the eigenvalues of $A$ are real,
 We have following

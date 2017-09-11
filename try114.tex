@@ -1,0 +1,65 @@
+iabbr <buffer> tab66_tabular <CR>\begin{tabular}{\|c\|c\|c\|c\|c\|c\|} \hline<CR>10 & 20 & 30 & 40 & 50 & 50 \\ \hline<CR>22 & 28 & 38 & 48 & 58 & 50 \\ \hline<CR>28 & 38 & 48 & 58 & 68 & 50 \\ \hline<CR>33 & 18 & 18 & 28 & 99 & 50 \\ \hline<CR>98 & 18 & 18 & 28 & 88 & 50 \\ \hline<CR>98 & 18 & 18 & 28 & 88 & 50 \\ \hline<CR>\end{tabular}
+iabbr <buffer> tab55_tabular <CR>\begin{tabular}{\|c\|c\|c\|c\|c\|} \hline<CR>10 & 20 & 30 & 40 & 50 \\ \hline<CR>22 & 28 & 38 & 48 & 58 \\ \hline<CR>28 & 38 & 48 & 58 & 68 \\ \hline<CR>33 & 28 & 18 & 18 & 99 \\ \hline<CR>98 & 28 & 18 & 18 & 88 \\ \hline<CR>\end{tabular}
+iabbr <buffer> tab44_tabular <CR>\begin{tabular}{\|c\|c\|c\|c\|} \hline<CR>10 & 20 & 30 & 40 \\ \hline<CR>22 & 28 & 37 & 48 \\ \hline<CR>28 & 38 & 48 & 58 \\ \hline<CR>33 & 10 & 11 & 12 \\ \hline<CR>\end{tabular}
+iabbr <buffer> tab33_tabular <CR>\begin{tabular}{\|c\|c\|c\|} \hline<CR>10 & 20 & 30  \\ \hline<CR>22 & 28 & 38  \\ \hline<CR>28 & 38 & 48  \\ \hline<CR>\end{tabular}
+iabbr <buffer> matn_3x3_1_to_n <CR>A= \begin{bmatrix}<CR>1 & 2 & 3\\<CR>4 & 5 & 6\\<CR>7 & 8 & 9<CR>\end{bmatrix}
+iabbr <buffer> mati_3x3_identity <CR>A= \begin{bmatrix}<CR>1 & 0 & 0\\<CR>0 & 1 & 0\\<CR>0 & 0 & 1<CR>\end{bmatrix}
+iabbr <buffer> matb_3x3 <CR>\begin{bmatrix}<CR>1 & 2  & 3 \\<CR>4 & 5  & 6 \\<CR>7 & 8  & 9 \\<CR>\end{bmatrix}
+iabbr <buffer> matb_3x3_[ <CR>\[ \begin{bmatrix}<CR>1 & 2  & 3 \\<CR>4 & 5  & 6 \\<CR>7 & 8  & 9 \\<CR>\end{bmatrix} \]
+iabbr <buffer> mat( <CR>\[<CR>\left( \begin{array}{ccc}<CR>a & b & c \\<CR>d & e & f \\<CR>g & h & i \end{array} \right)<CR>\]
+iabbr <buffer> matv_3x3 <CR>\left\| \begin{array}{ccc}<CR>a & b & c \\<CR>d & e & f \\<CR>g & h & i \end{array} \right\|
+iabbr <buffer> matv_3x3_[ <CR>\[<CR>\left\| \begin{array}{ccc}<CR>a & b & c \\<CR>d & e & f \\<CR>g & h & i \end{array} \right\|<CR>\]
+iabbr <buffer> mat_4x4_m_n_subscript <CR>A_{m,n} =<CR>\begin{pmatrix}<CR>a_{1,1} & a_{1,2} & \cdots & a_{1,n} \\<CR>a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\<CR>\vdots  & \vdots  & \ddots & \vdots  \\<CR>a_{m,1} & a_{m,2} & \cdots & a_{m,n}<CR>\end{pmatrix}
+iabbr <buffer> mati_2x2_identity_[ <CR>\[ A= \begin{bmatrix}<CR>1 & 0\\<CR>0 & 1<CR>\end{bmatrix} \]
+iabbr <buffer> matn_2x2_1_to_n_[ <CR>\[ A= \begin{bmatrix}<CR>1 & 2\\<CR>3 & 4<CR>\end{bmatrix} \]
+iabbr <buffer> matn_2x2_1_to_n <CR>A= \begin{bmatrix}<CR>1 & 2\\<CR>3 & 4<CR>\end{bmatrix}
+iabbr <buffer> mat_2x2_rotate <CR>A= \begin{bmatrix}<CR>\cos(\beta) & -\sin(\beta)\\<CR>\sin(\beta) & \cos(\beta)<CR>\end{bmatrix}
+iabbr <buffer> limg__grid_tikzpicture <CR>\begin{tikzpicture}<CR>\draw[step=1cm,gray,very thin] (-2,-2) grid (6,6);<CR>\end{tikzpicture}
+iabbr <buffer> limg_latex_no_float <CR>\begin{minipage}{\linewidth}% to keep image and caption on one page<CR>\makebox[\linewidth]{%        to center the image<CR>\includegraphics[keepaspectratio=true,scale=0.2]{/Users/cat/myfile/github/image/quicksort3.png}}<CR>\end{minipage}<CR>% gf http://tex.stackexchange.com/questions/8625/force-figure-placement-in-text
+iabbr <buffer> limg_latex_float_figure <CR>\begin{figure}<CR>\centering<CR>\includegraphics[scale=0.5,height=1cm, width=6cm]{ }<CR>\caption{This is the caption}<CR>\end{figure}<CR>% gf http://tex.stackexchange.com/questions/8625/force-figure-placement-in-text
+iabbr <buffer> det_characteristic_polynomial <CR>\[<CR>\det\left(\begin{bmatrix}<CR>1 & 2\\<CR>3 & 4<CR>\end{bmatrix} - \lambda<CR>\begin{bmatrix}<CR>1 & 0\\<CR>0 & 1<CR>\end{bmatrix} \right)  = 0<CR>\]
+iabbr <buffer> det_3x3_lambda_array <CR>\[<CR>\chi(\lambda) = \left\| \begin{array}{ccc}<CR>\lambda - a & -b & -c \\<CR>-d & \lambda - e & -f \\<CR>-g & -h & \lambda - i \end{array} \right\|<CR>\]
+iabbr <buffer> det_2x2_array <CR>\[<CR>\left\| \begin{array}{cc}<CR>a & b \\<CR>c & d \end{array} \right\|<CR>\]
+iabbr <buffer> det_2x2_vmatrix <CR>\[<CR>\begin{vmatrix}<CR>1 & 2\\<CR>3 & 4<CR>\end{vmatrix}<CR>\]
+iabbr <buffer> vet_vdot_column <CR>\left[ \begin{array}{cc}<CR>c_1 \\<CR>c_2 \\<CR>\vdots \\<CR>c_n<CR>\end{array}<CR>\right]
+iabbr <buffer> lcode_listing <CR>\begin{lstlisting}[<CR>mathescape,<CR>columns=fullflexible,<CR>basicstyle=\fontfamily{lmvtt}\selectfont,<CR>]<CR>fun(){<CR>}<CR>\end{lstlisting}
+iabbr <buffer> lcode_verbatim <CR>\begin{verbatim}<CR>for(int i=0; i<3; i++){<CR>}<CR>\end{verbatim}
+iabbr <buffer> lcolor_latex_color <CR>darkGrayColor<CR>lightGrayColor<CR>whiteColor<CR>grayColor<CR>redColor<CR>greenColor<CR>blueColor<CR>cyanColor<CR>yellowColor<CR>magentaColor<CR>orangeColor<CR>purpleColor<CR>brownColor<CR>clearColor
+iabbr <buffer> lhello_template <CR>\documentclass{article}<CR>\usepackage[tc]{titlepic}<CR>\usepackage{xcolor}<CR>\usepackage{graphicx}<CR>\usepackage{tipa}<CR>\usepackage{pagecolor,lipsum}<CR>\usepackage{amsmath}<CR>\usepackage{amsfonts}<CR>\usepackage{amssymb}<CR>\usepackage{centernot}<CR>\usepackage{xcolor}<CR>\usepackage{listings}<CR>\begin{document}<CR>\textbf{Hello World}<CR>\end{document}
+iabbr <buffer> lenumerate <CR>\begin{enumerate}<CR>\item xxx<CR>\end{enumerate}
+iabbr <buffer> litemize <CR>\begin{itemize}<CR>\item xxx<CR>\end{itemize}<CR><ESC>2kI
+iabbr <buffer> litemize_without_bullets <CR>\begin{itemize}<CR>\item[] There are two important functions for timer.<CR>\begin{itemize}<CR>\item A function is subscribed in event queue.<CR>\item A event triggers your function.<CR>\end{itemize}<CR>\end{itemize}<CR><ESC>5kI
+iabbr <buffer> lenumerate_nest <CR>\begin{enumerate}<CR>\item Latex is cool<CR>\item Haskell is fun<CR>\begin{enumerate}<CR>\item Continuous<CR>\item Continue<CR>\item Consecutive<CR>\item Contingent<CR>\end{enumerate}<CR>\end{enumerate}
+iabbr <buffer> ltheorem <CR>\newtheorem{theorem}{Theorem}<CR>\newtheorem{defintion}{Definition}<CR>\newtheorem{collorary}{Collorary}<CR>\newtheorem{example}{Example}<CR>\newtheorem{remark}{Remark}<CR>\newtheorem{note}{Note}
+iabbr <buffer> lthm_newtheorem <CR>\newtheorem{theorem}{Theorem}<CR>\newtheorem{defintion}{Definition}<CR>\newtheorem{collorary}{Collorary}<CR>\newtheorem{example}{Example}<CR>\newtheorem{remark}{Remark}<CR>\newtheorem{note}{Note}
+iabbr <buffer> lthm_theorem <CR>\begin{theorem}<CR>\end{theorem}
+iabbr <buffer> ldef_definition <CR>\begin{defintion}<CR>\end{defintion}
+\usepackage{pagecolor,lipsum}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{centernot}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{fullpage}
+\usepackage[inline]{asymptote}
+\usepackage{listings}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+\newtheorem{theorem}{Theorem}
+\newtheorem{defintion}{Definition}
+\newtheorem{collorary}{Collorary}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{note}{Note} 
+% no indentation
+\setlength\parindent{0pt}
+
+\begin{document}
+Hello World
+
+\begin{tikzpicture}
+  \draw (0,0) -- (1,1);
+\end{tikzpicture}
+
+\end{document}

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1480289457 "symmetric_real_eigenvalue.tex" "symmetric_real_eigenvalue.pdf" "symmetric_real_eigenvalue" 1480289458
+["pdflatex"] 1480321365 "symmetric_real_eigenvalue.tex" "symmetric_real_eigenvalue.pdf" "symmetric_real_eigenvalue" 1480321366
   "/usr/local/texlive/2013/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
@@ -20,6 +20,7 @@
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/public/cm/cmss10.tfm" 1136768653 1316 b636689f1933f24d1294acdf6041daaa ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "/usr/local/texlive/2013/texmf-dist/fonts/tfm/public/cm/cmti12.tfm" 1136768653 1484 ed72f8f5cf654cda15ecc8e32bfcbee5 ""
   "/usr/local/texlive/2013/texmf-dist/fonts/tfm/public/cm/cmti7.tfm" 1136768653 1492 86331993fe614793f5e7e755835c31c5 ""
   "/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
@@ -85,9 +86,9 @@
   "/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1369923225 1072746 3ce1f23f203cb4a0015ca3c8411dee4a ""
   "/usr/local/texlive/2013/texmf-var/web2c/pdftex/pdflatex.fmt" 1369923264 3827029 ad4432546849f432c3154779662c76c8 ""
   "/usr/local/texlive/2013/texmf.cnf" 1369923207 577 cbc827f6294276973a1952e86e8ad73a ""
-  "symmetric_real_eigenvalue.aux" 1480289458 159 5a6056814f92741f08803d1b65d10dd9 ""
-  "symmetric_real_eigenvalue.tex" 1480289455 6007 e83180d539566e8438ca2a63a2f10135 ""
+  "symmetric_real_eigenvalue.aux" 1480321366 159 84df58f77d2f0f9037ade00ccff4137a ""
+  "symmetric_real_eigenvalue.tex" 1480321365 6032 6368c917db6e1720ec018586029b51e9 ""
   (generated)
-  "symmetric_real_eigenvalue.aux"
-  "symmetric_real_eigenvalue.log"
   "symmetric_real_eigenvalue.pdf"
+  "symmetric_real_eigenvalue.log"
+  "symmetric_real_eigenvalue.aux"

@@ -1,4 +1,4 @@
-\documentclass{book}
+\documentclass[10pt]{article}
 \usepackage[tc]{titlepic}
 \usepackage{xcolor}
 \usepackage{graphicx}
@@ -10,10 +10,8 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{amsmath,amsfonts}
-\DeclareMathOperator{\SPAN}{Span}
-
 \usepackage[inline]{asymptote}
-
+\DeclareMathOperator{\SPAN}{Span}
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}
 \newtheorem{collorary}{Collorary}
@@ -23,14 +21,11 @@
 \newenvironment{solution}
  {\begin{proof}[Solution]}
  {\end{proof}}
-
-
 \setlength\parindent{0pt}
 \definecolor{title}{RGB}{180,0,0}
 \definecolor{other}{RGB}{171,0,255}
 \definecolor{name}{RGB}{255,0,0}
 \definecolor{phd}{RGB}{0,0,240}
-
 
 \newcommand{\polyringz}[2][Z]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
 \newcommand{\polyringr}[2][R]{\mathbb{#1}\scalebox{1}[.95]{[}#2\scalebox{1}[.95]{]}}
@@ -737,7 +732,7 @@ $\Rightarrow x = \frac{-b \pm \sqrt{b^{2} - 4ac}}{2a}$
 
 Exponential backoff algorithm\\
 \\
-$\frac{1}{N+1} \sum_{i=1}^{k}i$\\
+$\frac{1}{N+1} \sum_{i=1}^{N}i$\\
 For example, the expected backoff time for the third collision, one could 
 calculate the maximum backoff time, N\\
 $N = 2^{c} - 1 (c = 3)$

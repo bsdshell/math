@@ -1,0 +1,171 @@
+\documentclass[UTF8]{article}
+\usepackage{pagecolor,lipsum}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{centernot}
+\usepackage{tikz}
+\usepackage{xcolor}
+\usepackage{fullpage}
+\usepackage[inline]{asymptote}
+\usepackage{listings}
+\usepackage{tkz-euclide}
+\usetikzlibrary{arrows,decorations.pathmorphing,backgrounds,positioning,fit,petri}
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+\newtheorem{collorary}{Collorary}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+\newtheorem{note}{Note} 
+% no indentation
+\setlength\parindent{0pt}
+
+\begin{document}
+% euclideanspace euclidean_space
+\section{Euclidean Space}
+Let $V \in \mathbb{R}^n$ is vector space and an inner product is a function $V \times V \rightarrow \mathbb{R}$, that is 
+$(x, y) \rightarrow \left< x \,, y \right>$ for $x, y \in V$, which satisfied following axioms:
+
+\begin{equation}
+\begin{aligned}
+\left<ax \,, y \right> &= a \left< x \,, y \right> \\  
+\left<x \,, by \right> &= b \left< x \,, y \right> \\
+\left<x + y \,, z \right> &= \left< x \,, z \right> + \left< y \,, z \right> \\
+\left<x\,, y + z \right> &= \left< x \,, y \right> + \left< x \,, z \right> \\
+\left<x \,, y \right> &= \left<x \,, y \right> \\
+\left<x \,, x \right> &> 0 \quad x \neq 0 \quad \text{positive definite}\\
+\end{aligned}
+\end{equation} 
+\section{Construct perspective projective matrix}
+Model Geometry $\rightarrow$ World Coordinates $\rightarrow$ Projective Coordinates
+$\rightarrow$ Normal Device Coordinates
+\[  
+    \left[ \begin{array}{c} 
+    x_{e} \\ 
+    y_{e} \\ 
+    z_{e} \\ 
+    w_{e} \\ 
+    \end{array} \right] 
+    = \begin{bmatrix} 
+    A & B & C & D\\ 
+    A & B & C & D\\ 
+    A & B & C & D\\ 
+    A & B & C & D\\ 
+    \end{bmatrix} 
+    \left[ 
+    \begin{array}{c} 
+    x_{obj} \\ 
+    y_{obj} \\ 
+    z_{obj} \\ 
+    w_{obj} \\ 
+    \end{array} 
+    \right] \\
+\]
+
+\section{Coordinate Systems and Frames}
+Vector $v$ is defined as 
+\[
+    v = \alpha_1 e_1 + \alpha_2 e_2 + \alpha_3 e_3
+\]
+$\alpha_1, \alpha_2, \alpha_3$ are components of $v$ with respect to basis vector $e_1, e_2, e_3$ \\
+e.g. vector 
+$v = \left[ \begin{array}{c} 
+                1 \\ 
+                2 \\
+                3
+            \end{array}
+            \right]
+                $
+can be uniquely define as following with respect to $\{e_1, e_2, e_3\}$ 
+%
+\begin{equation}
+\begin{aligned} 
+    e_0 &= \left[ \begin{array}{c} 
+                1 \\ 
+                0 \\
+                0 
+            \end{array}
+            \right] \quad 
+    e_1 = \left[ \begin{array}{c} 
+                0 \\ 
+                1 \\
+                0 
+            \end{array}
+            \right] \quad 
+    e_2 = \left[ \begin{array}{c} 
+                0 \\ 
+                0 \\
+                1 
+            \end{array}
+            \right]  \\
+    v &= 1e_0 + 2e_1 + 3e_2        
+\end{aligned}
+\end{equation} 
+Vector $v$ forms a coordinate system in Vector space \\
+Points representation needed a "fix" origin - reference point and basis vectors are required $\mathbf{frame}$ \\
+Within a given $\mathbf{frame}$ every vector can be written uniquely 
+\[
+    v = \alpha_1 e_1 + \alpha_2 e_2 + \alpha_3 e_3
+\]
+%
+Every point can be written uniquely as \\
+\begin{equation}
+\begin{aligned}
+    p &= p_0 + \alpha_1 e_1 + \alpha_2 e_2 + \alpha_3 e_3 \\
+    p &= e_1 \alpha_1  + e_2 \alpha_2 + e_3 \alpha_3 + p_0 1 \\
+    p &= \left[ \begin{array}{c|c|c|c} 
+    e_1 & e_2 & e_3 & p_0 
+    \end{array} 
+    \right] 
+    \left[ \begin{array}{cc} 
+    \alpha_1 \\
+    \alpha_2 \\
+    \alpha_3 \\
+    1 
+    \end{array} 
+    \right] \\
+    %
+\end{aligned}
+\end{equation} 
+
+\section{Affine}
+Affine space can be defined as $\mathbb{A}^n = \mathbf{R}^n / \text{translation}$ \\
+\begin{align*}
+ &\left< \mathbf{E}, \mathbf{V}, + \right> \\
+ &\mathbf{E} \text{ is a set of points} \\
+ & \mathbf{V} \text{ is vector space. e.g. satisfy vectors space rules.} \\
+\end{align*} \\
+satisfy the following rules:
+any two points $p_0, p_1 \in \mathbf{E}$, there is unique vector $\vec{v} \in \mathbf{V}$ such that $\vec{v} = p_1 - p_0$ or $p_1 = p_0 + (p_1 - p_0)$
+$\vec{0} = p_0 - p_0$ \\
+%
+\section{Point and Vector}
+Point and Vector are very confusing concept since we abuse the concept and notation.
+When we are talking point, an origin are needed to represent the point. e.g. \\
+In two dimension Cartesian System, we assume the origin is $(0, 0)$, but we can change the origin to $(1, 2)$
+Assume we choose the orgin is $(0, 0)$ and a point is $(2, 3)$ \\
+Point \\
+1. Point has position. \\
+2. Point does not have size \\
+3. Point could move to different position \\
+Vector \\
+1. Vector has magnitude \\
+2. Vector has length \\
+3. Vector does not have position \\
+What are the difference betweeen Point and Vector \\
+Given two point $p_0, p_1$ \\
+$\vec{v} = p_0 p_1 = p_1 - p_0$
+%
+%
+%
+%
+\section{Frame}
+Frame is defined as a pair 
+$(\mathbf{O}, \{e_1, e_2, \dots e_n\})$ consists of an origin $\mathbf{O}$(which is a point) in $\mathbf{E}$ together with a basis of three vectors $\{e_1, e_2, e_3\}$ in $\mathbf{V}$ \\
+For example, the standard frame 
+$(\mathbf{O} = \{0, 0, 0\}, \{e_1, e_2, e_3\})$ in $\mathbf{R}^3$
+\section{Affine Combination}
+%
+%
+\end{document}
